@@ -1,0 +1,42 @@
+//- ===================================
+//- 		MIXINS UNIVERSAL
+//- ===================================
+
+mixin linkTemplate033115a(linkURL, nameURL)
+	if block
+		block
+	else
+		li
+			a(href=linkURL)=nameURL
+
+mixin labelForSubMenus040115a(subMenuLabel,labelText)
+	//- where subMenuLabel is the name set for the input#subMenuLabel and is a string i.e. 'toggle'
+	if block
+		block
+	else
+		li
+			label(for=subMenuLabel)=labelText
+
+mixin imgInsertTemplate(imgLink,altText)
+	if block
+		block
+	else
+		li
+			img(src=imgLink, alt=altText)
+
+mixin standardLinkButton041415a(buttonText,imgLink,classLabel,idLabel)
+	//- This one is used for link buttons that you click and hover over
+	if block
+		block
+	else
+		a(href=imgLink,class=classLabel,id=idLabel)=buttonText
+
+mixin standardButton041415a(buttonText,imgLink,classLabel,idLabel)
+	//- This one is used for link buttons that you click and hover over
+	//- You could re-write the button to have an a element within it or wrap the element in an a tag... in that case you can pass the var imgLink
+	if block
+		block
+	else
+		button(name=buttonText,class=classLabel,id=idLabel)=buttonText
+
+//- END MIXINS UNIVERSAL
