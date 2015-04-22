@@ -1,0 +1,87 @@
+////////////////////////////////////////////
+///// 		NAV MENU
+///////////////////////////////////////////////
+
+// VARIABLES  ------------------------------------------------
+$navDivPadding: 2%;
+$navPaddingMenuButton: 2%;
+// // END VARIABLES ------------------------------------------------
+
+nav.mainNav {
+	border-bottom: $navmenuborder;
+	margin: 0;
+	padding: 0;
+	// for testing
+	// background: lightgrey;
+	position: fixed;
+	width: 100%;
+	z-index: 900;
+	& .flexbox {
+		@include flexboxSettings041715a;
+		color: $navmenucolour;
+	}
+	& div.logo, div.menu, div.icons {
+		padding-bottom: $navDivPadding;
+		padding-top: $navDivPadding;
+		text-transform: uppercase;
+	}
+	& div.menu, div.icons {
+		font-family: $navfontfamily;
+		font-size: $navfontsize;
+	}
+	& div.logo {
+		flex-grow: 1;
+		// border-right: $navmenuborder;
+		@include flexboxSettings041715a;
+		justify-content: flex-end;
+		padding-right: 6%;
+		// @include column(2);
+	}
+	& div.menu {
+		flex-grow: 2;
+		border-right: $navmenuborder;
+		border-left: $navmenuborder;
+		@include flexboxSettings041715a;
+		justify-content: flex-end;
+		// @include column(8);
+		& ul {
+			@include flexboxSettings041715a;
+			justify-content: flex-end;
+			width: auto;
+			& a {
+				color: inherit;
+				padding: 1% 20% 1% 20%;
+				font-size: $navfontsize;
+				font-weight: bold;
+				letter-spacing: 1px;
+				@include transitionEffectAllEaseOut(0.3s);
+				&:hover {
+					color: $navcolourlinkhover;
+				}
+			}
+		}
+		font-size: $navfontsize;
+	}
+	& div.icons {
+		flex-grow: 1;
+		@include flexboxSettings041715a;
+		justify-content: flex-start;
+		// @include column(2);
+		padding-left: 2.5%;
+		& span.fa {
+			border-radius: 50%;
+			color: $navcolouricon;
+			background: $navcolouriconback;
+			padding: 6%;
+			margin-left: 2%;
+			margin-right: 2%;
+			font-size: $navfontsize;
+			@include transitionEffectAllEaseOut(0.3s);
+			&:hover {
+				background: $navcolouriconbackhover;
+			}
+		}
+	}
+}
+
+/////////////////////////////////////////////

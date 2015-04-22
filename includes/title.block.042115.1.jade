@@ -8,12 +8,15 @@
 //- for all mixins please reference mixins.project.jade
 
 section.titleBlock.clearfix
+	//- set this to position relative
 	.imageShader
-		//- for applying a coloured layer mask
+		//- for applying a coloured layer mask...  set this as position absolute
 	.wrapper.clearfix
-		.outer
-			h1 Spartan Web Development That Boosts Your Bottom Line
-			h2 Toronto Web Developer With Ad Writing Experience Gives You An Unfair Advantage
-			span.fa.fa-angle-down
+		.outer.clearfix
+			.copy.clearfix
+				h1 Spartan Web Development That Boosts Your Bottom Line
+				h2 Toronto Web Developer With Ad Writing Experience Gives You An Unfair Advantage
+				a(href="javascript:void(0)",id='moveDown',class='moveDown')
+					span.fa.fa-angle-down
 
 ////////////////////////////////////////////

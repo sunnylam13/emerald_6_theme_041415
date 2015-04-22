@@ -7,11 +7,24 @@
 //- If you ever decide to duplicate a new version of one of the pages of the site having their mixins here means you don't have to copy the same mixin over and over again
 
 //- ===================================
+//- 		LOGO
+//- ===================================
+
+mixin logoIconDesign042215a
+	//- if you're not using the company icon placeholder... you will have to set it to width 50px, height 30px
+	//- you'll have to style it with CSS as well to have a thick white border and transparent background
+	aside.logo042215a.clearfix
+		h2 Emerald Six
+
+//- END LOGO
+
+//- ===================================
 //- 		NAV MENU
 //- ===================================
 
 mixin companyIcon042115a
-	+imgInsertTemplate('http://lorempixel.com/50/30','Logo')
+	//- +imgInsertTemplate('http://lorempixel.com/50/30','Logo')
+	+logoIconDesign042215a
 
 //- END NAV MENU
 

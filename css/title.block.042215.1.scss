@@ -1,0 +1,84 @@
+////////////////////////////////////////////
+// 		TITLE BLOCK
+////////////////////////////////////////////
+
+section.titleBlock {
+	// what if you move the background-image and height to the .imageShader?
+	background-image: $titleblockbackimage;
+	background-size: cover;
+	height: 97vh;
+	position: relative;
+	z-index: 5;
+	opacity: 0.5;
+	& .imageShader {
+		position: absolute;
+		// background-image: url(http://lorempixel.com/1400/700);
+		// background-size: cover;
+		// height: 97vh;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		// background: $titleblockshader;
+		z-index: 7;
+		// background gradient
+		// @include titleBlockShaderGradient042215a($phaedraRedShade1,$phaedraYellowShade1);
+		@include titleBlockShaderGradient042215a($phaedraRedShade1,$phaedraGreen3Shade1);
+	}
+
+	& .wrapper {
+		position: relative;
+		z-index: 15;
+	}
+
+	& .outer {
+		// you can also hook this to the section as you did with .image shader however it needs to be higher z-index
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		@include flexboxSettings041715a;
+		flex-flow: column;
+		justify-content: flex-start;
+		align-content: flex-start;
+		align-items: flex-end;
+		padding-top: 12%;
+		z-index: 20;
+		& .copy {
+			width: 100%;
+			padding-right: 35%;
+		}
+		& h1, h2, span.fa {
+			color: $titleblockcolour;
+		}
+		& h1, h2 {
+			display: block;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			margin-bottom: 5%;
+			text-shadow:0 0 10px #203A8B;
+		}
+		& h1 {
+			font-size: $titleblockFontSizeHeader1;
+		}
+		& h2 {
+			font-size: $titleblockFontSizeHeader2;
+		}
+		& span.fa {
+			font-size: $titleblockFontSizeIcon;
+			border: 2px solid $titleBlockColourIconBorder;
+			padding: 0 1% 0 1%;
+			@include transitionEffectAllEaseOut(0.3s);
+			&:hover {
+				color: $titleBlockColourIconHover;
+				border: 2px solid $titleBlockColourIconBorderHover;
+			}
+		}
+	}
+
+}
+
+
+///////////////////////////////////////

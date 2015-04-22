@@ -12,16 +12,191 @@
 // 		VARIABLES
 ////////////////////////////////////////////
 
-// BASE
+// FONTS  ------------------------------------------------
+// for headers
+$montserrat: 'Montserrat', sans-serif;
+// for text
+$lora: 'Lora', serif;
+// // END FONTS ------------------------------------------------
 
-$basefontfamily:'Open Sans', sans-serif;
+// COLOURS  ------------------------------------------------
+// colours must go before the base
+
+$titleBlockTransparency: 0.6;
+
+$phaedraRed:rgba(255, 66, 16,1);
+$phaedraRedShade1:rgba(255, 66, 16,$titleBlockTransparency);
+$phaedraYellow:rgba(251, 255, 152,1);
+$phaedraYellowShade1:rgba(251, 255, 152,$titleBlockTransparency);
+$phaedraGreen1:rgba(175, 243, 158,1);
+$phaedraGreen2:rgba(96, 196, 144,1);
+$phaedraGreen3:rgba(0, 171, 138,1);
+$phaedraGreen3Shade1:rgba(0, 171, 138,$titleBlockTransparency);
+$belizeHole: rgba(41, 128, 185,1.0);
+$peterRiver: rgba(52, 152, 219,1.0);
+// // END COLOURS ------------------------------------------------
+
+
+// BASE  ------------------------------------------------
+
+// NOTE:  the font family has been placed on all elements for the base and header... see style.scss
+$basefontfamily:$lora;
+$basefontfamilyHeader: $montserrat;
+
 $basefontsize:16px;
 $baselineheight:16px;
-$baseFontColor: lighten(#653082,10%);
-$baseHoverColor: #ab4d63;
-$basebackcolor: grey;
+$baseFontColor: white;
+$baseFontColor2: lightgrey;
+$baseFontColorHeader: black;
+$baseHoverColor: $phaedraRed;
+$basebackcolor: lightblue;
+
+// END BASE ------------------------------------------------
 
 
+
+// LOGO  ------------------------------------------------
+$logoColour: $baseFontColor;
+$logoFontFamily: $montserrat;
+$logoColourHover: $phaedraRed;
+// // END LOGO ------------------------------------------------
+
+// NAV MENU MAIN  ------------------------------------------------
+$navmenucolour: $baseFontColor;
+$navmenuborder: 1px solid lighten($baseFontColor2,15%);
+$navfontsize: $basefontsize*0.6;
+
+// $navfontfamily: $lora;
+$navfontfamily: $montserrat;
+
+$navcolourlinkhover: $phaedraRed;
+
+$navcolouricon: $baseFontColor;
+$navcolouriconback: $phaedraGreen3;
+$navcolouriconbackhover: $phaedraRed;
+
+// // END NAV MENU MAIN ------------------------------------------------
+
+// TITLE BLOCK  ------------------------------------------------
+$titleblockcolour: $baseFontColor;
+// the shader must use a lower opacity alpha channel
+$titleblockshader: rgba(251, 255, 152,0.6);
+// $titleblockshader: red;
+$titleblockbackimage: url(http://lorempixel.com/1400/700);
+
+$titleblockFontSizeIcon: $basefontsize*2;
+$titleblockFontSizeHeader1:$basefontsize*4.5;
+$titleblockFontSizeHeader2: $basefontsize*1.3;
+
+// $titleBlockColourIconHover: $phaedraGreen3;
+$titleBlockColourIconHover: $phaedraRed;
+$titleBlockColourIconBorder: $baseFontColor;
+$titleBlockColourIconBorderHover: $titleBlockColourIconHover;
+
+// // END TITLE BLOCK ------------------------------------------------
+
+// ABOUT US  ------------------------------------------------
+$aboutColour: $baseFontColor2;
+$aboutColourHeader: $baseFontColorHeader;
+$aboutColourBack: $baseFontColor;
+$aboutColourBackButton: $phaedraGreen3;
+$aboutColourButton: $baseFontColor;
+// // END ABOUT US ------------------------------------------------
+
+// BENEFITS  ------------------------------------------------
+$benefitColour: $baseFontColor2;
+$benefitColourBack: $phaedraGreen1;
+$benefitColourHeader: $baseFontColorHeader;
+$benefitColourIcon: $baseFontColor;
+$benefitColourIconHover: $phaedraGreen3;
+$benefitColourIconHoverBack: $baseFontColor;
+$benefitBorder: 5px solid transparent;
+$benefitBorderHover: 5px solid $phaedraGreen3;
+// // END BENEFITS ------------------------------------------------
+
+// PORTFOLIO  ------------------------------------------------
+$portfolioColour: $baseFontColor2;
+$portfolioColourBack: $baseFontColor;
+$portfolioColourHeader: $baseFontColorHeader;
+// // END PORTFOLIO ------------------------------------------------
+
+// FEATURES  ------------------------------------------------
+$portfolioColour: $baseFontColor2;
+$portfolioColourBack: $phaedraGreen2;
+$portfolioColourHeader: $baseFontColor;
+$portfolioColourIcon: $baseFontColor;
+$portfolioColourIconBack: $phaedraGreen3;
+$portfolioShader: $phaedraGreen3;
+$portfolioBackImage: url('http://lorempixel.com/1400/700');
+// // END FEATURES ------------------------------------------------
+
+// CORE FEATURES  ------------------------------------------------
+$coreFeatureColour: $baseFontColor2;
+$coreFeatureColourBack: $phaedraGreen1;
+$coreFeatureColourHeader: $baseFontColorHeader;
+$coreFeatureColourIcon: $phaedraGreen3;
+$coreFeatureColourButton: $baseFontColor;
+$coreFeatureColourButtonBack: $phaedraGreen3;
+$coreFeatureBorderImage: $baseFontColor;
+// // END CORE FEATURES ------------------------------------------------
+
+// STAFF  ------------------------------------------------
+$staffColour: $baseFontColor2;
+$staffColourBack: $baseFontColor;
+$staffColourHeader: $baseFontColorHeader;
+$staffColourHeader2: $phaedraGreen3;
+$staffColourIcon: $staffColourBack;
+$staffColourIconBack: $phaedraGreen2;
+$staffColourIconHover: $phaedraGreen3;
+// // END STAFF ------------------------------------------------
+
+// PREMIUM WORDPRESS THEME  ------------------------------------------------
+$productTeaseColour: $baseFontColor2;
+$productTeaseColourBack: $baseFontColor;
+$productTeaseColourHeader: $baseFontColorHeader;
+$productTeaseColourBack: darken($phaedraYellow,15%);
+$productTeaseBorder: 1em solid $phaedraYellow;
+// // END PREMIUM WORDPRESS THEME ------------------------------------------------
+
+// BLOG  ------------------------------------------------
+$blogColour: $baseFontColor2;
+$blogColourBack: $phaedraGreen1;
+$blogColourHeader: $baseFontColorHeader;
+$blogEntryBack: white;
+$blogColourButton: $baseFontColor;
+$blogColourButtonBackComments: $belizeHole;
+$blogColourButtonBackFavourites: lighten($phaedraRed,15%);
+$blogColourButtonBackShare: $phaedraGreen2;
+$blogColourButtonBackPrev: white;
+$blogColourButtonBackNext: $phaedraGreen3;
+
+// // END BLOG ------------------------------------------------
+
+// PRICING  ------------------------------------------------
+$pricingColour: $baseFontColor2;
+$pricingColourHeader: $baseFontColorHeader;
+$pricingColourStandard: $phaedraGreen2;
+$pricingColourPremium: lighten($peterRiver,20%);
+$pricingColourUltimate: lighten($phaedraRed,20%);
+// // END PRICING ------------------------------------------------
+
+// FOOTER  ------------------------------------------------
+$footerColour: $baseFontColor2;
+$footerColour2: lighten($baseFontColor2,20%);
+$footerColourHeader: $baseFontColor;
+$footerColourHover: $phaedraGreen3;
+
+$footerColourHoverIcon: $baseFontColor;
+$footerColourBackIcon: grey;
+$footerColourBackHoverIcon: $phaedraGreen3;
+
+$footerColourBack1: lighten($phaedraRed,20%);
+$footerColourBack2: darken($phaedraRed,20%);
+
+$footerColourChevron: $phaedraGreen3;
+$footerColourInput: $phaedraGreen3;
+
+// // END FOOTER ------------------------------------------------
 
 ////////////////////////////////////////////
 ///// 		MIXINS

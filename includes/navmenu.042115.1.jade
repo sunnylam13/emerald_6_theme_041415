@@ -5,21 +5,23 @@
 //- The entire nav must be transparent and the background must show through
 //- There will be a shader div to provide a colour
 //- for all mixins please reference mixins.project.jade
+//- you will add sticky nav js effect after you style all the other sections
 
-nav.clearfix
+nav.mainNav.clearfix
 	.wrapper.clearfix
-		div.logo.clearfix
-			+companyIcon042115a
-		div.menu.clearfix
-			ul.clearfix
-				+linkTemplate033115a('Main','#')
-				+linkTemplate033115a('Demos','#')
-				+linkTemplate033115a('Portfolio','#')
-				+linkTemplate033115a('Blog','#')
-				+linkTemplate033115a('Shortcodes','#')
-		div.icons.clearfix
-			//- we will not size them here, we will size them in the CSS
-			span.fa.fa-shopping-cart
-			span.fa.fa-search
+		.flexbox.clearfix
+			div.logo.clearfix
+				+companyIcon042115a
+			div.menu.clearfix
+				ul.clearfix
+					+linkTemplate033115a('Main','#')
+					+linkTemplate033115a('Demos','#')
+					+linkTemplate033115a('Portfolio','#')
+					+linkTemplate033115a('Blog','#')
+					+linkTemplate033115a('Shortcodes','#')
+			div.icons.clearfix
+				//- we will not size them here, we will size them in the CSS
+				span.fa.fa-shopping-cart
+				span.fa.fa-search
 
 ////////////////////////////////////////////
