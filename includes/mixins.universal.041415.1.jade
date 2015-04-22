@@ -2,12 +2,20 @@
 //- 		MIXINS UNIVERSAL
 //- ===================================
 
-mixin linkTemplate033115a(linkURL, nameURL)
+mixin linkTemplate033115a(eleName,linkURL)
+	//- this is for use with lists only
 	if block
 		block
 	else
 		li
-			a(href=linkURL)=nameURL
+			a(href=linkURL)=eleName
+
+mixin linkTemplate042115a(eleName,linkURL)
+	//- this is for general use
+	if block
+		block
+	else
+		a(href=linkURL)=eleName
 
 mixin labelForSubMenus040115a(subMenuLabel,labelText)
 	//- where subMenuLabel is the name set for the input#subMenuLabel and is a string i.e. 'toggle'
@@ -38,5 +46,29 @@ mixin standardButton041415a(buttonText,imgLink,classLabel,idLabel)
 		block
 	else
 		button(name=buttonText,class=classLabel,id=idLabel)=buttonText
+
+mixin iconLink042115a(fontAwesome,linkURL)
+	//- the anchor <a> link has a span inside of it instead of an image
+	//- fontAwesome = you must provide a string value for the selected Font Awesome icon
+	if block
+		block
+	else
+		li
+			a(href=linkURL)
+				span(class=fontAwesome).fa
+
+mixin iconLink042115b(fontAwesome,linkURL,tagName)
+	//- the anchor <a> link has a span inside of it instead of an image
+	//- fontAwesome = you must provide a string value for the selected Font Awesome icon
+	//- tagName = name of the tag
+	//- This version provides an actual name tag under the icon
+	//- This can be used in other projects.
+	if block
+		block
+	else
+		li
+			a(href=linkURL)
+				span(class=fontAwesome).fa
+			p.tag=tagName
 
 //- END MIXINS UNIVERSAL

@@ -4,5 +4,257 @@
 
 //- These mixins are specific to this project only.
 
+//- If you ever decide to duplicate a new version of one of the pages of the site having their mixins here means you don't have to copy the same mixin over and over again
+
+//- ===================================
+//- 		NAV MENU
+//- ===================================
+
+mixin companyIcon042115a
+	+imgInsertTemplate('http://lorempixel.com/50/30','Logo')
+
+//- END NAV MENU
+
+//- ===================================
+//- 		TITLE BLOCK
+//- ===================================
+
+
+
+//- END TITLE BLOCK
+
+//- ===================================
+//- 		ABOUT US
+//- ===================================
+
+
+
+//- END ABOUT US
+
+//- ===================================
+//- 		BENEFITS
+//- ===================================
+
+mixin benefitBullet042115a
+	//- this version only supplies internal data instead of assigning classes
+	if block
+		block
+	else
+		span.fa.fa-wrench
+		h3 Bullet
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis odio, dicta ex? Ea quod, ipsum.
+
+//- END BENEFITS
+
+//- ===================================
+//- 		PORTFOLIO
+//- ===================================
+
+mixin portfolioBlock042115a
+	if block
+		block
+	else
+		section.portfolioUnit
+			.imgShaderBox.clearfix
+				img(src="http://lorempixel.com/280/200", alt="Portfolio Image")
+				//- you make the image shader hidden by default until revealed by jQuery
+				.imgShaderScreen1
+					//- by placing the span as a child of the screen we can centre it separately
+					span.fa.fa-plus
+
+			.meta.clearfix
+				div.metatags.clearfix
+					+standardLinkButton041415a('Olivera Note','#','title','title')
+					+standardLinkButton041415a('Fashion','#','category','category')
+				div.favourites.clearfix
+					//- this link needs a ::before with a heart
+					//- could be interesting to animate it filling it up with colour
+					+standardLinkButton041415a('576','javascript:void(0)','favourites','favourites')
+
+//- END PORTFOLIO
+
+//- ===================================
+//- 		FEATURES
+//- ===================================
+
+mixin rightBullet042115a
+	if block
+		block
+	else
+		section.rightBullet
+			div.flex
+				h3 Fully Responsive
+				span.fa.fa-dropbox
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, commodi!
+
+mixin leftBullet042115a
+	if block
+		block
+	else
+		section.rightBullet
+			div.flex
+				span.fa.fa-dropbox
+				h3 Fully Responsive
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, commodi!
+
+//- END FEATURES
+
+
+//- ===================================
+//- 		STAFF
+//- ===================================
+
+mixin staffBlock042115a(name,title,text,imageURL,altText,fb,twi,lkd)
+	//- pass long strings or urls as variables
+	if block
+		block
+	else
+		section.staffMember.clearfix
+			div
+				img(src=imageURL, alt=altText)
+				div.socialIcons
+					+iconLink042115b('fa-facebook',fb,'Facebook')
+					+iconLink042115b('fa-twitter',twi,'Twitter')
+					+iconLink042115b('fa-linkedin',lkd,'LinkedIn')
+			div
+				h3=name
+				h4=title
+				p=text
+
+//- END STAFF
+
+
+//- ===================================
+//- 		PREMIUM WORDPRESS THEME 042115
+//- ===================================
+
+//- for pages like:  PREMIUM WORDPRESS THEME 042115 (premium.wp.theme.042115.1)
+//- where uniqueClass is a string
+
+mixin productTease042115a(uniqueClass,headline,subhead,imgLink,altText)
+	if block
+		block
+	else
+		section(class=uniqueClass).product.clearfix
+			.wrapper.clearfix
+				h2=headline
+				h3=subhead
+				.row
+					div
+						span.fa.fa-eye
+					div
+						h3 Retina Ready
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat pariatur recusandae vero unde dolor qui.
+				.row
+					div
+						span.fa.fa-desktop
+					div
+						h3 Swiss Army Knife Layout
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat pariatur recusandae vero unde dolor qui.
+				.row
+					div
+						span.fa.fa-thumbs-o-up
+					div
+						h3 Cutting Edge Design
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat pariatur recusandae vero unde dolor qui.
+				img(src=imgLink, alt=altText)
+
+//- END TEASE
+
+//- ===================================
+//- 		HEADING
+//- ===================================
+
+mixin postEntryTease042115a
+	section.postEntryTease.clearfix
+		div.image.clearfix
+			+imgInsertTemplate('http://lorempixel.com/204/289','Blog Post')
+			div.buttonPanel.clearfix
+				+standardButton041415a('25','#','comments','comments')
+				+standardButton041415a('480','#','likes','likes')
+				+standardButton041415a('25','#','share','share')
+		div.copy.clearfix
+			h3 Blog Post
+			div.meta.clearfix
+				p.author By Admin
+				p.date April 25th, 2015
+			p.summary Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi doloribus est veritatis assumenda officia vero excepturi ea, cumque omnis reiciendis error delectus. Quidem quas maxime accusantium, praesentium tenetur, distinctio nisi temporibus fuga...
+
+mixin postVideoTease042115a
+	section.postEntryTease.clearfix
+		div.image.clearfix
+			+imgInsertTemplate('http://lorempixel.com/204/289','Blog Post')
+			span.fa.fa-play
+			div.buttonPanel.clearfix
+				+standardButton041415a('25','#','comments','comments')
+				+standardButton041415a('480','#','likes','likes')
+				+standardButton041415a('25','#','share','share')
+		div.copy.clearfix
+			h3 Blog Post
+			div.meta.clearfix
+				p.author By Admin
+				p.date April 25th, 2015
+			p.summary Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi doloribus est veritatis assumenda officia vero excepturi ea, cumque omnis reiciendis error delectus. Quidem quas maxime accusantium, praesentium tenetur, distinctio nisi temporibus fuga...
+
+mixin postImgGalleryTease042115a
+	section.postEntryTease.clearfix
+		div.image.clearfix
+			+imgInsertTemplate('http://lorempixel.com/204/289','Blog Post')
+			span.fa.fa-angle-left
+			span.fa.fa-angle-right
+			div.buttonPanel.clearfix
+				+standardButton041415a('25','#','comments','comments')
+				+standardButton041415a('480','#','likes','likes')
+				+standardButton041415a('25','#','share','share')
+		div.copy.clearfix
+			h3 Blog Post
+			div.meta.clearfix
+				p.author By Admin
+				p.date April 25th, 2015
+			p.summary Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi doloribus est veritatis assumenda officia vero excepturi ea, cumque omnis reiciendis error delectus. Quidem quas maxime accusantium, praesentium tenetur, distinctio nisi temporibus fuga...
+
+//- END LATEST BLOG POSTS
+
+//- ===================================
+//- 		PRICING
+//- ===================================
+
+mixin pricingTable042115a(packageName,priceString,popularClass)
+	//- where packageName is a string with options:  Standard, Premium, Ultimate
+	//- where priceString is $69/Month, $79/Month, $89/Month
+	//- if the optional popularClass (class will match this arg name exactly) is used, it applies that class which should use a ::before in the CSS to add Most Popular with the relevant styling and absolute positioning... if that doesn't work we'll have to write custom update to this mixin and absolute position it that way
+	//- you'll use the packageName class to assign styling colours of course
+	if block
+		block
+	else
+		div.pricingEntry.clearfix
+			header(class=packageName,class=popularClass)
+				h3=packageName
+				span.priceValue=priceString
+					|  / Month
+				+standardButton041415a('Get Started Now','#','priceCTA','priceCTA')
+			section.copy.clearfix
+				h3 Benefits
+				ul.bullets.clearfix
+					li Unlimited products
+					li 20 Pages, Galleries
+					li 500 GB Bandwidth
+					li Mobile Website and Store
+					li Custom Domain Free
+					li 24/7 Round the Clock Support
+					li Unlimited Staff Access
+					li Unlimited Registers
+					li 99% Uptime
+			
+
+//- END PRICING
+
+//- ===================================
+//- 		FOOTER
+//- ===================================
+
+
+
+//- END FOOTER
 
 //- END MIXINS PROJECT 

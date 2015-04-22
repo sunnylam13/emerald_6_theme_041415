@@ -1,7 +1,22 @@
 extends index.layout.030215.1.jade
 
-//- block testimonials
-//- 	include ./includes/testimonial.030315.1.jade
+block navmenu
+	//- this is constant throughout pages
+	include ./includes/navmenu.042115.1.jade
 
-//- block logoSection
-//- 	include ./includes/logo.030315.1.jade
+block content
+	//- the content will vary with each page... use separate includes instead of blocks here
+	include ./includes/title.block.042115.1.jade
+	include ./includes/about.us.042115.1.jade
+	include ./includes/benefits.042115.1.jade
+	include ./includes/portfolio.042115.1.jade
+	include ./includes/features.042115.1.jade
+	include ./includes/core.features.042115.1.jade
+	include ./includes/staff.042115.1.jade
+	include ./includes/premium.wp.theme.042115.1.jade
+	include ./includes/blog.latest.042115.1.jade
+	include ./includes/pricing.042115.1.jade
+
+block footer
+	//- this is constant throughout pages
+	include ./includes/footer.042115.1.jade
