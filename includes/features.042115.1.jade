@@ -7,12 +7,13 @@
 section.features.clearfix
 	//- set this section to position relative
 	.imageShader
-			//- the image will be absolutely positioned to shade the background image of section
+			//- the image will be absolutely positioned to shade the background image of section... leave this outside of the .wrapper though it doesn't matter due to absolute position
 	.wrapper.clearfix
 		h2 Gain These Edges Over Your Competition
 		h3 Not Everyone Can Deliver These The Way We Do
-		//- align with flexbox
+		
 		.display.clearfix
+			//- align with flexbox
 			.left.clearfix
 				+rightBullet042115a
 				+rightBullet042115a
@@ -20,14 +21,16 @@ section.features.clearfix
 				+rightBullet042115a
 				+rightBullet042115a
 			.center.clearfix
+				//- +featureImageCentre042315a
+				img(src="http://lorempixel.com/300/540", alt="Mobile Phone")
 				div.frame.clearfix
-					img(src="http://lorempixel.com/300/540", alt="Mobile Phone")
 					.copy.clearfix
+						//- +featureImageCopy042315a
 						h2 Create an "Iron Man" Website That Can Handle Anything
 						h3 with SAMURAI Development and Ad Writing
 						div.clearfix
-							+standardButton041415a('Learn More','#','learnMore','learnMore')
-							+standardButton041415a('Purchase','#','purchase','purchase')
+							+standardButton041415a('Learn More','#','learnMore','')
+							+standardButton041415a('Purchase','#','purchase','')
 			.right.clearfix
 				+leftBullet042115a
 				+leftBullet042115a

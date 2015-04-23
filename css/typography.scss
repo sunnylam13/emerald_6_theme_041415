@@ -23,9 +23,11 @@ $lora: 'Lora', serif;
 // colours must go before the base
 
 $titleBlockTransparency: 0.6;
+$featuresTransparency: 0.9;
 
 $phaedraRed:rgba(255, 66, 16,1);
 $phaedraRedShade1:rgba(255, 66, 16,$titleBlockTransparency);
+$phaedraRedShade2:rgba(255, 66, 16,$featuresTransparency);
 $phaedraYellow:rgba(251, 255, 152,1);
 $phaedraYellowShade1:rgba(251, 255, 152,$titleBlockTransparency);
 $phaedraGreen1:rgba(175, 243, 158,1);
@@ -114,6 +116,7 @@ $aboutColourBackButton: $phaedraGreen3;
 $aboutColourBackButtonHover: $phaedraRed;
 $aboutColourButton: $baseFontColor;
 $aboutColourButtonShadow: $phaedraYellow;
+$aboutFontFamilyButton: $basefontfamilyHeader;
 
 // // END ABOUT US ------------------------------------------------
 
@@ -164,7 +167,7 @@ $featuresBackImage: url('http://lorempixel.com/1400/700');
 
 //shader
 // $featuresShader: $phaedraGreen3Shade1;
-$featuresShader: $phaedraRedShade1;
+$featuresShader: $phaedraRedShade2;
 
 //icon
 $featuresColourIcon: $baseFontColor;
@@ -173,6 +176,14 @@ $featuresColourIconBack: $phaedraGreen3;
 //font sizes
 $featuresFontSize:$basefontsize*0.7;
 $featuresFontSizeHeader:$basefontsize*1.2;
+
+// button
+$featuresColourButton: $baseFontColor;
+$featuresColourBackButton: $phaedraGreen3;
+$featuresColourBackButtonHover: $phaedraRed;
+$featuresColourButton: $baseFontColor;
+$featuresColourButtonShadow: $phaedraYellow;
+$featuresFontFamilyButton: $basefontfamilyHeader;
 
 // // END FEATURES ------------------------------------------------
 

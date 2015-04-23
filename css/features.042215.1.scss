@@ -7,6 +7,35 @@ section.features {
 	background-size: cover;
 	// height: 80vh;
 	position: relative;
+	// apparently the easiest way to get the image on the bottom of the section is to simply get rid of margin-bottom
+	@include sectionPadding041515(5%,0);
+	// set the parent default colour that is passed to all the elements below
+	color: $featuresColour;
+	& h2, h3 {
+		text-align: center;
+	}
+	& h2 {
+		margin-bottom: 1%;
+		font-size: $featuresFontSizeHeader;
+		color: $featuresColourHeader;
+	}
+	& h3 {
+		margin-bottom: 5%;
+		font-size: $featuresFontSize;
+		color: $featuresColourHeader;
+	}
+	& p {
+		font-size: $featuresFontSize;
+	}
+	& span.fa {
+		// needed to add margin-bottom here to match h3 to be things in alignment
+		margin-bottom: 5%;
+		padding: 4%;
+		border: 0;
+		color: $featuresColourIcon;
+		background: $featuresColourIconBack;
+		border-radius: 50%;
+	}
 	& .imageShader {
 		position: absolute;
 		top: 0;
@@ -14,6 +43,82 @@ section.features {
 		right: 0;
 		left: 0;
 		background: $featuresShader;
+	}
+	& .display {
+		@include flexboxSettings041715a;
+		// you must assign align-items: flex-end so that the image bottom sits at the bottom of the section
+		// comment out if you want it centred
+		// align-items: flex-end;
+	}
+	& .left, .center, .right {
+		// this positions everything
+		flex: 1;
+	}
+	& .left, .right {
+		// padding-top: 5%;
+		// padding-bottom: 5%;
+	}
+	& .center {
+		// @include featuresImageCentre042315a;
+		position: relative;
+		margin:0;
+		padding:0;
+		
+		& div.frame {
+			position: absolute;
+			margin:0;
+			padding:0;
+			top:0;
+			bottom:0;
+			right:0;
+			left:0;
+			padding-top: 30%;
+		}
+		& .copy {
+			@include flexboxSettings042215a;
+			align-items: center;
+			padding-left: 10%;
+			padding-right: 10%;
+			& h2, h3 {display: block;}
+			& h2 {
+				margin-bottom: 3%;
+			}
+			& h3 {
+				margin-bottom: 5%;
+			}
+			& button {
+				border:0;
+				@include projectButtonStyle042115a($featuresColourButton,$featuresColourBackButton,$featuresColourBackButtonHover);
+				font-size: $featuresFontSize;
+				// padding: 3% 10% 3% 10%;
+				font-family: $featuresFontFamilyButton;
+			}
+		}
+		& img {
+			width: 100%;
+		}
+	}
+	& .left {
+		padding-right: 5%;
+		text-align: right;
+		& div.flex {
+			@include flexboxSettings041715a;
+			justify-content: flex-end;
+			& span.fa {
+				margin-left: 5%;
+			}
+		}
+	}
+	& .right {
+		padding-left: 5%;
+		text-align: left;
+		& div.flex {
+			@include flexboxSettings041715a;
+			justify-content: flex-start;
+			& span.fa {
+				margin-right: 5%;
+			}
+		}
 	}
 }
 

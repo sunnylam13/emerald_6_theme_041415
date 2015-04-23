@@ -55,11 +55,14 @@ section.aboutus {
 			color: $aboutColourButton;
 			padding: 1.5% 5% 1.5% 5%;
 			text-transform: uppercase;
-			@include boxShadow042215a(14px,15px,25px,-8px,$aboutColourButtonShadow);
+			
 			@include transitionEffectAllEaseOut(0.4s);
 			&:hover {
 				background: $aboutColourBackButtonHover;
+			// @include projectButtonStyle042115a ($aboutColourButton,$aboutColourBackButton,$aboutColourBackButtonHover);
+			@include boxShadow042215a(14px,15px,25px,-8px,$aboutColourButtonShadow);
 			}
+			font-family: $aboutFontFamilyButton;
 		}
 	}
 }
