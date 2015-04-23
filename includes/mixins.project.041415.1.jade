@@ -67,7 +67,7 @@ mixin portfolioBlock042115a
 	if block
 		block
 	else
-		section.portfolioUnit
+		section.portfolioUnit.clearfix
 			.imgShaderBox.clearfix
 				img(src="http://lorempixel.com/280/200", alt="Portfolio Image")
 				//- you make the image shader hidden by default until revealed by jQuery
@@ -77,12 +77,12 @@ mixin portfolioBlock042115a
 
 			.meta.clearfix
 				div.metatags.clearfix
-					+standardLinkButton041415a('Olivera Note','#','title','title')
-					+standardLinkButton041415a('Fashion','#','category','category')
+					+standardLinkButton041415a('Olivera Note','#','title')
+					+standardLinkButton041415a('Fashion','#','category')
 				div.favourites.clearfix
 					//- this link needs a ::before with a heart
 					//- could be interesting to animate it filling it up with colour
-					+standardLinkButton041415a('576','javascript:void(0)','favourites','favourites')
+					+standardLinkButton041415a('576','javascript:void(0)','favourites','')
 
 //- END PORTFOLIO
 

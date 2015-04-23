@@ -37,6 +37,14 @@
 	box-shadow: $hor $ver $blur $colour;
 }
 
+@mixin boxShadow042215a ($hor,$ver,$blur,$spread,$colour) {
+	// where $hor, $ver, $blur are in #px
+	-webkit-box-shadow: $hor $ver $blur $spread $colour;
+	-moz-box-shadow: $hor $ver $blur $spread $colour;
+	-o-box-shadow: $hor $ver $blur $spread $colour;
+	box-shadow: $hor $ver $blur $colour $spread;
+}
+
 @mixin transformRotate ($degrees) {
 	// where $degrees is x deg
 	-webkit-transform: rotate($degrees);

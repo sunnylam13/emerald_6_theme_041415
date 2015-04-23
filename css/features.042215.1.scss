@@ -1,0 +1,20 @@
+////////////////////////////////////////////
+///// 		FEATURES
+///////////////////////////////////////////////
+
+section.features {
+	background-image: $featuresBackImage;
+	background-size: cover;
+	// height: 80vh;
+	position: relative;
+	& .imageShader {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		background: $featuresShader;
+	}
+}
+
+/////////////////////////////////////////////

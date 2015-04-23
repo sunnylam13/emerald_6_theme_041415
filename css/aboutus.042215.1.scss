@@ -1,0 +1,67 @@
+////////////////////////////////////////////
+///// 		ABOUT US
+///////////////////////////////////////////////
+
+section.aboutus {
+	$sectionAboutUsPadTopBottom: 5%;
+	background: $aboutColourBack;
+	@include sectionPadding041515($sectionAboutUsPadTopBottom,$sectionAboutUsPadTopBottom);
+	& div.flex {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		@include flexboxSettings041715a;
+		justify-content: center;
+		align-items: flex-start;
+		& img {
+			$imgMarginLeftRight: 0.75%;
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			flex: 1;
+			margin-right: $imgMarginLeftRight;
+			margin-left: $imgMarginLeftRight;
+		}
+	}
+	& .copy {
+		// display: inline-block;
+		margin: 0;
+		padding: 0;
+		margin-left: 3%;
+		flex: 2;
+		@include flexboxSettings041715a;
+		flex-flow: column;
+		// justify-content: flex-start;
+		// align-content: flex-start;
+		// use align-items to line everything on the left side
+		align-items: flex-start;
+		& p, a {
+			font-size: $aboutFontSize;
+			color: $aboutColour;
+		}
+		& h2 {
+			margin-bottom: 8%;
+		}
+		& p {
+			// margin-bottom: 5%;
+		}
+		& a.aboutCTA {
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			width: auto;
+			margin-top: 5%;
+			background: $aboutColourBackButton;
+			color: $aboutColourButton;
+			padding: 1.5% 5% 1.5% 5%;
+			text-transform: uppercase;
+			@include boxShadow042215a(14px,15px,25px,-8px,$aboutColourButtonShadow);
+			@include transitionEffectAllEaseOut(0.4s);
+			&:hover {
+				background: $aboutColourBackButtonHover;
+			}
+		}
+	}
+}
+
+/////////////////////////////////////////////

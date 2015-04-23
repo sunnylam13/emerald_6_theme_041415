@@ -71,9 +71,14 @@ $navfontfamily: $montserrat;
 
 $navcolourlinkhover: $phaedraRed;
 
+// icon
 $navcolouricon: $baseFontColor;
 $navcolouriconback: $phaedraGreen3;
 $navcolouriconbackhover: $phaedraRed;
+$navIconSpacing: 5%;
+
+$navcolourAbout: black;
+$navmenuborder: 1px solid lighten($baseFontColor2,15%);
 
 // // END NAV MENU MAIN ------------------------------------------------
 
@@ -96,38 +101,79 @@ $titleBlockColourIconBorderHover: $titleBlockColourIconHover;
 // // END TITLE BLOCK ------------------------------------------------
 
 // ABOUT US  ------------------------------------------------
-$aboutColour: $baseFontColor2;
+// $aboutColour: $baseFontColor2;
+$aboutColour: darken($baseFontColor2,20%);
 $aboutColourHeader: $baseFontColorHeader;
 $aboutColourBack: $baseFontColor;
-$aboutColourBackButton: $phaedraGreen3;
+
+$aboutFontSize: $basefontsize*0.7;
+
+// button
 $aboutColourButton: $baseFontColor;
+$aboutColourBackButton: $phaedraGreen3;
+$aboutColourBackButtonHover: $phaedraRed;
+$aboutColourButton: $baseFontColor;
+$aboutColourButtonShadow: $phaedraYellow;
+
 // // END ABOUT US ------------------------------------------------
 
 // BENEFITS  ------------------------------------------------
 $benefitColour: $baseFontColor2;
 $benefitColourBack: $phaedraGreen1;
 $benefitColourHeader: $baseFontColorHeader;
+
+$benefitFontSize: $basefontsize*0.7;
+$benefitFontSizeHeader: $basefontsize*0.8;
+
+// icons
 $benefitColourIcon: $baseFontColor;
-$benefitColourIconHover: $phaedraGreen3;
-$benefitColourIconHoverBack: $baseFontColor;
+$benefitColourIconBack: $phaedraGreen3;
+// $benefitColourIconBack: darken($phaedraGreen3,25%);
+$benefitColourIconHover: $baseFontColor;
+$benefitColourIconHoverBack: $phaedraRed;
+
+//borders
 $benefitBorder: 5px solid transparent;
 $benefitBorderHover: 5px solid $phaedraGreen3;
 // // END BENEFITS ------------------------------------------------
 
 // PORTFOLIO  ------------------------------------------------
-$portfolioColour: $baseFontColor2;
+// $portfolioColour: $baseFontColor2;
+$portfolioColour: darken($baseFontColor2,15%);
+$portfolioColour2: black;
 $portfolioColourBack: $baseFontColor;
 $portfolioColourHeader: $baseFontColorHeader;
+
+$portfolioFontSize:$basefontsize*0.7;
+$portfolioFontSizeHeader:$basefontsize*1.2;
+
+// shader
+$portfolioColourShader: $baseFontColor2;
+$portfolioColourShaderBack: $phaedraRedShade1;
+$portfolioShaderIconSize:$basefontsize*3.7;
+
 // // END PORTFOLIO ------------------------------------------------
 
 // FEATURES  ------------------------------------------------
-$portfolioColour: $baseFontColor2;
-$portfolioColourBack: $phaedraGreen2;
-$portfolioColourHeader: $baseFontColor;
-$portfolioColourIcon: $baseFontColor;
-$portfolioColourIconBack: $phaedraGreen3;
-$portfolioShader: $phaedraGreen3;
-$portfolioBackImage: url('http://lorempixel.com/1400/700');
+$featuresColour: $baseFontColor2;
+$featuresColourBack: $phaedraGreen2;
+$featuresColourHeader: $baseFontColor;
+
+//background image
+$featuresBackImage: url('http://lorempixel.com/1400/700');
+
+//shader
+// $featuresShader: $phaedraGreen3Shade1;
+$featuresShader: $phaedraRedShade1;
+
+//icon
+$featuresColourIcon: $baseFontColor;
+$featuresColourIconBack: $phaedraGreen3;
+
+//font sizes
+$featuresFontSize:$basefontsize*0.7;
+$featuresFontSizeHeader:$basefontsize*1.2;
+
 // // END FEATURES ------------------------------------------------
 
 // CORE FEATURES  ------------------------------------------------

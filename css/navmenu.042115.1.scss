@@ -63,7 +63,7 @@ nav.mainNav {
 		font-size: $navfontsize;
 	}
 	& div.icons {
-		flex-grow: 1;
+		flex: 1;
 		@include flexboxSettings041715a;
 		justify-content: flex-start;
 		// @include column(2);
@@ -73,8 +73,8 @@ nav.mainNav {
 			color: $navcolouricon;
 			background: $navcolouriconback;
 			padding: 6%;
-			margin-left: 2%;
-			margin-right: 2%;
+			margin-left: $navIconSpacing;
+			margin-right: $navIconSpacing;
 			font-size: $navfontsize;
 			@include transitionEffectAllEaseOut(0.3s);
 			&:hover {
@@ -82,6 +82,11 @@ nav.mainNav {
 			}
 		}
 	}
+}
+
+.midnightHeader.blackPower {
+	// @include navStylingForMidnight(black);
+	@include navStylingForMidnightV2(black);
 }
 
 /////////////////////////////////////////////

@@ -4,16 +4,19 @@
 
 //- for all mixins please reference mixins.project.jade
 
-section.portfolio.clearfix
+//- data-midnight="your-class"... your class = .blackPower... data-midnight='blackPower'
+
+section(data-midnight='blackPower').portfolio.clearfix
 	.wrapper.clearfix
 		h2 Portfolio
 		p Striking Design and Power For Your Advertising and Message
-		+portfolioBlock042115a
-		+portfolioBlock042115a
-		+portfolioBlock042115a
-		+portfolioBlock042115a
-		+portfolioBlock042115a
-		+portfolioBlock042115a
+		div.portfolioGallery
+			+portfolioBlock042115a
+			+portfolioBlock042115a
+			+portfolioBlock042115a
+			+portfolioBlock042115a
+			+portfolioBlock042115a
+			+portfolioBlock042115a
 
 
 ////////////////////////////////////////////

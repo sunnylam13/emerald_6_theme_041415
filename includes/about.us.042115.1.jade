@@ -7,14 +7,18 @@
 //- I'd make the images block elements as well or surround with divs
 //- for all mixins please reference mixins.project.jade
 
-section.aboutus.clearfix
+//- data-midnight="your-class"... your class = .blackPower... data-midnight='blackPower'
+
+section(data-midnight='blackPower').aboutus.clearfix
 	.wrapper.clearfix
-		+imgInsertTemplate('http://lorempixel.com/160/313')
-		+imgInsertTemplate('http://lorempixel.com/160/313')
-		.copy.clearfix
-			h2 Do You Need An Internet Fixer?
-			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita nemo dolores, placeat, qui porro iure explicabo deleniti amet voluptate laboriosam harum distinctio molestiae recusandae quas doloremque laudantium officiis sunt quam necessitatibus obcaecati accusantium voluptates, ipsam ab rem! Ea esse aliquid libero unde itaque voluptatem, illo reiciendis cum, tenetur beatae, aut!
-			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non natus soluta rerum. Repellendus ipsam iure illo harum, dignissimos, provident doloremque nulla ratione possimus quae voluptatibus!
-			+standardLinkButton041415a('Ready For a Free Consult?','#')
+		div.flex.clearfix
+			+imgInsertTemplate042215a('http://lorempixel.com/160/313')
+			+imgInsertTemplate042215a('http://lorempixel.com/160/313')
+			.copy.clearfix
+				h2 Do You Need An Internet Fixer?
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita nemo dolores, placeat, qui porro iure explicabo deleniti amet voluptate laboriosam harum distinctio molestiae recusandae quas doloremque laudantium officiis sunt quam necessitatibus obcaecati accusantium voluptates, ipsam ab rem! Ea esse aliquid libero unde itaque voluptatem, illo reiciendis cum, tenetur beatae, aut!
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non natus soluta rerum. Repellendus ipsam iure illo harum, dignissimos, provident doloremque nulla ratione possimus quae voluptatibus!
+				//- +standardLinkButton041415a('Consult Us','#','aboutCTA','aboutCTA')
+				a(href="#", class='aboutCTA',id='aboutCTA') Consult Us
 
 ////////////////////////////////////////////

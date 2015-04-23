@@ -1,0 +1,41 @@
+////////////////////////////////////////////
+///// 		BENEFITS
+///////////////////////////////////////////////
+
+section.benefits {
+	background: $benefitColourBack;
+	& div.benefitZone {
+		width: 100%;
+		@include flexboxSettings041715a;
+
+		// each benefit entry
+		& .benefit {
+			flex: 1;
+			@include flexboxSettings042215a;
+			@include sectionPadding041515(7%,7%);
+			& span.fa {
+				color: $benefitColourIcon;
+				background: $benefitColourIconBack;
+				padding: 5%;
+				border-radius: 50%;
+				&:hover {
+					border: 3px solid $benefitColourIconBack;
+					background: transparent;
+					color: $benefitColourIconBack;
+				}
+			}
+			& h3 {
+				font-size: $benefitFontSizeHeader;
+				@include sectionMargins041515(21%,13%);
+			}
+			& p {
+				$benefitTextPadding: 7%;
+				font-size: $benefitFontSize;
+				text-align: center;
+				padding: 0 $benefitTextPadding 0 $benefitTextPadding;
+			}
+		}
+	}
+}
+
+/////////////////////////////////////////////

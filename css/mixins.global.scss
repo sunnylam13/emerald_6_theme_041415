@@ -6,8 +6,10 @@
 // don't forget to include the $ in front of the variables
 
 @mixin flexboxSettings041615a {
+	// ROW
 	// this must be used within a parent element
 	// the div.flexbox must be used or some sort of wrapping parent element
+	// the class .flexbox must have already been applied
 	& .flexbox {
 		display: flex;
 		flex-flow: row wrap;
@@ -18,12 +20,38 @@
 }
 
 @mixin flexboxSettings041715a {
+	// ROW
 	// this is used within a parent without the class .flexbox... the actual class name used will vary
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
 	align-content: center;
 	align-items: center;
+}
+
+@mixin flexboxSettings042215a {
+	// COLUMN
+	// this is used within a parent without the class .flexbox... the actual class name used will vary
+	display: flex;
+	flex-flow: column;
+	justify-content: space-around;
+	align-content: center;
+	// align-items:  flex-start, center, flex-end
+	align-items: center;
+}
+
+@mixin sectionMargins041515($marginTop, $marginBottom) {
+	// TOP AND BOTTOM
+	// where arguments are a value in px, em or %
+	margin-top: $marginTop;
+	margin-bottom: $marginBottom;
+}
+
+@mixin sectionPadding041515($padTop, $padBottom) {
+	// TOP AND BOTTOM
+	// where arguments are a value in px, em or %
+	padding-top: $padTop;
+	padding-bottom: $padBottom;
 }
 
 @mixin titleBlockShaderGradient042215a($colourStart,$colourEnd) {
@@ -46,6 +74,183 @@
 
 	// /* W3C Markup, IE10 Release Preview */ 
 	background-image: linear-gradient(to top right, $colourStart 0%, $colourEnd 100%);
+}
+
+@mixin navStylingForMidnight ($colour) {
+	$navmenuMidnightBorder: 1px solid lighten($colour,15%);
+	border-bottom: $navmenuMidnightBorder;
+	margin: 0;
+	padding: 0;
+	// for testing
+	// background: lightgrey;
+	position: fixed;
+	width: 100%;
+	z-index: 900;
+	& .flexbox {
+		@include flexboxSettings041715a;
+		color: $colour;
+	}
+	& div.logo, div.menu, div.icons {
+		padding-bottom: $navDivPadding;
+		padding-top: $navDivPadding;
+		text-transform: uppercase;
+	}
+	& div.menu, div.icons {
+		font-family: $navfontfamily;
+		font-size: $navfontsize;
+	}
+	& div.logo {
+		flex-grow: 1;
+		// border-right: $navmenuborder;
+		@include flexboxSettings041715a;
+		justify-content: flex-end;
+		padding-right: 6%;
+		// @include column(2);
+		
+		// ADJUST THE COMPANY LOGO COLOUR AS WELL
+		& aside.logo042215a h2 {
+			color: $colour;
+			border: 3px solid $colour;
+		}
+	}
+	& div.menu {
+		flex-grow: 2;
+		border-right: $navmenuMidnightBorder;
+		border-left: $navmenuMidnightBorder;
+		@include flexboxSettings041715a;
+		justify-content: flex-end;
+		// @include column(8);
+		& ul {
+			@include flexboxSettings041715a;
+			justify-content: flex-end;
+			width: auto;
+			& a {
+				color: inherit;
+				padding: 1% 20% 1% 20%;
+				font-size: $navfontsize;
+				font-weight: bold;
+				letter-spacing: 1px;
+				@include transitionEffectAllEaseOut(0.3s);
+				&:hover {
+					color: $navcolourlinkhover;
+				}
+			}
+		}
+		font-size: $navfontsize;
+	}
+	& div.icons {
+		flex-grow: 1;
+		@include flexboxSettings041715a;
+		justify-content: flex-start;
+		// @include column(2);
+		padding-left: 2.5%;
+		& span.fa {
+			border-radius: 50%;
+			color: $navcolouricon;
+			background: $navcolouriconback;
+			padding: 6%;
+			margin-left: $navIconSpacing;
+			margin-right: $navIconSpacing;
+			font-size: $navfontsize;
+			@include transitionEffectAllEaseOut(0.3s);
+			&:hover {
+				background: $navcolouriconbackhover;
+			}
+		}
+	}
+}
+
+@mixin navStylingForMidnightV2 ($backgroundSelectColour) {
+	border-bottom: $navmenuborder;
+	margin: 0;
+	padding: 0;
+	// for testing
+	// background: lightgrey;
+	position: fixed;
+	width: 100%;
+	z-index: 900;
+	background: $backgroundSelectColour;
+	& .flexbox {
+		@include flexboxSettings041715a;
+		color: $navmenucolour;
+	}
+	& div.logo, div.menu, div.icons {
+		padding-bottom: $navDivPadding;
+		padding-top: $navDivPadding;
+		text-transform: uppercase;
+	}
+	& div.menu, div.icons {
+		font-family: $navfontfamily;
+		font-size: $navfontsize;
+	}
+	& div.logo {
+		flex-grow: 1;
+		// border-right: $navmenuborder;
+		@include flexboxSettings041715a;
+		justify-content: flex-end;
+		padding-right: 6%;
+		// @include column(2);
+	}
+	& div.menu {
+		flex-grow: 2;
+		border-right: $navmenuborder;
+		border-left: $navmenuborder;
+		@include flexboxSettings041715a;
+		justify-content: flex-end;
+		// @include column(8);
+		& ul {
+			@include flexboxSettings041715a;
+			justify-content: flex-end;
+			width: auto;
+			& a {
+				color: inherit;
+				padding: 1% 20% 1% 20%;
+				font-size: $navfontsize;
+				font-weight: bold;
+				letter-spacing: 1px;
+				@include transitionEffectAllEaseOut(0.3s);
+				&:hover {
+					color: $navcolourlinkhover;
+				}
+			}
+		}
+		font-size: $navfontsize;
+	}
+	& div.icons {
+		flex-grow: 1;
+		@include flexboxSettings041715a;
+		justify-content: flex-start;
+		// @include column(2);
+		padding-left: 2.5%;
+		& span.fa {
+			border-radius: 50%;
+			color: $navcolouricon;
+			background: $navcolouriconback;
+			padding: 6%;
+			margin-left: $navIconSpacing;
+			margin-right: $navIconSpacing;
+			font-size: $navfontsize;
+			@include transitionEffectAllEaseOut(0.3s);
+			&:hover {
+				background: $navcolouriconbackhover;
+			}
+		}
+	}
+}
+
+@mixin beforeAfterIconPlace042215a($content) {
+	// this must be placed with a ::before or ::after selector block
+	// $content must be a string... in the form of '\f01d'
+	// what will change each time you use it is the Unicode for content: ''
+
+	// to make this work you have to use the FontAwesome font and the content must be the icon's Unicode (available at FA's website)
+	// http://stackoverflow.com/questions/18793428/put-an-icon-after-list-item-with-after-and-font-awesome
+	content: $content;
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	margin:0px 20px 0px 0px;
+	text-decoration:none;
 }
 
 ///////////////////////////////////////////////

@@ -62,9 +62,11 @@ section.titleBlock {
 		}
 		& h1 {
 			font-size: $titleblockFontSizeHeader1;
+			text-transform: uppercase;
 		}
 		& h2 {
 			font-size: $titleblockFontSizeHeader2;
+			font-style: italic;
 		}
 		& span.fa {
 			font-size: $titleblockFontSizeIcon;

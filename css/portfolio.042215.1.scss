@@ -1,0 +1,99 @@
+////////////////////////////////////////////
+///// 		PORTFOLIO
+///////////////////////////////////////////////
+
+section.portfolio {
+	background: $portfolioColourBack;
+	@include sectionPadding041515(7%,7%);
+	& h2 {
+		text-align: center;
+		font-size: $portfolioFontSizeHeader;
+		text-transform: uppercase;
+	}
+	& p {
+		text-align: center;
+		font-size: $portfolioFontSize;
+		color: $portfolioColour;
+	}
+	& div.portfolioGallery {
+		width: 100%;
+		@include flexboxSettings041715a;
+		margin-top: 3%;
+	}
+	& section.portfolioUnit {
+		// if I don't apply flex: 1 then the portfolio blocks align themselves in thirds all by themselves
+		// applying @include column(4) also didn't work either
+		// flex: 1;
+		margin-bottom: 3%;
+		
+		& .imgShaderBox {
+			position: relative;
+			& img {
+				width: 100%;
+			}
+			& .imgShaderScreen1 {
+				position: absolute;
+				
+				top:0;
+				bottom:0;
+				right:0;
+				left:0;
+				background: $portfolioColourShaderBack;
+				@include flexboxSettings041715a;
+				display: none;
+				// you would use jQuery to enable display:flex which should make it appear
+
+				& span.fa {
+					font-size: $portfolioShaderIconSize;
+					color: $portfolioColourShader;
+				}
+			}
+		}
+
+		& .meta {
+			margin: 0;
+			padding: 0;
+			@include flexboxSettings041715a;
+			& a {
+				font-size: $portfolioFontSize;
+				color: $portfolioColour;
+			}
+			& div.metatags {
+				@include column(10);
+				margin: 0;
+				padding: 0;
+				margin-top: 5%;
+				// @include flexboxSettings042215a;
+				// justify-content: flex-start;
+				// align-items: flex-start;
+				& .title {
+					color: $portfolioColour2;
+					display: block;
+				}
+				& .category {
+					margin-top: 1.5%;
+					display: block;
+				}
+			}
+			& div.favourites {
+				@include column(2);
+				margin: 0;
+				padding: 0;
+				// @include flexboxSettings042215a;
+				// justify-content: flex-end;
+				// align-items: flex-end;
+				text-align: right;
+				&.favourites {
+					&::before {
+						@include beforeAfterIconPlace042215a('\f08a');
+						margin:0px 5px 0px 0px;
+						font-size: $portfolioFontSize;
+						color: $portfolioColour;
+					}
+				}
+			}
+		}
+	}
+}
+
+/////////////////////////////////////////////
