@@ -36,6 +36,9 @@ $phaedraGreen3:rgba(0, 171, 138,1);
 $phaedraGreen3Shade1:rgba(0, 171, 138,$titleBlockTransparency);
 $belizeHole: rgba(41, 128, 185,1.0);
 $peterRiver: rgba(52, 152, 219,1.0);
+
+$blackShade1: rgba(0, 0, 0,$titleBlockTransparency);
+
 // // END COLOURS ------------------------------------------------
 
 
@@ -44,6 +47,7 @@ $peterRiver: rgba(52, 152, 219,1.0);
 // NOTE:  the font family has been placed on all elements for the base and header... see style.scss
 $basefontfamily:$lora;
 $basefontfamilyHeader: $montserrat;
+$basefontfamilyButton: $montserrat;
 
 $basefontsize:16px;
 $baselineheight:16px;
@@ -191,10 +195,25 @@ $featuresFontFamilyButton: $basefontfamilyHeader;
 $coreFeatureColour: $baseFontColor2;
 $coreFeatureColourBack: $phaedraGreen1;
 $coreFeatureColourHeader: $baseFontColorHeader;
+
+//icons
 $coreFeatureColourIcon: $phaedraGreen3;
+
+$coreFeatureTopBottomMargin: 5%;
+
+//font sizes
+$coreFeaturesFontSize:$basefontsize*0.7;
+$coreFeaturesFontSizeHeader:$basefontsize*1.2;
+$coreFeaturesFontSizeHeader2:$basefontsize*0.8;
+
+//button
 $coreFeatureColourButton: $baseFontColor;
 $coreFeatureColourButtonBack: $phaedraGreen3;
+$coreFeatureColourButtonBackHover: $phaedraRed;
+
+//border
 $coreFeatureBorderImage: $baseFontColor;
+$coreFeatureBorder: 5px solid $coreFeatureBorderImage;
 // // END CORE FEATURES ------------------------------------------------
 
 // STAFF  ------------------------------------------------
@@ -202,30 +221,72 @@ $staffColour: $baseFontColor2;
 $staffColourBack: $baseFontColor;
 $staffColourHeader: $baseFontColorHeader;
 $staffColourHeader2: $phaedraGreen3;
+
+// font sizes
+$staffFontSize:$basefontsize*0.7;
+$staffFontSizeHeader:$basefontsize*1.2;
+$staffFontSizeHeader2:$basefontsize*0.8;
+$staffFontsSizeIcon: $basefontsize*0.7;
+
+//icons
 $staffColourIcon: $staffColourBack;
 $staffColourIconBack: $phaedraGreen2;
-$staffColourIconHover: $phaedraGreen3;
+$staffColourIconHover: $phaedraRed;
+$staffIconSpanHeightWidth: 2em;
+$staffIconMarginLeftRight: 0;
+$staffIconFlexJustify: space-between;
 // // END STAFF ------------------------------------------------
 
 // PREMIUM WORDPRESS THEME  ------------------------------------------------
 $productTeaseColour: $baseFontColor2;
 $productTeaseColourBack: $baseFontColor;
+
+//header
 $productTeaseColourHeader: $baseFontColorHeader;
+
+//background
 $productTeaseColourBack: darken($phaedraYellow,15%);
-$productTeaseBorder: 1em solid $phaedraYellow;
+
+//icon
+$productTeaseColourIcon: $baseFontColor;
+$productTeaseColourBackIcon: $phaedraGreen3;
+$productTeaseColourIconHover: $phaedraGreen3;
+$productTeaseColourBackIconHover: $baseFontColor;
+
+//border
+$productTeaseBorder: 0.5em solid $phaedraYellow;
+$productTeaseBorderHover: 0.5em solid $phaedraGreen2;
+
+//margins
+$productMarginTopBottom: 5;
+
+// font sizes
+$productFontSize:$basefontsize*0.7;
+$productFontSizeHeader:$basefontsize*1.2;
+$productFontSizeHeader2:$basefontsize*0.8;
+$productFontsSizeIcon: $basefontsize*0.7;
 // // END PREMIUM WORDPRESS THEME ------------------------------------------------
 
 // BLOG  ------------------------------------------------
 $blogColour: $baseFontColor2;
 $blogColourBack: $phaedraGreen1;
 $blogColourHeader: $baseFontColorHeader;
+
 $blogEntryBack: white;
+
+//button
 $blogColourButton: $baseFontColor;
 $blogColourButtonBackComments: $belizeHole;
 $blogColourButtonBackFavourites: lighten($phaedraRed,15%);
 $blogColourButtonBackShare: $phaedraGreen2;
 $blogColourButtonBackPrev: white;
 $blogColourButtonBackNext: $phaedraGreen3;
+
+// font sizes
+$blogFontSize:$basefontsize*0.7;
+$blogFontSizeHeader:$basefontsize*1.2;
+$blogFontSizeHeader2:$basefontsize*0.8;
+$blogFontsSizeIcon: $basefontsize*0.7;
 
 // // END BLOG ------------------------------------------------
 
@@ -290,4 +351,5 @@ a {
 .crimsonWords {
 	color: red;
 }
+
 

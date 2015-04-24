@@ -1,0 +1,64 @@
+////////////////////////////////////////////
+///// 		CORE FEATURES
+///////////////////////////////////////////////
+
+section.coreFeature1 {
+	@include sectionPadding041515($coreFeatureTopBottomMargin,$coreFeatureTopBottomMargin);
+	background: $coreFeatureColourBack;
+	& div.flex {
+		@include flexboxSettings041715a;
+		align-items: flex-start;
+	}
+	& section.imageGallery {
+		flex: 1;
+		& .mainImage {
+			margin-bottom: 0.5%;
+			& img {
+				width: 100%;
+				border: $coreFeatureBorder;
+			}
+		}
+		& .imagePanel {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			@include flexboxSettings041715a;
+			justify-content: space-between;
+			& img {
+				border: $coreFeatureBorder;
+			}
+		}
+	}
+	& section.copy {
+		flex:1;
+		margin-left: 2.5%;
+		& h2 {
+			font-size: $coreFeaturesFontSizeHeader;
+			margin-bottom: 2%;
+		}
+		& h3 {
+			font-size: $coreFeaturesFontSizeHeader2;
+			margin-bottom: 6%;
+		}
+		& p, li, button {
+			font-size: $coreFeaturesFontSize;
+		}
+		& ul.bullets {
+			line-height: $baselineheight*1.5;
+			& li {
+				&::before {
+					@include beforeAfterIconPlace042215a('\f005');
+					color: $coreFeatureColourIcon;
+				}
+			}
+		}
+
+		& button {
+			margin-top: 7%;
+			border: 0;
+			@include projectButtonStyle042115a($coreFeatureColourButton,$coreFeatureColourButtonBack,$coreFeatureColourButtonBackHover);
+		}
+	}
+}
+
+/////////////////////////////////////////////

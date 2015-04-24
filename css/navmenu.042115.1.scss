@@ -29,6 +29,8 @@ nav.mainNav {
 		font-family: $navfontfamily;
 		font-size: $navfontsize;
 	}
+
+	// style the logo section
 	& div.logo {
 		flex-grow: 1;
 		// border-right: $navmenuborder;
@@ -37,6 +39,8 @@ nav.mainNav {
 		padding-right: 6%;
 		// @include column(2);
 	}
+
+	// style the central menu
 	& div.menu {
 		flex-grow: 2;
 		border-right: $navmenuborder;
@@ -62,12 +66,16 @@ nav.mainNav {
 		}
 		font-size: $navfontsize;
 	}
+
+	// style the icons section on the right
 	& div.icons {
 		flex: 1;
 		@include flexboxSettings041715a;
 		justify-content: flex-start;
 		// @include column(2);
 		padding-left: 2.5%;
+
+		// style the individual icons
 		& span.fa {
 			border-radius: 50%;
 			color: $navcolouricon;
@@ -87,6 +95,16 @@ nav.mainNav {
 .midnightHeader.blackPower {
 	// @include navStylingForMidnight(black);
 	@include navStylingForMidnightV2(black);
+}
+
+.midnightHeader.blackShade1 {
+	// @include navStylingForMidnight(black);
+	@include navStylingForMidnightV2($blackShade1);
+}
+
+.midnightHeader.phaedraRedShade1 {
+	// @include navStylingForMidnight(black);
+	@include navStylingForMidnightV2($phaedraRedShade1);
 }
 
 /////////////////////////////////////////////

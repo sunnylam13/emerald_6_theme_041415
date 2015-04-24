@@ -46,23 +46,7 @@ section.aboutus {
 			// margin-bottom: 5%;
 		}
 		& a.aboutCTA {
-			display: inline-block;
-			margin: 0;
-			padding: 0;
-			width: auto;
-			margin-top: 5%;
-			background: $aboutColourBackButton;
-			color: $aboutColourButton;
-			padding: 1.5% 5% 1.5% 5%;
-			text-transform: uppercase;
-			
-			@include transitionEffectAllEaseOut(0.4s);
-			&:hover {
-				background: $aboutColourBackButtonHover;
-			// @include projectButtonStyle042115a ($aboutColourButton,$aboutColourBackButton,$aboutColourBackButtonHover);
-			@include boxShadow042215a(14px,15px,25px,-8px,$aboutColourButtonShadow);
-			}
-			font-family: $aboutFontFamilyButton;
+			@include projectButtonStyle042115a($aboutColourButton,$aboutColourBackButton,$aboutColourBackButtonHover);
 		}
 	}
 }

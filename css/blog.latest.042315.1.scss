@@ -1,0 +1,136 @@
+////////////////////////////////////////////
+///// 		LATEST BLOG POSTS
+///////////////////////////////////////////////
+
+section.blogLatest {
+	@include sectionPadding041515(5%,5%);
+	background: $blogColourBack;
+	width: 100%;
+
+	& h2 {
+		font-size: $blogFontSizeHeader;
+		text-align: center;
+	}
+	& h3 {
+		font-size: $blogFontSizeHeader2;
+		text-align: center;
+		margin-bottom: 5%;
+	}
+	& p {
+		font-size: $blogFontSize;
+	}
+
+	& section.postPanel {
+		@include flexboxSettings041715a;
+		justify-content: space-around;
+		align-content: space-around;
+		align-items: space-around;
+	}
+
+	& section.postEntryTease {
+		flex: 1 auto;
+		width: 50%;
+		@include flexboxSettings041715a;
+		justify-content: center;
+		align-content:center;
+		align-items:center;
+		margin-bottom: 3%;
+	}
+
+	// LEFT SIDE IMAGE
+
+	& div.image {
+		margin:0;
+		padding:0;
+		flex: 1 auto;
+		width: 50%;
+		position: relative;
+		// background-image: url('http://lorempixel.com/250/300');
+		// background-repeat: no-repeat;
+		// background-size: cover;
+		& img {
+			margin:0;
+			padding:0;
+			display: inline-block;
+			// max-width: 100%;
+			width:100%;
+			// position: absolute;
+			// top:0;
+			// bottom:0;
+			// right:0;
+			// left:0;
+		}
+
+		// VIDEO
+		& div.playZone {
+			position: absolute;
+			top:0;
+			bottom:0;
+			right:0;
+			left:0;
+			& span.fa {
+				display: inline-block;
+				// position: absolute;
+			}
+		}
+
+		// IMAGE GALLERY
+		& div.galleryNav {
+			position: absolute;
+			top:0;
+			bottom:0;
+			right:0;
+			left:0;
+			& span.fa {
+				display: inline-block;
+				// position: absolute;
+			}
+		}
+
+		// BUTTON PANEL
+		& div.buttonPanel {
+			position: absolute;
+			bottom: 5%;
+			// stretch the panel across the bottom, from side to side, providing space
+			width: 100%;
+			// center everything
+			text-align: center;
+
+		}
+
+		
+	}
+
+	// RIGHT SIDE COPY
+
+	& div.copy {
+		flex: 1 auto;
+		width: 50%;
+		background: $blogEntryBack;
+		padding: 5%;
+		& h3 {
+			text-align: left;
+			margin-bottom: 3%;
+		}
+		& div.meta {
+			margin:0;
+			padding:0;
+			margin-bottom: 5%;
+			@include flexboxSettings041715a;
+			justify-content: flex-start;
+			// align-items: flex-start;
+			& p {
+				flex: 1 auto;
+				display: inline-block;
+				margin: 0;
+				padding: 0;
+			}
+			& p.author {
+				@include beforeAfterIconPlace042215a('|');
+				color: $blogColourHeader;
+			}
+		}
+	}
+}
+
+/////////////////////////////////////////////

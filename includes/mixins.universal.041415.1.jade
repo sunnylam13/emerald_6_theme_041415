@@ -17,6 +17,14 @@ mixin linkTemplate042115a(eleName,linkURL)
 	else
 		a(href=linkURL)=eleName
 
+mixin imgLinkTemplate042315a(imgLink,altText,linkURL)
+	//- this is for general use
+	if block
+		block
+	else
+		a(href=linkURL)
+			img(src=imgLink, alt=altText)
+
 mixin labelForSubMenus040115a(subMenuLabel,labelText)
 	//- where subMenuLabel is the name set for the input#subMenuLabel and is a string i.e. 'toggle'
 	if block
@@ -26,7 +34,8 @@ mixin labelForSubMenus040115a(subMenuLabel,labelText)
 			label(for=subMenuLabel)=labelText
 
 mixin imgInsertTemplate(imgLink,altText)
-	//- this does li images
+	//- FOR LISTS
+	//- this does li images as part of a ul or ol list
 	if block
 		block
 	else
@@ -34,7 +43,8 @@ mixin imgInsertTemplate(imgLink,altText)
 			img(src=imgLink, alt=altText)
 
 mixin imgInsertTemplate042215a(imgLink,altText)
-	//- this does regular images
+	//- NOT FOR LISTS
+	//- this does regular images that are no in any list
 	if block
 		block
 	else
@@ -65,6 +75,15 @@ mixin iconLink042115a(fontAwesome,linkURL)
 			a(href=linkURL)
 				span(class=fontAwesome).fa
 
+mixin iconLink042315a(fontAwesome,linkURL)
+	//- the anchor <a> link has a span inside of it instead of an image
+	//- fontAwesome = you must provide a string value for the selected Font Awesome icon
+	if block
+		block
+	else
+		a(href=linkURL)
+			span(class=fontAwesome).fa
+
 mixin iconLink042115b(fontAwesome,linkURL,tagName)
 	//- the anchor <a> link has a span inside of it instead of an image
 	//- fontAwesome = you must provide a string value for the selected Font Awesome icon
@@ -75,6 +94,20 @@ mixin iconLink042115b(fontAwesome,linkURL,tagName)
 		block
 	else
 		li
+			a(href=linkURL)
+				span(class=fontAwesome).fa
+			p.tag=tagName
+
+mixin iconLink042315a(fontAwesome,linkURL,tagName)
+	//- the anchor <a> link has a span inside of it instead of an image
+	//- fontAwesome = you must provide a string value for the selected Font Awesome icon
+	//- tagName = name of the tag
+	//- This version provides an actual name tag under the icon
+	//- This can be used in other projects.
+	if block
+		block
+	else
+		div
 			a(href=linkURL)
 				span(class=fontAwesome).fa
 			p.tag=tagName

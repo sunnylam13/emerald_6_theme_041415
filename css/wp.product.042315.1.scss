@@ -1,0 +1,93 @@
+////////////////////////////////////////////
+// 		PRODUCT TEASE:  PREMIUM WORDPRESS THEME
+////////////////////////////////////////////
+
+section.product {
+	@include sectionPadding041515($productMarginTopBottom,$productMarginTopBottom);
+	background: $productTeaseColourBack;
+	& h2 {
+		font-size: $productFontSizeHeader;
+		margin-bottom: 2%;
+	}
+	& h3 {
+		font-size: $productFontSizeHeader2;
+		margin-bottom: 8%;
+		color: $productTeaseColour;
+	}
+	& p {
+		font-size: $productFontSize;
+		// color: $productTeaseColour;
+	}
+
+	& .productPanel {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		@include flexboxSettings041715a;
+		// justify-content: space-between;
+		// align-content: space-between;
+		// align-items: flex-start;
+		padding-right: 5%;
+	}
+
+	// COPY SECTION  ------------------------------------------------
+	& .copy {
+		flex: 1;
+		@include flexboxSettings042215a;
+		align-items: flex-start;
+		& h3 {
+			color: $baseFontColorHeader;
+		}
+	}
+
+	& .row {
+		@include flexboxSettings041715a;
+		justify-content: flex-start;
+		align-content:flex-start;
+		align-items: flex-start;
+		& div:first-child {
+			flex:1;
+			@include flexboxSettings041715a;
+			justify-content: flex-start;
+			align-content:flex-start;
+			align-items: flex-start;
+			& span.fa {
+				background: $productTeaseColourBackIcon;
+				color: $productTeaseColourIcon;
+				padding: 20%;
+				border-radius: 50%;
+				border: $productTeaseBorder;
+				// to center the Font Awesome icon properly
+				text-align: center;
+				&:hover {
+					color: $productTeaseColourIconHover;
+					// background: $productTeaseColourBackIconHover;
+					background: transparent;
+					border: $productTeaseBorderHover;
+				}
+			}
+		}
+		& div:last-child {
+			flex:4;
+			& h3 {
+				margin-bottom: 5%;
+			}
+		}
+	}
+	// // END COPY SECTION ------------------------------------------------
+
+	// IMAGE HOLDER SECTION  ------------------------------------------------
+	& .imageHolder {
+		margin:0;
+		padding: 0;
+		flex: 1;
+		& img {
+			display: inline-block;
+			max-width: 100%;
+		}
+	}
+	// // END IMAGE HOLDER SECTION ------------------------------------------------	
+
+}
+
+///////////////////////////////////////

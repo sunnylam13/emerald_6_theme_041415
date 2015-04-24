@@ -1,0 +1,119 @@
+////////////////////////////////////////////
+///// 		STAFF
+///////////////////////////////////////////////
+
+section.staff {
+	@include sectionPadding041515(5%,5%);
+	& h2 {
+		font-size: $staffFontSizeHeader;
+		text-align: center;
+	}
+	& h3 {
+		font-size: $staffFontSizeHeader2;
+		text-align: center;
+	}
+	& h4 {
+		font-size: $staffFontSize;
+		color: $staffColourHeader2;
+	}
+	& p {
+		font-size: $staffFontSize;
+	}
+	& section.staffPanel {
+		@include flexboxSettings041715a;
+		margin-top: 5%;
+	}
+	& section.staffMember {
+		// if you want to create a flexible gallery like you would if you were using a grid system you must add auto to flex: 1 to create flex: 1 auto;
+		// flex: 1;
+		flex: 1 auto;
+		max-width: 50%;
+		@include flexboxSettings041715a;
+		align-items: flex-start;
+		& div.left {
+			flex:1;
+			width: auto;
+			@include flexboxSettings042215a;
+			// justify-content:flex-end;
+			// align-content: flex-end;
+			// align-items: flex-end;
+			& img {
+				display: block;
+				margin: 0;
+				padding: 0;
+				max-width: 100%;
+				border-radius: 50%;
+				// margin: 0 auto; on both the img and the div.socialIcons so they're in line
+				margin: 0 auto;
+				margin-bottom: 2.5%;
+			}
+		}
+
+
+		// social icons
+		& div.socialIcons {
+			@include flexboxSettings041715a;
+			// I needed to add these to centre the icons...
+			justify-content: $staffIconFlexJustify;
+			align-content: $staffIconFlexJustify;
+			align-items:$staffIconFlexJustify;
+			 
+			// need to shrink the div.socialIcons to get the icon spacing between perfect
+			width: 35%;
+			// text-align: center;
+			margin: 0 auto;
+			// background: blue;
+			& a {
+				// adding flex: 1 here also screwed up centring of the icons
+				// flex: 1;
+				// DO NOT USE display: inline-block;
+				padding: 0;
+				margin: 0;
+				// DO NOT USE width:auto;
+			}
+			& span.fa {
+				display: inline-block;
+				margin: 0;
+				padding: 0;
+
+				// the mixin doesn't work for some reason
+				// @include projectIconStyle042315b($staffColourIcon,$staffColourIconBack,$staffFontsSizeIcon,$staffColourIconHover);
+				
+				// margins don't work
+				// margin-left: $staffIconMarginLeftRight;
+				// margin-right: $staffIconMarginLeftRight;
+
+				color: $staffColourIcon;
+				background: $staffColourIconBack;
+				border-radius: 50%;
+				
+				// padding doesn't seem to work very well for some reason... I have to set an actual width and height plus line-height
+				height:$staffIconSpanHeightWidth;
+				width:$staffIconSpanHeightWidth;
+				line-height:$staffIconSpanHeightWidth;
+
+				text-align: center;
+				font-size: $staffFontsSizeIcon;
+				@include transitionEffectAllEaseOut(0.4s);
+				&:hover {
+					background: $staffColourIconHover;
+				}
+			}
+		}
+
+		
+		
+		& div.right {
+			flex: 1;
+			width:auto;
+			@include flexboxSettings042215a;
+			// align-items is what you use to simulate text-align
+			align-items: flex-start;
+			& h4 {
+				margin-bottom: 6%;
+			}
+		}
+	}
+}
+
+/////////////////////////////////////////////
