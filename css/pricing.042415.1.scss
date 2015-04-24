@@ -47,56 +47,52 @@ section.pricing {
 	}
 
 	header.Standard {
-		background: $pricingColourStandard;
-		padding: 10%;
-		@include flexboxSettings042215a;
-		width: 100%;
-		border-top-right-radius: 5px;
-		border-top-left-radius: 5px;
-		h3 {
-			color: $pricingColour2;
-			margin-bottom: 22%;
-		}
-		p {
-			display: inline;
-			font-size: $pricingFontSize;
-			color:$pricingColour2;
-			position: relative;
-		}
-		span.dollarSign {
-			position: absolute;
-			top: -22%;
-			left: -8%;
-			font-size: $basefontsize*2;
-
-		}
-		// p.month {
+		// background: $pricingColourStandard;
+		// padding: 10%;
+		// @include flexboxSettings042215a;
+		// width: 100%;
+		// border-top-right-radius: 5px;
+		// border-top-left-radius: 5px;
+		// h3 {
+		// 	color: $pricingColour2;
+		// 	margin-bottom: 22%;
+		// }
+		// p {
 		// 	display: inline;
 		// 	font-size: $pricingFontSize;
 		// 	color:$pricingColour2;
+		// 	position: relative;
 		// }
-		// sup {
-		// 	top: -4.5em;
+		// span.dollarSign {
+		// 	position: absolute;
+		// 	top: -22%;
+		// 	left: -8%;
+		// 	font-size: $basefontsize*2;
+
 		// }
-		span.priceValue {
-			color:$pricingColour2;
-			font-size: $basefontsize*4;
-			padding-left: 5%;
-		}
-		button {
-			border: 0;
-			background: white;
-			border-radius: 5px;
-			color: $pricingColourStandard;
-			padding: 4% 5% 4% 5%;
-			width: 95%;
-		}
+		// span.priceValue {
+		// 	color:$pricingColour2;
+		// 	font-size: $basefontsize*4;
+		// 	padding-left: 5%;
+		// }
+		// button {
+		// 	border: 0;
+		// 	background: white;
+		// 	border-radius: 5px;
+		// 	color: $pricingColourStandard;
+		// 	padding: 4% 5% 4% 5%;
+		// 	width: 95%;
+		// }
+		@include pricingEntryHeaderV1($pricingColourStandard);
 	}
 	header.Premium {
-		background: $pricingColourPremium;
+		// background: $pricingColourPremium;
+		@include pricingEntryHeaderV1($pricingColourPremium);
 	}
 	header.Ultimate {
-		background: $pricingColourUltimate;
+		// background: $pricingColourUltimate;
+		@include pricingEntryHeaderV1($pricingColourUltimate);
+		
 	}
 
 	section.copy {

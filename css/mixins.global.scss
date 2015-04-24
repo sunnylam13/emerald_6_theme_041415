@@ -332,7 +332,46 @@
 }
 // // END FEATURES ------------------------------------------------
 
+// PRICING  ------------------------------------------------
+@mixin pricingEntryHeaderV1 ($colour) {
+	background: $colour;
+	padding: 10%;
+	@include flexboxSettings042215a;
+	width: 100%;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	h3 {
+		color: $pricingColour2;
+		margin-bottom: 22%;
+	}
+	p {
+		display: inline;
+		font-size: $pricingFontSize;
+		color:$pricingColour2;
+		position: relative;
+	}
+	span.dollarSign {
+		position: absolute;
+		top: -22%;
+		left: -8%;
+		font-size: $basefontsize*2;
 
+	}
+	span.priceValue {
+		color:$pricingColour2;
+		font-size: $basefontsize*4;
+		padding-left: 8%;
+	}
+	button {
+		border: 0;
+		background: white;
+		border-radius: 5px;
+		color: $colour;
+		padding: 4% 5% 4% 5%;
+		width: 95%;
+	}
+}
+// // END PRICING ------------------------------------------------
 
 
 
