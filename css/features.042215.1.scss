@@ -35,6 +35,11 @@ section.features {
 		color: $featuresColourIcon;
 		background: $featuresColourIconBack;
 		border-radius: 50%;
+		@include transitionEffectAllEaseOut(0.4s);
+		&:hover {
+			background:$featuresColourIconBackHover;
+			color: $featuresColourIconHover;
+		}
 	}
 	& .imageShader {
 		position: absolute;

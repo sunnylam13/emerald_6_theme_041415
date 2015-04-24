@@ -1,0 +1,119 @@
+////////////////////////////////////////////
+///// 		HEADING
+///////////////////////////////////////////////
+
+section.pricing {
+	@include sectionPadding041515(5%,5%);
+	font-size: $pricingFontSize;
+	// want them line up in a column
+	@include flexboxSettings042215a;
+	h2 {
+		font-size: $pricingFontSizeHeader;
+		color: $pricingColourHeader;
+		margin-bottom: 1.5%;
+		&:first-child {
+			text-align: center;
+		}
+	}
+	h3 {
+		font-size: $pricingFontSizeHeader2;
+		color: $pricingColour;
+		text-align: center;
+	}
+
+	section.tables {
+		margin-top: 8%;
+		// want them line up in a row
+		@include flexboxSettings041715a;
+		justify-content:space-between;
+		align-content:space-between;
+		align-items:space-between;	
+
+	}
+
+	div.pricingEntry {
+		flex: 1 auto;
+		border: $pricingBorder;
+		border-radius: 5px;
+		// want them line up in a column
+		@include flexboxSettings042215a;
+		width: 20em;
+		margin-left: 1em;
+	}
+
+	header {
+		// set all widths to 100% so that you have space to work with
+		width: 100%;
+	}
+
+	header.Standard {
+		background: $pricingColourStandard;
+		padding: 10%;
+		@include flexboxSettings042215a;
+		width: 100%;
+		border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
+		h3 {
+			color: $pricingColour2;
+			margin-bottom: 22%;
+		}
+		p {
+			display: inline;
+			font-size: $pricingFontSize;
+			color:$pricingColour2;
+			position: relative;
+		}
+		span.dollarSign {
+			position: absolute;
+			top: -22%;
+			left: -8%;
+			font-size: $basefontsize*2;
+
+		}
+		// p.month {
+		// 	display: inline;
+		// 	font-size: $pricingFontSize;
+		// 	color:$pricingColour2;
+		// }
+		// sup {
+		// 	top: -4.5em;
+		// }
+		span.priceValue {
+			color:$pricingColour2;
+			font-size: $basefontsize*4;
+			padding-left: 5%;
+		}
+		button {
+			border: 0;
+			background: white;
+			border-radius: 5px;
+			color: $pricingColourStandard;
+			padding: 4% 5% 4% 5%;
+			width: 95%;
+		}
+	}
+	header.Premium {
+		background: $pricingColourPremium;
+	}
+	header.Ultimate {
+		background: $pricingColourUltimate;
+	}
+
+	section.copy {
+		h3 {
+			margin-top: 10%;
+			margin-bottom: 10%;
+		}
+		li {
+			margin-bottom: 10%;
+		}
+	}
+
+	section.copy ul.bullets {
+		@include flexboxSettings042215a;
+		color: $pricingColour;
+	}
+	
+}
+
+/////////////////////////////////////////////

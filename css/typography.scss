@@ -176,6 +176,8 @@ $featuresShader: $phaedraRedShade2;
 //icon
 $featuresColourIcon: $baseFontColor;
 $featuresColourIconBack: $phaedraGreen3;
+$featuresColourIconHover: $phaedraRed;
+$featuresColourIconBackHover: white;
 
 //font sizes
 $featuresFontSize:$basefontsize*0.7;
@@ -221,6 +223,9 @@ $staffColour: $baseFontColor2;
 $staffColourBack: $baseFontColor;
 $staffColourHeader: $baseFontColorHeader;
 $staffColourHeader2: $phaedraGreen3;
+
+//border
+$staffBorder: 1px solid lighten($baseFontColor2,25%);
 
 // font sizes
 $staffFontSize:$basefontsize*0.7;
@@ -276,11 +281,18 @@ $blogEntryBack: white;
 
 //button
 $blogColourButton: $baseFontColor;
+$blogFontFamily: $montserrat;
+
 $blogColourButtonBackComments: $belizeHole;
 $blogColourButtonBackFavourites: lighten($phaedraRed,15%);
 $blogColourButtonBackShare: $phaedraGreen2;
+
 $blogColourButtonBackPrev: white;
 $blogColourButtonBackNext: $phaedraGreen3;
+
+$blogColourButtonVideoPlay: $phaedraGreen3;
+$blogColourButtonVideoHover: $phaedraYellow;
+$blogColourButtonHover1: $phaedraRed;
 
 // font sizes
 $blogFontSize:$basefontsize*0.7;
@@ -291,11 +303,22 @@ $blogFontsSizeIcon: $basefontsize*0.7;
 // // END BLOG ------------------------------------------------
 
 // PRICING  ------------------------------------------------
-$pricingColour: $baseFontColor2;
+$pricingColour: darken($baseFontColor2,15%);
+$pricingColour2: $baseFontColor;
 $pricingColourHeader: $baseFontColorHeader;
+
 $pricingColourStandard: $phaedraGreen2;
 $pricingColourPremium: lighten($peterRiver,20%);
 $pricingColourUltimate: lighten($phaedraRed,20%);
+
+//border
+$pricingBorder: 1px solid $baseFontColor2;
+
+// font sizes
+$pricingFontSize:$basefontsize*0.7;
+$pricingFontSizeHeader:$basefontsize*1.2;
+$pricingFontSizeHeader2:$basefontsize*0.8;
+$pricingFontsSizeIcon: $basefontsize*0.7;
 // // END PRICING ------------------------------------------------
 
 // FOOTER  ------------------------------------------------

@@ -210,9 +210,9 @@ mixin postEntryTease042115a
 		div.image.clearfix
 			+imgInsertTemplate042215a('http://lorempixel.com/204/289','Blog Post')
 			div.buttonPanel.clearfix
-				+standardButton041415a('25','#','comments','comments')
-				+standardButton041415a('480','#','likes','likes')
-				+standardButton041415a('25','#','share','share')
+				+standardButton041415a('25','#','comments')
+				+standardButton041415a('480','#','likes')
+				+standardButton041415a('Share','#','share')
 		div.copy.clearfix
 			h3 Blog Post
 			div.meta.clearfix
@@ -231,7 +231,7 @@ mixin postVideoTease042115a
 				+standardButton041415a('480','#','likes','likes')
 				+standardButton041415a('25','#','share','share')
 		div.copy.clearfix
-			h3 Blog Post
+			h3 Video Post
 			div.meta.clearfix
 				p.author By Admin
 				p.date April 25th, 2015
@@ -249,7 +249,7 @@ mixin postImgGalleryTease042115a
 				+standardButton041415a('480','#','likes','likes')
 				+standardButton041415a('25','#','share','share')
 		div.copy.clearfix
-			h3 Blog Post
+			h3 Image Gallery Post
 			div.meta.clearfix
 				p.author By Admin
 				p.date April 25th, 2015
@@ -269,15 +269,19 @@ mixin pricingTable042115a(packageName,priceString,popularClass)
 	if block
 		block
 	else
-		div.pricingEntry.clearfix
+		div.pricingEntry
 			header(class=packageName,class=popularClass)
 				h3=packageName
-				span.priceValue=priceString
-					|  / Month
+				p 
+					span.dollarSign $ 
+					span.priceValue=priceString
+					span.month / Month
+					//- | / Month
+				//- p.month / Month
 				+standardButton041415a('Get Started Now','#','priceCTA','priceCTA')
-			section.copy.clearfix
+			section.copy
 				h3 Benefits
-				ul.bullets.clearfix
+				ul.bullets
 					li Unlimited products
 					li 20 Pages, Galleries
 					li 500 GB Bandwidth

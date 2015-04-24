@@ -4,33 +4,33 @@
 
 section.staff {
 	@include sectionPadding041515(5%,5%);
-	& h2 {
+	h2 {
 		font-size: $staffFontSizeHeader;
 		text-align: center;
 	}
-	& h3 {
+	h3 {
 		font-size: $staffFontSizeHeader2;
 		text-align: center;
 	}
-	& h4 {
+	h4 {
 		font-size: $staffFontSize;
 		color: $staffColourHeader2;
 	}
-	& p {
+	p {
 		font-size: $staffFontSize;
 	}
-	& section.staffPanel {
+	section.staffPanel {
 		@include flexboxSettings041715a;
 		margin-top: 5%;
 	}
-	& section.staffMember {
+	section.staffMember {
 		// if you want to create a flexible gallery like you would if you were using a grid system you must add auto to flex: 1 to create flex: 1 auto;
 		// flex: 1;
 		flex: 1 auto;
 		max-width: 50%;
 		@include flexboxSettings041715a;
 		align-items: flex-start;
-		& div.left {
+		div.left {
 			flex:1;
 			width: auto;
 			@include flexboxSettings042215a;
@@ -51,7 +51,7 @@ section.staff {
 
 
 		// social icons
-		& div.socialIcons {
+		div.socialIcons {
 			@include flexboxSettings041715a;
 			// I needed to add these to centre the icons...
 			justify-content: $staffIconFlexJustify;
@@ -63,7 +63,7 @@ section.staff {
 			// text-align: center;
 			margin: 0 auto;
 			// background: blue;
-			& a {
+			a {
 				// adding flex: 1 here also screwed up centring of the icons
 				// flex: 1;
 				// DO NOT USE display: inline-block;
@@ -71,7 +71,7 @@ section.staff {
 				margin: 0;
 				// DO NOT USE width:auto;
 			}
-			& span.fa {
+			span.fa {
 				display: inline-block;
 				margin: 0;
 				padding: 0;
@@ -103,13 +103,13 @@ section.staff {
 
 		
 		
-		& div.right {
+		div.right {
 			flex: 1;
 			width:auto;
 			@include flexboxSettings042215a;
 			// align-items is what you use to simulate text-align
 			align-items: flex-start;
-			& h4 {
+			h4 {
 				margin-bottom: 6%;
 			}
 		}

@@ -6,10 +6,11 @@ section.blogLatest {
 	@include sectionPadding041515(5%,5%);
 	background: $blogColourBack;
 	width: 100%;
-
-	& h2 {
+	
+	h2 {
 		font-size: $blogFontSizeHeader;
 		text-align: center;
+		margin-bottom: 1.5%;
 	}
 	& h3 {
 		font-size: $blogFontSizeHeader2;
@@ -29,12 +30,16 @@ section.blogLatest {
 
 	& section.postEntryTease {
 		flex: 1 auto;
-		width: 50%;
+		// to create the correct horizonal x axis spacing you must use the classic width reduction when applying margin
+		width: 48%;
+		margin-left: 1%;
+		margin-right: 1%;
 		@include flexboxSettings041715a;
 		justify-content: center;
 		align-content:center;
-		align-items:center;
+		align-items:flex-start;
 		margin-bottom: 3%;
+		background: $blogEntryBack;
 	}
 
 	// LEFT SIDE IMAGE
@@ -59,6 +64,7 @@ section.blogLatest {
 			// bottom:0;
 			// right:0;
 			// left:0;
+			// overflow:hidden;
 		}
 
 		// VIDEO
@@ -68,9 +74,32 @@ section.blogLatest {
 			bottom:0;
 			right:0;
 			left:0;
-			& span.fa {
+			width: 100%;
+			@include flexboxSettings041715a;
+			justify-content:center;
+			align-content:center;
+			align-items:center;
+			 	span.fa {
 				display: inline-block;
 				// position: absolute;
+				color: $blogColourButton;
+				background: $blogColourButtonVideoPlay;
+				text-align: center;
+				padding: 5%;
+				border-radius: 50%;
+				// @include flexboxSettings041715a;
+				// justify-content:center;
+				// align-content:center;
+				// align-items:center;
+				@include transitionEffectAllEaseOut(0.4s);
+				&:hover {
+					background:$blogColourButtonHover1;
+					color: $blogColourButtonVideoHover;
+				}
+				&:before {
+					// used the padding here to center the bloody Font Awesome icon within the span
+					padding-left: 20%;
+				}
 			}
 		}
 
@@ -95,10 +124,50 @@ section.blogLatest {
 			width: 100%;
 			// center everything
 			text-align: center;
-
-		}
-
-		
+			& button {
+				border: 0;
+				text-transform: uppercase;
+				font-size: $blogFontSize;
+				font-family: $blogFontFamily;
+				padding: 2% 5% 2% 5%;
+				border-radius: 20px;
+				@include transitionEffectAllEaseOut(0.4s);
+				&.comments {
+					color: $blogColourButton;
+					background: $blogColourButtonBackComments;
+					@include beforeAfterIconPlace042215a('');
+					&::before {
+						@include beforeAfterIconPlace042215a('\f075');
+						margin:0px 5px 0px 0px;
+					}
+					&:hover {
+						background: darken($blogColourButtonBackComments,20%);
+					}
+				}
+				&.likes {
+					color: $blogColourButton;
+					background: $blogColourButtonBackFavourites;
+					&::before {
+						@include beforeAfterIconPlace042215a('\f004');
+						margin:0px 5px 0px 0px;
+					}
+					&:hover {
+						background: darken($blogColourButtonBackFavourites,20%);
+					}
+				}
+				&.share {
+					color: $blogColourButton;
+					background: $blogColourButtonBackShare;
+					&::before {
+						@include beforeAfterIconPlace042215a('\f064');
+						margin:0px 5px 0px 0px;
+					}
+					&:hover {
+						background: darken($blogColourButtonBackShare,20%);
+					}
+				}
+			}
+		}	
 	}
 
 	// RIGHT SIDE COPY
