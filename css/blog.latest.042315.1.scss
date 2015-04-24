@@ -126,8 +126,12 @@ section.blogLatest {
 				padding: 0;
 			}
 			& p.author {
-				@include beforeAfterIconPlace042215a('|');
+				// @include beforeAfterIconPlace042215a('|');
 				color: $blogColourHeader;
+				border-right: 1px solid lighten($blogColourHeader,90%);
+			}
+			& p.date {
+				padding-left: 10%;
 			}
 		}
 	}

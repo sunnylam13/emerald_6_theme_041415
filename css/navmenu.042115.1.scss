@@ -84,6 +84,7 @@ nav.mainNav {
 			margin-left: $navIconSpacing;
 			margin-right: $navIconSpacing;
 			font-size: $navfontsize;
+			text-align: center;
 			@include transitionEffectAllEaseOut(0.3s);
 			&:hover {
 				background: $navcolouriconbackhover;
@@ -105,6 +106,11 @@ nav.mainNav {
 .midnightHeader.phaedraRedShade1 {
 	// @include navStylingForMidnight(black);
 	@include navStylingForMidnightV2($phaedraRedShade1);
+}
+
+.midnightHeader.phaedraGreen3Shade1 {
+	// @include navStylingForMidnight(black);
+	@include navStylingForMidnightV2($phaedraGreen3Shade1);
 }
 
 /////////////////////////////////////////////
