@@ -5,8 +5,10 @@
 section.aboutus {
 	$sectionAboutUsPadTopBottom: 5%;
 	background: $aboutColourBack;
+
 	@include sectionPadding041515($sectionAboutUsPadTopBottom,$sectionAboutUsPadTopBottom);
-	& div.flex {
+
+	div.flex {
 		margin: 0;
 		padding: 0;
 		width: 100%;
@@ -47,8 +49,11 @@ section.aboutus {
 		}
 		& a.aboutCTA {
 			@include projectButtonStyle042115a($aboutColourButton,$aboutColourBackButton,$aboutColourBackButtonHover);
+			padding: 1.5% 6% 1.5% 6%;
 		}
 	}
+
+
 }
 
 /////////////////////////////////////////////

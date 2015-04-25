@@ -330,6 +330,20 @@
 		width: 100%;
 	}
 }
+
+@mixin centreCopyFrameStyle042415a {
+	// when not using the original hero image on a phone
+	// you must enable div.frame text-align: center;
+	background: $phaedraGreen2;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	width: 80%;
+	text-align: center;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+
 // // END FEATURES ------------------------------------------------
 
 // PRICING  ------------------------------------------------
@@ -353,7 +367,7 @@
 	span.dollarSign {
 		position: absolute;
 		top: -22%;
-		left: -8%;
+		left: 6%;
 		font-size: $basefontsize*2;
 
 	}
@@ -369,6 +383,10 @@
 		color: $colour;
 		padding: 4% 5% 4% 5%;
 		width: 95%;
+		@include transitionEffectAllEaseOut(0.4s);
+		&:hover {
+			background: $phaedraYellow;
+		}
 	}
 }
 // // END PRICING ------------------------------------------------

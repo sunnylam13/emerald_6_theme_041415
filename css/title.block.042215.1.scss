@@ -6,6 +6,7 @@ section.titleBlock {
 	// what if you move the background-image and height to the .imageShader?
 	background-image: $titleblockbackimage;
 	background-size: cover;
+	// using the viewport height means that it re-sizes based on the current height of the window of the user's browser... if that changes so does this
 	height: 97vh;
 	position: relative;
 	z-index: 5;
@@ -24,6 +25,7 @@ section.titleBlock {
 		// background gradient
 		// @include titleBlockShaderGradient042215a($phaedraRedShade1,$phaedraYellowShade1);
 		@include titleBlockShaderGradient042215a($phaedraRedShade1,$phaedraGreen3Shade1);
+		// height: 97vh;
 	}
 
 	& .wrapper {
@@ -45,9 +47,11 @@ section.titleBlock {
 		align-items: flex-end;
 		padding-top: 12%;
 		z-index: 20;
+		height: 97vh;
 		& .copy {
 			width: 100%;
 			padding-right: 35%;
+			// height: 97vh;
 		}
 		& h1, h2, span.fa {
 			color: $titleblockcolour;

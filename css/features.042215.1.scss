@@ -78,6 +78,9 @@ section.features {
 			right:0;
 			left:0;
 			padding-top: 30%;
+
+			// when not using the original hero image on a phone
+			text-align: center;
 		}
 		& .copy {
 			@include flexboxSettings042215a;
@@ -85,6 +88,9 @@ section.features {
 
 			padding-left: 10%;
 			padding-right: 10%;
+
+			@include centreCopyFrameStyle042415a;
+
 			& h2, h3 {display: block;}
 			& h2 {
 				margin-bottom: 3%;

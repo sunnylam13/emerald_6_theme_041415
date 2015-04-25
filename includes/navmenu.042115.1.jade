@@ -8,19 +8,19 @@
 //- you will add sticky nav js effect after you style all the other sections
 //- use Midnight JS with the class of .mainNav
 
-nav.mainNav.clearfix
-	.wrapper.clearfix
-		.flexbox.clearfix
-			div.logo.clearfix
+nav.mainNav
+	.wrapper
+		.flexbox
+			div.logo
 				+companyIcon042115a
-			div.menu.clearfix
-				ul.clearfix
+			div.menu
+				ul
 					+linkTemplate033115a('Main','#')
 					+linkTemplate033115a('Demos','#')
 					+linkTemplate033115a('Portfolio','#')
 					+linkTemplate033115a('Blog','#')
 					+linkTemplate033115a('Shortcodes','#')
-			div.icons.clearfix
+			div.icons
 				//- we will not size them here, we will size them in the CSS
 				span.fa.fa-shopping-cart
 				span.fa.fa-search

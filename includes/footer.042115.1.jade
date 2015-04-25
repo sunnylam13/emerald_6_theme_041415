@@ -3,12 +3,13 @@
 /////////////////////////////////////////
 
 //- for all mixins please reference mixins.project.jade
+//- the .wrapper must be applied with each of the sections instead
 
-section.footer.clearfix
-	.wrapper
-		section.iconLinks.clearfix
-			nav.siteNav.clearfix
-				ul.flex.clearfix
+section.footer
+	section.iconLinks
+		.wrapper
+			nav.siteNav
+				ul.flex
 					li
 						a(href='#')
 							span.fa.fa-home
@@ -29,47 +30,52 @@ section.footer.clearfix
 						a(href='#')
 							span.fa.fa-envelope-o
 						p.tag Contact
-			div.logoBox.clearfix
+			div.logoBox
 				+companyIcon042115a
-			section.socialIcons.clearfix
-				+iconLink042115b('fa-facebook','#','Facebook')
-				+iconLink042115b('fa-twitter','#','Twitter')
-				+iconLink042115b('fa-google-plus','#','Google')
-				+iconLink042115b('fa-dribbble','#','Dribble')
-				+iconLink042115b('fa-tumblr','#','Tumblr')
+			section.socialIconsNav
+				+iconLink042315a('fa-facebook','#','Facebook')
+				+iconLink042315a('fa-twitter','#','Twitter')
+				+iconLink042315a('fa-google-plus','#','Google')
+				+iconLink042315a('fa-dribbble','#','Dribble')
+				+iconLink042315a('fa-tumblr','#','Tumblr')
 
-		section.info.clearfix
+	section.info
+		.wrapper
 			//- you will use ::before on the email, phone and address <p>
-			section.aboutUs.clearfix
+			section.aboutUs
 				h2 About Us
-				p Emerald Six hands you cutting edge expertise in web development and direct response marketing that helps you maximize your bottom line.
-				+linkTemplate042115a('hello@emeraldsix.com','#')
-				p P: 555-555-5555
-				p 2 Bloor St West
-				p Toronto, Ontario M9C 1X7
+				p.aboutSummary Emerald Six hands you cutting edge expertise in web development and direct response marketing that helps you maximize your bottom line.
+				+linkTemplate042115a('hello@emeraldsix.com','mailto:hello@emeraldsix.com')
+				.phone
+					p P: 555-555-5555
+				.address
+					p 2 Bloor St West
+					p Toronto, Ontario M9C 1X7
 
-			section.usefulLinks.clearfix
+			section.usefulLinks
 				h2 Useful Links
 				//- flexbox will be used to wrap the items
-				ul.flex.clearfix
-					//- use ::before for the double chevron
-				+linkTemplate033115a('Web Development','#')
-				+linkTemplate033115a('About Emerald Six','#')
-				+linkTemplate033115a('Mobile','#')
-				+linkTemplate033115a('Why Emerald','#')
-				+linkTemplate033115a('Direct Response Copywriting','#')
-				+linkTemplate033115a('Social Media','#')
-				+linkTemplate033115a('Site Map','#')
-				+linkTemplate033115a('Company','#')
-				+linkTemplate033115a('Latest Jobs','#')
-				+linkTemplate033115a('Partners','#')
-				+linkTemplate033115a('Blog Posts','#')
-				+linkTemplate033115a('Help Topics','#')
-				+linkTemplate033115a('Policies','#')
+				div
+					ul.flex
+						//- use ::before for the double chevron
+						+linkTemplate033115a('Web Development','#')
+						+linkTemplate033115a('About Emerald Six','#')
+						+linkTemplate033115a('Mobile','#')
+						+linkTemplate033115a('Why Emerald','#')
+						+linkTemplate033115a('Direct Response Copywriting','#')
+						+linkTemplate033115a('Social Media','#')
+					ul.flex
+						+linkTemplate033115a('Site Map','#')
+						+linkTemplate033115a('Company','#')
+						+linkTemplate033115a('Latest Jobs','#')
+						+linkTemplate033115a('Partners','#')
+						+linkTemplate033115a('Blog Posts','#')
+						+linkTemplate033115a('Help Topics','#')
+						+linkTemplate033115a('Policies','#')
 
-			section.recentWork.clearfix
+			section.recentWork
 				h2 Recent Work
-				section.portfolioThumbs.clearfix
+				ul.portfolioThumbs
 					+imgInsertTemplate('http://lorempixel.com/50/50','Portfolio Thumbnail Placeholder Image')
 					+imgInsertTemplate('http://lorempixel.com/50/50','Portfolio Thumbnail Placeholder Image')
 					+imgInsertTemplate('http://lorempixel.com/50/50','Portfolio Thumbnail Placeholder Image')
@@ -80,35 +86,58 @@ section.footer.clearfix
 					+imgInsertTemplate('http://lorempixel.com/50/50','Portfolio Thumbnail Placeholder Image')
 				//- use ::after for the double chevron pointer
 				+linkTemplate042115a('View More','#')
-					
+				
 
-			section.mailingList.clearfix
+			section.mailingList
 				h2 Mailing List
 				p Sign up for our mailing list to get the latest updates and offers.
 				
 				form(id="mailListForm042115", method="", action="")
 					fieldset
 						//- use ::after to place checkmark after input field using absolute positioning
-						input(type='email' name='email' autofocus placeholder='email address')
+						input(type='email' name='email' autofocus placeholder='Email address')
+						a(href='#')
+							span.fa.fa-check
 
-				p We respect your privacy.
-				section.socialIcons.clearfix
-					ul.flex.clearfix
-						+iconLink042115a('fa-facebook','#')
-						+iconLink042115a('fa-twitter','#')
-						+iconLink042115a('fa-linkedin','#')
-						+iconLink042115a('fa-skype','#')
-						+iconLink042115a('fa-pinterest-square','#')
-						+iconLink042115a('fa-apple','#')
+				p.privacy We respect your privacy.
+				//- section.socialIcons
+				//- 	ul.flex
+				//- 		+iconLink042115a('fa-facebook','#')
+				//- 		+iconLink042115a('fa-twitter','#')
+				//- 		+iconLink042115a('fa-linkedin','#')
+				//- 		+iconLink042115a('fa-skype','#')
+				//- 		+iconLink042115a('fa-pinterest-square','#')
+				//- 		+iconLink042115a('fa-apple','#')
+				section.socialIcons
+					//- +iconLink042315a('fa-facebook','#')
+					//- +iconLink042315a('fa-twitter','#')
+					//- +iconLink042315a('fa-linkedin','#')
+					//- +iconLink042315a('fa-skype','#')
+					//- +iconLink042315a('fa-pinterest-square','#')
+					//- +iconLink042315a('fa-apple','#')
 
-		section.copyright.clearfix
+					a(href='#')
+						span(class='fa-facebook').fa
+					a(href='#')
+						span(class='fa-twitter').fa
+					a(href='#')
+						span(class='fa-linkedin').fa
+					a(href='#')
+						span(class='fa-skype').fa
+					a(href='#')
+						span(class='fa-pinterest-square').fa
+					a(href='#')
+						span(class='fa-apple').fa
+
+	section.copyright
+		.wrapper
 			nav.copyright
-				+linkTemplate033115a('Home','#')
-				+linkTemplate033115a('About','#')
-				+linkTemplate033115a('Services','#')
-				+linkTemplate033115a('Portfolio','#')
-				+linkTemplate033115a('Blog','#')
-				+linkTemplate033115a('Contact','#')
+				+linkTemplate042115a('Home','#')
+				+linkTemplate042115a('About','#')
+				+linkTemplate042115a('Services','#')
+				+linkTemplate042115a('Portfolio','#')
+				+linkTemplate042115a('Blog','#')
+				+linkTemplate042115a('Contact','#')
 			div.trademark
 				p &copy; Emerald Six
 

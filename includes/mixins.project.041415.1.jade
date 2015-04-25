@@ -13,7 +13,7 @@
 mixin logoIconDesign042215a
 	//- if you're not using the company icon placeholder... you will have to set it to width 50px, height 30px
 	//- you'll have to style it with CSS as well to have a thick white border and transparent background
-	aside.logo042215a.clearfix
+	aside.logo042215a
 		h2 Emerald Six
 
 //- END LOGO
@@ -67,19 +67,19 @@ mixin portfolioBlock042115a
 	if block
 		block
 	else
-		section.portfolioUnit.clearfix
-			.imgShaderBox.clearfix
+		section.portfolioUnit
+			.imgShaderBox
 				img(src="http://lorempixel.com/280/200", alt="Portfolio Image")
 				//- you make the image shader hidden by default until revealed by jQuery
 				.imgShaderScreen1
 					//- by placing the span as a child of the screen we can centre it separately
 					span.fa.fa-plus
 
-			.meta.clearfix
-				div.metatags.clearfix
+			.meta
+				div.metatags
 					+standardLinkButton041415a('Olivera Note','#','title')
 					+standardLinkButton041415a('Fashion','#','category')
-				div.favourites.clearfix
+				div.favourites
 					//- this link needs a ::before with a heart
 					//- could be interesting to animate it filling it up with colour
 					+standardLinkButton041415a('576','javascript:void(0)','favourites','')
@@ -116,7 +116,7 @@ mixin featureImageCopy042315a
 	else
 		h2 Create an "Iron Man" Website That Can Handle Anything
 		h3 with SAMURAI Development and Ad Writing
-		div.clearfix
+		div
 			+standardButton041415a('Learn More','#','learnMore','learnMore')
 			+standardButton041415a('Purchase','#','purchase','purchase')
 
@@ -126,8 +126,8 @@ mixin featureImageCentre042315a
 		block
 	else
 		img(src="http://lorempixel.com/300/540", alt="Mobile Phone")
-		div.frame.clearfix
-			.copy.clearfix
+		div.frame
+			.copy
 				+featureImageCopy042315a
 
 //- END FEATURES
@@ -142,7 +142,7 @@ mixin staffBlock042115a(name,title,text,imageURL,altText,fb,twi,lkd)
 	if block
 		block
 	else
-		section.staffMember.clearfix
+		section.staffMember
 			div.left
 				img(src=imageURL, alt=altText)
 				div.socialIcons
@@ -171,32 +171,32 @@ mixin staffBlock042115a(name,title,text,imageURL,altText,fb,twi,lkd)
 //- where uniqueClass is a string
 
 mixin productTease042115a(uniqueClass,dataType,headline,subhead,imgLink,altText)
-	section(class=uniqueClass,data-midnight=dataType).product.clearfix
-		.wrapper.clearfix
-			.productPanel.clearfix
-				.copy.clearfix
+	section(class=uniqueClass,data-midnight=dataType).product
+		.wrapper
+			.productPanel
+				.copy
 					h2=headline
 					h3=subhead
-					.row.clearfix.clearfix
+					.row
 						div
 							span.fa.fa-eye
 						div
 							h3 Retina Ready
 							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat pariatur recusandae vero unde dolor qui.
-					.row.clearfix
+					.row
 						div
 							span.fa.fa-desktop
 						div
 							h3 Swiss Army Knife Layout
 							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat pariatur recusandae vero unde dolor qui.
-					.row.clearfix
+					.row
 						div
 							span.fa.fa-thumbs-o-up
 						div
 							h3 Cutting Edge Design
 							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat pariatur recusandae vero unde dolor qui.
 			
-				.imageHolder.clearfix
+				.imageHolder
 					img(src=imgLink, alt=altText)
 
 //- END TEASE
@@ -206,51 +206,51 @@ mixin productTease042115a(uniqueClass,dataType,headline,subhead,imgLink,altText)
 //- ===================================
 
 mixin postEntryTease042115a
-	section.postEntryTease.clearfix
-		div.image.clearfix
+	section.postEntryTease
+		div.image
 			+imgInsertTemplate042215a('http://lorempixel.com/204/289','Blog Post')
-			div.buttonPanel.clearfix
+			div.buttonPanel
 				+standardButton041415a('25','#','comments')
 				+standardButton041415a('480','#','likes')
 				+standardButton041415a('Share','#','share')
-		div.copy.clearfix
+		div.copy
 			h3 Blog Post
-			div.meta.clearfix
+			div.meta
 				p.author By Admin
 				p.date April 25th, 2015
 			p.summary Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi doloribus est veritatis assumenda officia vero excepturi ea, cumque omnis reiciendis error delectus. Quidem quas maxime accusantium, praesentium tenetur, distinctio nisi temporibus fuga...
 
 mixin postVideoTease042115a
-	section.postEntryTease.clearfix
-		div.image.clearfix
+	section.postEntryTease
+		div.image
 			+imgInsertTemplate042215a('http://lorempixel.com/204/289','Blog Post')
-			div.playZone.clearfix
+			div.playZone
 				span.fa.fa-play
-			div.buttonPanel.clearfix
+			div.buttonPanel
 				+standardButton041415a('25','#','comments','comments')
 				+standardButton041415a('480','#','likes','likes')
 				+standardButton041415a('25','#','share','share')
-		div.copy.clearfix
+		div.copy
 			h3 Video Post
-			div.meta.clearfix
+			div.meta
 				p.author By Admin
 				p.date April 25th, 2015
 			p.summary Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi doloribus est veritatis assumenda officia vero excepturi ea, cumque omnis reiciendis error delectus. Quidem quas maxime accusantium, praesentium tenetur, distinctio nisi temporibus fuga...
 
 mixin postImgGalleryTease042115a
-	section.postEntryTease.clearfix
-		div.image.clearfix
+	section.postEntryTease
+		div.image
 			+imgInsertTemplate042215a('http://lorempixel.com/204/289','Blog Post')
-			div.galleryNav.clearfix
+			div.galleryNav
 				span.fa.fa-angle-left
 				span.fa.fa-angle-right
-			div.buttonPanel.clearfix
+			div.buttonPanel
 				+standardButton041415a('25','#','comments','comments')
 				+standardButton041415a('480','#','likes','likes')
 				+standardButton041415a('25','#','share','share')
-		div.copy.clearfix
+		div.copy
 			h3 Image Gallery Post
-			div.meta.clearfix
+			div.meta
 				p.author By Admin
 				p.date April 25th, 2015
 			p.summary Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi doloribus est veritatis assumenda officia vero excepturi ea, cumque omnis reiciendis error delectus. Quidem quas maxime accusantium, praesentium tenetur, distinctio nisi temporibus fuga...

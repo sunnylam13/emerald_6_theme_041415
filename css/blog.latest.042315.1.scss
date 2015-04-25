@@ -12,23 +12,23 @@ section.blogLatest {
 		text-align: center;
 		margin-bottom: 1.5%;
 	}
-	& h3 {
+	h3 {
 		font-size: $blogFontSizeHeader2;
 		text-align: center;
 		margin-bottom: 5%;
 	}
-	& p {
+	p {
 		font-size: $blogFontSize;
 	}
 
-	& section.postPanel {
+	section.postPanel {
 		@include flexboxSettings041715a;
 		justify-content: space-around;
 		align-content: space-around;
 		align-items: space-around;
 	}
 
-	& section.postEntryTease {
+	section.postEntryTease {
 		flex: 1 auto;
 		// to create the correct horizonal x axis spacing you must use the classic width reduction when applying margin
 		width: 48%;
@@ -44,7 +44,7 @@ section.blogLatest {
 
 	// LEFT SIDE IMAGE
 
-	& div.image {
+	div.image {
 		margin:0;
 		padding:0;
 		flex: 1 auto;
@@ -53,7 +53,7 @@ section.blogLatest {
 		// background-image: url('http://lorempixel.com/250/300');
 		// background-repeat: no-repeat;
 		// background-size: cover;
-		& img {
+		img {
 			margin:0;
 			padding:0;
 			display: inline-block;
@@ -68,7 +68,7 @@ section.blogLatest {
 		}
 
 		// VIDEO
-		& div.playZone {
+		div.playZone {
 			position: absolute;
 			top:0;
 			bottom:0;
@@ -104,70 +104,72 @@ section.blogLatest {
 		}
 
 		// IMAGE GALLERY
-		& div.galleryNav {
+		div.galleryNav {
 			position: absolute;
 			top:0;
 			bottom:0;
 			right:0;
 			left:0;
-			& span.fa {
+			span.fa {
 				display: inline-block;
 				// position: absolute;
 			}
 		}
 
 		// BUTTON PANEL
-		& div.buttonPanel {
+		div.buttonPanel {
 			position: absolute;
 			bottom: 5%;
 			// stretch the panel across the bottom, from side to side, providing space
 			width: 100%;
 			// center everything
 			text-align: center;
-			& button {
-				border: 0;
-				text-transform: uppercase;
-				font-size: $blogFontSize;
-				font-family: $blogFontFamily;
-				padding: 2% 5% 2% 5%;
-				border-radius: 20px;
-				@include transitionEffectAllEaseOut(0.4s);
-				&.comments {
-					color: $blogColourButton;
-					background: $blogColourButtonBackComments;
-					@include beforeAfterIconPlace042215a('');
-					&::before {
-						@include beforeAfterIconPlace042215a('\f075');
-						margin:0px 5px 0px 0px;
-					}
-					&:hover {
-						background: darken($blogColourButtonBackComments,20%);
-					}
+		}
+
+		div.buttonPanel button {
+			border: 0;
+			text-transform: uppercase;
+			font-size: $blogFontSize;
+			font-family: $blogFontFamily;
+			padding: 2% 5% 2% 5%;
+			border-radius: 20px;
+			@include transitionEffectAllEaseOut(0.4s);
+			&.comments {
+				color: $blogColourButton;
+				background: $blogColourButtonBackComments;
+				@include beforeAfterIconPlace042215a('');
+				&::before {
+					@include beforeAfterIconPlace042215a('\f075');
+					margin:0px 5px 0px 0px;
 				}
-				&.likes {
-					color: $blogColourButton;
-					background: $blogColourButtonBackFavourites;
-					&::before {
-						@include beforeAfterIconPlace042215a('\f004');
-						margin:0px 5px 0px 0px;
-					}
-					&:hover {
-						background: darken($blogColourButtonBackFavourites,20%);
-					}
-				}
-				&.share {
-					color: $blogColourButton;
-					background: $blogColourButtonBackShare;
-					&::before {
-						@include beforeAfterIconPlace042215a('\f064');
-						margin:0px 5px 0px 0px;
-					}
-					&:hover {
-						background: darken($blogColourButtonBackShare,20%);
-					}
+				&:hover {
+					background: darken($blogColourButtonBackComments,20%);
 				}
 			}
-		}	
+			&.likes {
+				color: $blogColourButton;
+				background: $blogColourButtonBackFavourites;
+				margin-right: 3%;
+				&::before {
+					@include beforeAfterIconPlace042215a('\f004');
+					margin:0px 5px 0px 0px;
+				}
+				&:hover {
+					background: darken($blogColourButtonBackFavourites,20%);
+				}
+			}
+			&.share {
+				color: $blogColourButton;
+				background: $blogColourButtonBackShare;
+				&::before {
+					@include beforeAfterIconPlace042215a('\f064');
+					margin:0px 5px 0px 0px;
+				}
+				&:hover {
+					background: darken($blogColourButtonBackShare,20%);
+				}
+			}
+		}
 	}
 
 	// RIGHT SIDE COPY

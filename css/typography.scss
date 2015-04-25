@@ -322,20 +322,41 @@ $pricingFontsSizeIcon: $basefontsize*0.7;
 // // END PRICING ------------------------------------------------
 
 // FOOTER  ------------------------------------------------
-$footerColour: $baseFontColor2;
-$footerColour2: lighten($baseFontColor2,20%);
+// $footerColour: $baseFontColor2;
+$footerColour: $baseFontColor;
+$footerColour2: lighten($baseFontColor2,0);
 $footerColourHeader: $baseFontColor;
-$footerColourHover: $phaedraGreen3;
 
-$footerColourHoverIcon: $baseFontColor;
-$footerColourBackIcon: grey;
-$footerColourBackHoverIcon: $phaedraGreen3;
+// $footerColourHover: $phaedraGreen3;
+$footerColourHover: $baseFontColor;
 
+
+//icon
+$footerColourIcon: $baseFontColor;
+$footerColourIconBack: $phaedraGreen3;
+$footerColourIconHover: $phaedraRed;
+$footerColourIconBackHover: white;
+
+
+//background
 $footerColourBack1: lighten($phaedraRed,20%);
 $footerColourBack2: darken($phaedraRed,20%);
 
-$footerColourChevron: $phaedraGreen3;
+//chevron
+// $footerColourChevron: $phaedraGreen3;
+$footerColourChevron: $phaedraYellow;
+
+//input fields
 $footerColourInput: $phaedraGreen3;
+
+//border
+$footerBorder: 1px solid lighten($phaedraYellow,5%);
+
+// font sizes
+$footerFontSize:$basefontsize*0.7;
+$footerFontSizeHeader:$basefontsize*1.2;
+$footerFontSizeHeader2:$basefontsize*0.8;
+$footerFontsSizeIcon: $basefontsize*0.7;
 
 // // END FOOTER ------------------------------------------------
 
