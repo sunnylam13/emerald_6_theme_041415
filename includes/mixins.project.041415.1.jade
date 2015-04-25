@@ -69,7 +69,8 @@ mixin portfolioBlock042115a
 	else
 		section.portfolioUnit
 			.imgShaderBox
-				img(src="http://lorempixel.com/280/200", alt="Portfolio Image")
+				a(href="#")
+					img(src="http://lorempixel.com/280/200", alt="Portfolio Image")
 				//- you make the image shader hidden by default until revealed by jQuery
 				.imgShaderScreen1
 					//- by placing the span as a child of the screen we can centre it separately
@@ -171,7 +172,7 @@ mixin staffBlock042115a(name,title,text,imageURL,altText,fb,twi,lkd)
 //- where uniqueClass is a string
 
 mixin productTease042115a(uniqueClass,dataType,headline,subhead,imgLink,altText)
-	section(class=uniqueClass,data-midnight=dataType).product
+	section(class=uniqueClass,data-midnight=dataType,id=uniqueClass).product
 		.wrapper
 			.productPanel
 				.copy

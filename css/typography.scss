@@ -336,11 +336,11 @@ $footerColourIcon: $baseFontColor;
 $footerColourIconBack: $phaedraGreen3;
 $footerColourIconHover: $phaedraRed;
 $footerColourIconBackHover: white;
-
+$footerColourIconTagHover: black;
 
 //background
-$footerColourBack1: lighten($phaedraRed,20%);
-$footerColourBack2: darken($phaedraRed,20%);
+$footerColourBack1: lighten($phaedraRed,10%);
+$footerColourBack2: darken($phaedraRed,15%);
 
 //chevron
 // $footerColourChevron: $phaedraGreen3;

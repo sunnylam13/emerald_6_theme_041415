@@ -66,108 +66,132 @@ section.blogLatest {
 			// left:0;
 			// overflow:hidden;
 		}
+	}
 
-		// VIDEO
-		div.playZone {
-			position: absolute;
-			top:0;
-			bottom:0;
-			right:0;
-			left:0;
-			width: 100%;
-			@include flexboxSettings041715a;
-			justify-content:center;
-			align-content:center;
-			align-items:center;
-			 	span.fa {
-				display: inline-block;
-				// position: absolute;
-				color: $blogColourButton;
-				background: $blogColourButtonVideoPlay;
-				text-align: center;
-				padding: 5%;
-				border-radius: 50%;
-				// @include flexboxSettings041715a;
-				// justify-content:center;
-				// align-content:center;
-				// align-items:center;
-				@include transitionEffectAllEaseOut(0.4s);
-				&:hover {
-					background:$blogColourButtonHover1;
-					color: $blogColourButtonVideoHover;
-				}
-				&:before {
-					// used the padding here to center the bloody Font Awesome icon within the span
-					padding-left: 20%;
-				}
-			}
-		}
-
-		// IMAGE GALLERY
-		div.galleryNav {
-			position: absolute;
-			top:0;
-			bottom:0;
-			right:0;
-			left:0;
-			span.fa {
-				display: inline-block;
-				// position: absolute;
-			}
-		}
-
-		// BUTTON PANEL
-		div.buttonPanel {
-			position: absolute;
-			bottom: 5%;
-			// stretch the panel across the bottom, from side to side, providing space
-			width: 100%;
-			// center everything
+	// VIDEO
+	div.image div.playZone {
+		position: absolute;
+		top:0;
+		bottom:0;
+		right:0;
+		left:0;
+		width: 100%;
+		@include flexboxSettings041715a;
+		justify-content:center;
+		align-content:center;
+		align-items:center;
+		 	span.fa {
+			display: inline-block;
+			// position: absolute;
+			color: $blogColourButton;
+			background: $blogColourButtonVideoPlay;
 			text-align: center;
+			padding: 5%;
+			border-radius: 50%;
+			// @include flexboxSettings041715a;
+			// justify-content:center;
+			// align-content:center;
+			// align-items:center;
+			@include transitionEffectAllEaseOut(0.4s);
+			&:hover {
+				background:$blogColourButtonHover1;
+				color: $blogColourButtonVideoHover;
+			}
+			&:before {
+				// used the padding here to center the bloody Font Awesome icon within the span
+				padding-left: 20%;
+			}
+		}
+	}
+
+	// IMAGE GALLERY
+	div.image div.galleryNav {
+		position: absolute;
+		top:0;
+		bottom:0;
+		right:0;
+		left:0;
+		@include flexboxSettings041715a;
+		justify-content: space-between;
+		align-content: space-between;
+		span.fa {
+			display: inline-block;
+			// position: absolute;
+			padding: 2% 4% 2% 4%;
+			@include flexboxSettings041715a;
+			@include transitionEffectAllEaseOut(0.4s);
+		}
+		// prev
+		span.fa.fa-angle-left {
+			background: $blogColourButtonBackPrev;
+			&:hover {
+				// background: darken($blogColourButtonBackPrev,20%);
+				background: $phaedraYellow;
+				color: $phaedraRed;
+			}
 		}
 
-		div.buttonPanel button {
-			border: 0;
-			text-transform: uppercase;
-			font-size: $blogFontSize;
-			font-family: $blogFontFamily;
-			padding: 2% 5% 2% 5%;
-			border-radius: 20px;
-			@include transitionEffectAllEaseOut(0.4s);
-			&.comments {
-				color: $blogColourButton;
-				background: $blogColourButtonBackComments;
-				@include beforeAfterIconPlace042215a('');
-				&::before {
-					@include beforeAfterIconPlace042215a('\f075');
-					margin:0px 5px 0px 0px;
-				}
-				&:hover {
-					background: darken($blogColourButtonBackComments,20%);
-				}
+		// next
+		span.fa.fa-angle-right {
+			background: $blogColourButtonBackNext;
+			&:hover {
+				background: $phaedraRed;
+				color: $baseFontColor;
 			}
-			&.likes {
-				color: $blogColourButton;
-				background: $blogColourButtonBackFavourites;
-				margin-right: 3%;
-				&::before {
-					@include beforeAfterIconPlace042215a('\f004');
-					margin:0px 5px 0px 0px;
-				}
-				&:hover {
-					background: darken($blogColourButtonBackFavourites,20%);
-				}
+		}
+	}
+
+	// BUTTON PANEL
+	div.image div.buttonPanel {
+		position: absolute;
+		bottom: 5%;
+		// stretch the panel across the bottom, from side to side, providing space
+		width: 100%;
+		// center everything
+		text-align: center;
+	}
+
+	div.image div.buttonPanel button {
+		border: 0;
+		text-transform: uppercase;
+		font-size: $blogFontSize;
+		font-family: $blogFontFamily;
+		padding: 2% 5% 2% 5%;
+		border-radius: 20px;
+		@include transitionEffectAllEaseOut(0.4s);
+		&.comments {
+			color: $blogColourButton;
+			background: $blogColourButtonBackComments;
+			@include beforeAfterIconPlace042215a('');
+			&::before {
+				@include beforeAfterIconPlace042215a('\f075');
+				margin:0px 5px 0px 0px;
 			}
-			&.share {
-				color: $blogColourButton;
-				background: $blogColourButtonBackShare;
-				&::before {
-					@include beforeAfterIconPlace042215a('\f064');
-					margin:0px 5px 0px 0px;
-				}
-				&:hover {
-					background: darken($blogColourButtonBackShare,20%);
-				}
+			&:hover {
+				background: darken($blogColourButtonBackComments,20%);
+			}
+		}
+		&.likes {
+			color: $blogColourButton;
+			background: $blogColourButtonBackFavourites;
+			margin-right: 3%;
+			&::before {
+				@include beforeAfterIconPlace042215a('\f004');
+				margin:0px 5px 0px 0px;
+			}
+			&:hover {
+				background: darken($blogColourButtonBackFavourites,20%);
+			}
+		}
+		&.share {
+			color: $blogColourButton;
+			background: $blogColourButtonBackShare;
+			&::before {
+				@include beforeAfterIconPlace042215a('\f064');
+				margin:0px 5px 0px 0px;
+			}
+			&:hover {
+				background: darken($blogColourButtonBackShare,20%);
 			}
 		}
 	}

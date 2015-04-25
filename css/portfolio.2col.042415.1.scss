@@ -1,8 +1,11 @@
 ////////////////////////////////////////////
-///// 		PORTFOLIO
+///// 		PORTFOLIO - 2 COLUMNS
 ///////////////////////////////////////////////
 
-section.portfolio {
+// for portfolio.jade
+// for portfolio.html
+
+section#portfolio2col {
 	background: $portfolioColourBack;
 	@include sectionPadding041515(7%,7%);
 	h2 {
@@ -22,7 +25,7 @@ section.portfolio {
 	}
 }
 
-section.portfolio section.portfolioUnit {
+section#portfolio2col section.portfolioUnit {
 	// if I don't apply flex: 1 then the portfolio blocks align themselves in thirds all by themselves
 	// applying @include column(4) also didn't work either
 	// flex: 1;
