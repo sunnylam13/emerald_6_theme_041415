@@ -32,27 +32,30 @@ nav.mainNav {
 
 	// style the logo section
 	& div.logo {
-		flex-grow: 1;
-		// border-right: $navmenuborder;
+		flex: 1;
+		border-right: $navmenuborder;
 		@include flexboxSettings041715a;
 		justify-content: flex-end;
 		padding-right: 6%;
 		// @include column(2);
+		padding: 2.5% 6% 3% 0;
+
 	}
 
 	// style the central menu
-	& div.menu {
-		flex-grow: 2;
-		border-right: $navmenuborder;
-		border-left: $navmenuborder;
+	div.menu {
+		flex: 2;
+		// border-right: $navmenuborder;
+		// border-left: $navmenuborder;
 		@include flexboxSettings041715a;
 		justify-content: flex-end;
 		// @include column(8);
-		& ul {
+		// width: 50%;
+		ul {
 			@include flexboxSettings041715a;
 			justify-content: flex-end;
 			width: auto;
-			& a {
+			a {
 				color: inherit;
 				padding: 1% 20% 1% 20%;
 				font-size: $navfontsize;
@@ -63,6 +66,13 @@ nav.mainNav {
 					color: $navcolourlinkhover;
 				}
 			}
+			li {
+				flex:1 auto;
+				width: auto;
+			}
+			li:last-child {
+				// margin-right: 5%;
+			}
 		}
 		font-size: $navfontsize;
 	}
@@ -70,10 +80,14 @@ nav.mainNav {
 	// style the icons section on the right
 	& div.icons {
 		flex: 1;
+		border-left: $navmenuborder;
 		@include flexboxSettings041715a;
 		justify-content: flex-start;
 		// @include column(2);
 		padding-left: 2.5%;
+		// margin-left: 5%;
+		margin-left: 5%;
+		padding-top: 2.25%;
 
 		// style the individual icons
 		& span.fa {

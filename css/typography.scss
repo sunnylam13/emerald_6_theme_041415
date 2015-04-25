@@ -34,6 +34,7 @@ $phaedraGreen1:rgba(175, 243, 158,1);
 $phaedraGreen2:rgba(96, 196, 144,1);
 $phaedraGreen3:rgba(0, 171, 138,1);
 $phaedraGreen3Shade1:rgba(0, 171, 138,$titleBlockTransparency);
+
 $belizeHole: rgba(41, 128, 185,1.0);
 $peterRiver: rgba(52, 152, 219,1.0);
 
@@ -51,11 +52,17 @@ $basefontfamilyButton: $montserrat;
 
 $basefontsize:16px;
 $baselineheight:16px;
+
 $baseFontColor: white;
 $baseFontColor2: lightgrey;
 $baseFontColorHeader: black;
+
 $baseHoverColor: $phaedraRed;
+
 $basebackcolor: lightblue;
+
+
+
 
 // END BASE ------------------------------------------------
 
@@ -160,6 +167,21 @@ $portfolioColourShaderBack: $phaedraRedShade1;
 $portfolioShaderIconSize:$basefontsize*3.7;
 
 // // END PORTFOLIO ------------------------------------------------
+
+// PORTFOLIO NAVIGATION  ------------------------------------------------
+$portfolioNavFontSize: $basefontsize*0.7;
+$portfolioNavFontColourLink: darken($baseFontColor2,15%);
+$portfolioNavFontColourList: black;
+$portfolioNavFontColourHover: $phaedraGreen3;
+// // END PORTFOLIO NAVIGATION ------------------------------------------------
+
+// SERVICES  ------------------------------------------------
+
+$servicesColour: $baseFontColor2;
+$servicesColourHeader: black;
+
+// // END SERVICES ------------------------------------------------
+
 
 // FEATURES  ------------------------------------------------
 $featuresColour: $baseFontColor2;
@@ -359,6 +381,21 @@ $footerFontSizeHeader2:$basefontsize*0.8;
 $footerFontsSizeIcon: $basefontsize*0.7;
 
 // // END FOOTER ------------------------------------------------
+
+// SERVICES DISPLAY PANEL 1   ------------------------------------------------
+$serviceDisplayColourBack: lightgrey;
+$serviceDisplayFontSize:$basefontsize*0.7;
+$serviceDisplayFontSizeHeader:$basefontsize*1.2;
+$serviceDisplayFontSizeHeader2:$basefontsize*0.8;
+// // END SERVICES DISPLAY PANEL 1 ------------------------------------------------
+
+// PROOF ELEMENTS  ------------------------------------------------
+$proofColour: black;
+$proofColourHeader: white;
+$proofFontSize:$basefontsize*0.7;
+$proofFontSizeHeader:$basefontsize*1.2;
+$proofFontSizeHeader2:$basefontsize*0.8;
+// // END PROOF ELEMENTS ------------------------------------------------
 
 ////////////////////////////////////////////
 ///// 		MIXINS

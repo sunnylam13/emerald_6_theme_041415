@@ -31,6 +31,15 @@ section#portfolio2col section.portfolioUnit {
 	// flex: 1;
 	margin-bottom: 3%;
 	
+
+	// FLEXBOX
+	// what if I set the spacing using flex for child... flex: 1 auto for the unit?
+	// use flexbox to make this double column
+	flex: 1 auto;
+	// subtract double the margin from the width
+	width: 48%;
+	margin-right: 2%;
+
 	.imgShaderBox {
 		position: relative;
 		& img {
@@ -83,6 +92,7 @@ section#portfolio2col section.portfolioUnit {
 			display: block;
 		}
 	}
+
 	.meta div.favourites {
 		@include column(2);
 		margin: 0;
@@ -100,6 +110,56 @@ section#portfolio2col section.portfolioUnit {
 			}
 		}
 	}
+}
+
+ul.portfolioNavigation1 {
+	@include flexboxSettings041715a;
+	justify-content: flex-start;
+	align-content: flex-start;
+	li {
+		// flex: 1 auto;
+		width: auto;
+		font-size: $portfolioNavFontSize;
+		color: $portfolioNavFontColourList;
+	}
+
+	li:first-child {
+		margin-right: 1.5%;
+	}
+
+	li a {
+		// placing the flex: 1 auto on the a works as well and the spacing isn't as much... even though I didn't apply flexbox to the parent <li>
+		// flex: 1 auto;
+		font-size: $portfolioNavFontSize;
+		color: $portfolioNavFontColourLink;
+		// margin: 0 2% 0 2%;
+		// padding: 1% 2% 1% 2%;
+		padding: 4%;
+		// background: blue;
+		margin-right: 20%;
+		@include transitionEffectAllEaseOut(0.4s);
+		&:hover {
+			color: $portfolioNavFontColourHover;
+		}
+	}
+
+	// you must count the ul as n=0
+	li:nth-child(2) a {
+		//- use jQuery to change CSS such that when a link is clicked its colour changes... when you click another button all the colours reset
+		// the "All" link should have the default portfolio nav hover colour
+		margin-right: 51%;
+		// background: blue;
+		color: $portfolioNavFontColourHover;
+	}
+
+	li:nth-child(5) a, li:nth-child(6) a, li:nth-child(7) a, li:nth-child(8) a {
+		margin-right: 39%;
+		// background: red;
+	}
+
+	// a:first-child {
+	// 	margin-right: 33%;
+	// }
 }
 
 /////////////////////////////////////////////

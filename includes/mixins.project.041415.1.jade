@@ -88,6 +88,49 @@ mixin portfolioBlock042115a
 //- END PORTFOLIO
 
 //- ===================================
+//- 		PORTFOLIO - 2 COLUMNS
+//- ===================================
+
+mixin portfolioNavigation042515a
+	//- we make all of the links null as we use Javascript to sort the portfolio
+	//- use jQuery to change CSS such that when a link is clicked its colour changes... when you click another button all the colours reset
+	section.portfolioNavigation1
+		ul.portfolioNavigation1
+			li Sort Portfolio: 
+			+linkTemplate033115a('All','javascript:void(0)')
+			+linkTemplate033115a('Applications','javascript:void(0)')
+			+linkTemplate033115a('Illustration','javascript:void(0)')
+			+linkTemplate033115a('Logo','javascript:void(0)')
+			+linkTemplate033115a('Music','javascript:void(0)')
+			+linkTemplate033115a('Print','javascript:void(0)')
+			+linkTemplate033115a('Video','javascript:void(0)')
+
+//- END HEADING
+
+
+//- ===================================
+//- 		SERVICES
+//- ===================================
+
+mixin serviceBullet042515a
+	div.icon
+		span.fa.fa-eye
+	div.copy
+		h2 Retina Ready
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae ea harum mollitia, deleniti, dolore voluptate!
+
+mixin serviceBullet042515b(faClass,headline)
+	div.icon
+		span(class=faClass).fa
+	div.copy
+		h2=headline
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae ea harum mollitia, deleniti, dolore voluptate!
+
+
+//- END SERVICES
+
+
+//- ===================================
 //- 		FEATURES
 //- ===================================
 
@@ -132,6 +175,64 @@ mixin featureImageCentre042315a
 				+featureImageCopy042315a
 
 //- END FEATURES
+
+//- ===================================
+//- 		FEATURES 2
+//- ===================================
+
+//- this is the verison used for the services.jade file
+
+mixin featureBlock042515a(faIcon,headline)
+	//- where the arguments passed are all strings
+	section.feature2Unit
+		span(class=faIcon).fa
+		h3=headline
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, aspernatur! Animi molestias suscipit unde iure!
+
+//- END FEATURES 2
+
+
+//- ===================================
+//- 		SERVICES OFFERED 1
+//- ===================================
+
+mixin servicesOffer042515a
+	if block
+		block
+	else
+		section.serviceUnit1
+			img(src="http://lorempixel.com/860/480", alt="Lorem Image Placeholder")
+			h2 Imagination is the Beginning
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem exercitationem at, earum ipsum, quo dolorem vitae. Libero cupiditate eligendi natus, ipsum iusto, ducimus beatae nisi porro consequatur nam ullam illo!
+			//- style with ::after for the arrow
+			a(href="#") Find out now
+
+//- END SERVICES OFFERED 1
+
+
+//- ===================================
+//- 		SERVICES DISPLAY PANEL 1
+//- ===================================
+
+//- see services.display.042515.1.jade
+
+mixin serviceDisplayUnit042515a(headline,text)
+	//- where headline, text are strings
+	if block
+		block
+	else
+		section.serviceDisplayUnit1
+			div.imageHolder
+				//- the correct aspect ratio dimensions were required for the image to fill the div... didn't have to be 1400x700 (which is also the wrong aspect ratio)
+				img(src="http://lorempixel.com/90/150", alt="Lorem Picture Placeholder")
+			div.copy
+				h3=headline
+				if text
+					p=text
+				else
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, velit nesciunt fuga. Architecto cum nemo doloremque consequuntur facilis nulla.
+
+//- END SERVICES DISPLAY PANEL 1
 
 
 //- ===================================

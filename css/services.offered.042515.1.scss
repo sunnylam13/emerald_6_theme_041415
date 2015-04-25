@@ -1,0 +1,50 @@
+////////////////////////////////////////////
+///// 		SERVICES OFFERED 1
+///////////////////////////////////////////////
+
+// for services.jade
+
+section.servicesOffer1 {
+	background: white;
+	@include sectionPadding041515(5%,5%);
+
+	.wrapper {
+		// apply flexbox
+		@include flexboxSettings041715a;
+	}
+
+	section.serviceUnit1 {
+		// flex child modification
+		flex:1 auto;
+		width: 47%;
+		margin-right: 3%;
+		// apply flexbox
+		@include flexboxSettings042215a;
+		align-items:flex-start;
+
+		img {
+			// need to increase the base image size to be large enough to exceed the containing element sufficiently
+			max-width: 100%;
+			margin-bottom: 5%;
+		}
+
+		h2 {
+			margin-bottom: 5%;
+			font-size: $basefontsize*1.1;
+		}
+
+		p {
+			margin-bottom: 5%;
+			color: grey;
+			font-size: $serviceDisplayFontSize;
+		}
+
+		a {
+			font-size: $serviceDisplayFontSize;
+			color: $phaedraGreen3;
+			font-family: $montserrat;
+		}
+	}
+}
+
+///////////////////////////////////////////////

@@ -1,0 +1,98 @@
+////////////////////////////////////////////
+///// 		SERVICES DISPLAY PANEL 1
+///////////////////////////////////////////////
+
+// for services.jade
+
+section.serviceDisplay1 {
+	margin:0;
+	padding:0;
+	@include sectionPadding041515(5%,5%);
+
+	.wrapper {
+		@include flexboxSettings042215a;
+	}
+
+	h2 {
+		font-size: $serviceDisplayFontSizeHeader;
+		margin-bottom: 1%;
+	}
+
+	h3 {
+		font-size: $serviceDisplayFontSizeHeader2;
+		color: $baseFontColor2;
+		margin-bottom: 2.5%;
+	}
+
+	div.panel {
+		margin:0;
+		padding:0;
+		// apply flexbox
+		@include flexboxSettings041715a;
+	}
+
+	// display unit as a whole
+	section.serviceDisplayUnit1 {
+		margin:0;
+		padding:0;
+		background: $serviceDisplayColourBack;
+		// if you use space-around 
+		flex: 1 auto;
+		// width: 33.333333333%;
+		margin-bottom: 2%;
+		width: 31.333333333%;
+		margin-right: 2%;
+
+		// apply flexbox
+		@include flexboxSettings041715a;
+		justify-content:center;
+
+
+	}
+
+	// image
+	section.serviceDisplayUnit1 div.imageHolder {
+		margin:0;
+		padding:0;
+		display: block;
+		flex:1;
+		width: 50%;
+
+		// background-image: url('http://lorempixel.com/1400/700');
+		// background-size: cover;
+		// background-repeat: no-repeat;
+
+		img {
+			// display: none;
+			width: 100%;
+		}
+	}
+
+	// div.copy
+	section.serviceDisplayUnit1 div.copy {
+		margin:0;
+		padding:0;
+		background: $serviceDisplayColourBack;
+		flex:1;
+		// apply flexbox
+		@include flexboxSettings042215a;
+		align-items:flex-start;
+		width:50%;
+		// padding left and right works best when using flexbox to centre vertically
+		padding: 0 5% 0 6%;
+
+		h3 {
+			color: black;
+			font-size: $serviceDisplayFontSizeHeader2;
+			margin-bottom: 10%;
+			// using margin top helps to space things out correctly
+			margin-top: 15%;
+		}
+
+		p {
+			font-size: $serviceDisplayFontSize;
+		}
+	}
+}
+
+///////////////////////////////////////////////

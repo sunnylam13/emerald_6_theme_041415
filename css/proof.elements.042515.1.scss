@@ -1,0 +1,77 @@
+////////////////////////////////////////////
+///// 		PROOF ELEMENT SECTION 1
+///////////////////////////////////////////////
+
+// for services.jade
+
+section.proofElement1 {
+	margin:0;
+	padding:0;
+	@include topLeftGradient042515a ($phaedraGreen1,$phaedraRed);
+	@include sectionPadding041515(5%,5%);
+
+	.wrapper {
+		// apply flexbox
+		@include flexboxSettings041715a;
+	}
+
+	.imageHolder {
+		// flex child
+		flex:1 auto;
+		width: 50%;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	.copy {
+		// flex child
+		flex:1 auto;
+		width: 50%;
+		// apply flexbox
+		@include flexboxSettings042215a;
+
+		h2 {
+			color:$proofColourHeader;
+			font-size: $basefontsize*0.8;
+			margin-bottom: 3%;
+		}
+		p {
+			color: $proofColour;
+			font-size: $proofFontSize;
+		}
+	}
+
+	// .copy div:nth-of-type(1) {
+	// 	background: blue;
+	// }
+
+	.copy div {
+		position: relative;
+	}
+
+	.copy div::before {
+		position: absolute;
+		left: -8%;
+		top: 4%;
+		font-size: $basefontsize*1.5;
+	}
+
+	.copy div:nth-of-type(1)::before {
+		@include beforeAfterIconPlace042215a('\f124');
+		// position: absolute;
+	}
+
+	.copy div:nth-of-type(2)::before {
+		@include beforeAfterIconPlace042215a('\f02c');
+		// position: absolute;
+	}
+
+	.copy div:nth-of-type(3)::before {
+		@include beforeAfterIconPlace042215a('\f123');
+		// position: absolute;
+	}
+}
+
+///////////////////////////////////////////////
