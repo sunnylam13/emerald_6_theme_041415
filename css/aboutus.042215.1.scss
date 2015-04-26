@@ -14,7 +14,7 @@ section.aboutus {
 		width: 100%;
 		@include flexboxSettings041715a;
 		justify-content: center;
-		align-items: flex-start;
+		align-items: center;
 		& img {
 			$imgMarginLeftRight: 0.75%;
 			display: inline-block;
@@ -23,6 +23,7 @@ section.aboutus {
 			flex: 1;
 			margin-right: $imgMarginLeftRight;
 			margin-left: $imgMarginLeftRight;
+			width: 100%;
 		}
 	}
 	& .copy {

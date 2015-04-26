@@ -72,26 +72,89 @@ mixin benefitBullet042115a(faIcon,headline,textIns)
 //- ===================================
 
 mixin portfolioBlock042115a
-	if block
-		block
-	else
-		section.portfolioUnit
-			.imgShaderBox
-				a(href="#")
-					img(src="http://lorempixel.com/280/200", alt="Portfolio Image")
-				//- you make the image shader hidden by default until revealed by jQuery
-				.imgShaderScreen1
-					//- by placing the span as a child of the screen we can centre it separately
-					span.fa.fa-plus
+	section.portfolioUnit
+		.imgShaderBox
+			a(href="#")
+				img(src="http://lorempixel.com/280/200", alt="Portfolio Image")
+			//- you make the image shader hidden by default until revealed by jQuery
+			.imgShaderScreen1
+				//- by placing the span as a child of the screen we can centre it separately
+				span.fa.fa-plus
 
-			.meta
-				div.metatags
+		.meta
+			div.metatags
+				+standardLinkButton041415a('Olivera Note','#','title')
+				+standardLinkButton041415a('Fashion','#','category')
+			div.favourites
+				//- this link needs a ::before with a heart
+				//- could be interesting to animate it filling it up with colour
+				+standardLinkButton041415a('576','javascript:void(0)','favourites','')
+
+mixin portfolioBlock042615a(uClass,imgLink,headline,category)
+	//- where the arguments are strings
+	section(class=uClass).portfolioUnit
+		.imgShaderBox
+			a(href="#")
+				if imgLink
+					img(src=imgLink, alt="Portfolio Image", width='280', height='200')
+					//- img(src=imgLink, alt="Portfolio Image")
+				else
+					img(src="http://lorempixel.com/280/200", alt="Portfolio Image")
+			//- you make the image shader hidden by default until revealed by jQuery
+			.imgShaderScreen1
+				//- by placing the span as a child of the screen we can centre it separately
+				span.fa.fa-plus
+
+		.meta
+			div.metatags
+				if headline
+					+standardLinkButton041415a(headline,'#','title')
+					//- a(href="#",class='title')=headline
+				else
 					+standardLinkButton041415a('Olivera Note','#','title')
+					//- a(href="#",class='title')=headline
+				
+				if category
+					+standardLinkButton041415a(category,'#','category')
+				else
 					+standardLinkButton041415a('Fashion','#','category')
-				div.favourites
-					//- this link needs a ::before with a heart
-					//- could be interesting to animate it filling it up with colour
-					+standardLinkButton041415a('576','javascript:void(0)','favourites','')
+			div.favourites
+				//- this link needs a ::before with a heart
+				//- could be interesting to animate it filling it up with colour
+				+standardLinkButton041415a('576','javascript:void(0)','favourites','')
+
+mixin portfolioBlock042615b(uClass,imgLink,headline,category)
+	//- where the arguments are strings
+	section(class=uClass).portfolioUnit
+		.imgShaderBox
+			a(href="#")
+				if imgLink
+					img(src=imgLink, alt="Portfolio Image", width='571', height='345')
+					//- img(src=imgLink, alt="Portfolio Image")
+				else
+					img(src="http://lorempixel.com/571/345", alt="Portfolio Image")
+			//- you make the image shader hidden by default until revealed by jQuery
+			.imgShaderScreen1
+				//- by placing the span as a child of the screen we can centre it separately
+				span.fa.fa-plus
+
+		.meta
+			div.metatags
+				if headline
+					+standardLinkButton041415a(headline,'#','title')
+					//- a(href="#",class='title')=headline
+				else
+					+standardLinkButton041415a('Olivera Note','#','title')
+					//- a(href="#",class='title')=headline
+				
+				if category
+					+standardLinkButton041415a(category,'#','category')
+				else
+					+standardLinkButton041415a('Fashion','#','category')
+			div.favourites
+				//- this link needs a ::before with a heart
+				//- could be interesting to animate it filling it up with colour
+				+standardLinkButton041415a('576','javascript:void(0)','favourites','')
 
 //- END PORTFOLIO
 
@@ -106,12 +169,26 @@ mixin portfolioNavigation042515a
 		ul.portfolioNavigation1
 			li Sort Portfolio: 
 			+linkTemplate033115a('All','javascript:void(0)')
+				li
+					a(href='javascript:void(0)',class='portfolioNavButton',id='all') All
 			+linkTemplate033115a('Applications','javascript:void(0)')
+				li
+					a(href='javascript:void(0)',class='portfolioNavButton',id='applications') Applications
 			+linkTemplate033115a('Illustration','javascript:void(0)')
+				li
+					a(href='javascript:void(0)',class='portfolioNavButton',id='illustration') Illustration
 			+linkTemplate033115a('Logo','javascript:void(0)')
+				li
+					a(href='javascript:void(0)',class='portfolioNavButton',id='logo') Logo
 			+linkTemplate033115a('Music','javascript:void(0)')
+				li
+					a(href='javascript:void(0)',class='portfolioNavButton',id='music') Music
 			+linkTemplate033115a('Print','javascript:void(0)')
+				li
+					a(href='javascript:void(0)',class='portfolioNavButton',id='print') Print
 			+linkTemplate033115a('Video','javascript:void(0)')
+				li
+					a(href='javascript:void(0)',class='portfolioNavButton',id='video') Video
 
 //- END HEADING
 

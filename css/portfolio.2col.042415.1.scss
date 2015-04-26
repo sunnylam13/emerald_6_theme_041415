@@ -25,25 +25,50 @@ section#portfolio2col {
 	}
 }
 
+// PORTFOLIO UNIT  ------------------------------------------------
 section#portfolio2col section.portfolioUnit {
+
+	// FLEX CHILD PROPERTIES  ------------------------------------------------
 	// if I don't apply flex: 1 then the portfolio blocks align themselves in thirds all by themselves
 	// applying @include column(4) also didn't work either
 	// flex: 1;
-	margin-bottom: 3%;
 	
-
 	// FLEXBOX
 	// what if I set the spacing using flex for child... flex: 1 auto for the unit?
 	// use flexbox to make this double column
-	flex: 1 auto;
+	// flex: 1 0 auto;
+	flex: 1 0 48%;
 	// subtract double the margin from the width
-	width: 48%;
+	// width: 48%;
 	margin-right: 2%;
+	
 
+	// // END FLEX CHILD PROPERTIES ------------------------------------------------
+
+	margin-bottom: 3%;
+	
+	// FLEXBOX  ------------------------------------------------
+	// I've got to flexbox the portfolioUnit because when I use jQuery the .imgShaderBox, img and .imgShaderScreen1 don't resize properly and stretch across the page... if img is set to max-width 100% or something similar
+	// using the row version is a bit of a fix
+	// @include flexboxSettings041715a;
+
+	// using the column version is a bit of a fix
+	@include flexboxSettings042215a;
+	justify-content: space-between;
+	align-content: space-between;
+	align-items: space-between;
+
+	// // END FLEXBOX ------------------------------------------------
+	
 	.imgShaderBox {
+		// flex child
+		flex: 1 0 auto;
+
 		position: relative;
+		// max-width: 100%;
 		& img {
-			width: 100%;
+			// width: 100%;
+			max-width: 100%;
 		}
 	}
 
@@ -66,9 +91,16 @@ section#portfolio2col section.portfolioUnit {
 	}
 
 	.meta {
+		// flex child
+		flex: 1 0 auto;
+
 		margin: 0;
 		padding: 0;
+
+		// flexbox
 		@include flexboxSettings041715a;
+		// align-items:baseline;
+		
 		a {
 			font-size: $portfolioFontSize;
 			color: $portfolioColour;
@@ -76,13 +108,24 @@ section#portfolio2col section.portfolioUnit {
 	}
 
 	.meta div.metatags {
-		@include column(10);
+		// @include column(10);
+		// align-self: flex-start;
 		margin: 0;
 		padding: 0;
 		margin-top: 5%;
 		// @include flexboxSettings042215a;
 		// justify-content: flex-start;
 		// align-items: flex-start;
+		
+		@include flexboxSettings042215a;
+		justify-content: flex-start;
+		align-items: flex-start;
+
+		// width: auto;
+
+		// using padding on this one sort of corrects the squishing of div.metatags and div.favourites
+		// padding-right: 70%;
+
 		.title {
 			color: $portfolioColour2;
 			display: block;
@@ -94,14 +137,24 @@ section#portfolio2col section.portfolioUnit {
 	}
 
 	.meta div.favourites {
-		@include column(2);
+		// @include column(2);
+		// I want this .favourites text at the end
+		// align-self: flex-end;
 		margin: 0;
 		padding: 0;
 		// @include flexboxSettings042215a;
 		// justify-content: flex-end;
 		// align-items: flex-end;
-		text-align: right;
-		.favourites {
+		
+		// @include flexboxSettings041715a;
+		// justify-content: flex-end;
+		// align-items: flex-end;
+
+		// width: auto;
+		// text-align: right;
+
+		// link
+		a.favourites {
 			&::before {
 				@include beforeAfterIconPlace042215a('\f08a');
 				margin:0px 5px 0px 0px;
@@ -111,11 +164,19 @@ section#portfolio2col section.portfolioUnit {
 		}
 	}
 }
+// // END PORTFOLIO UNIT ------------------------------------------------
 
+
+
+// PORTFOLIO NAVIGATION  ------------------------------------------------
 ul.portfolioNavigation1 {
+
+	// flexbox
 	@include flexboxSettings041715a;
 	justify-content: flex-start;
 	align-content: flex-start;
+
+
 	li {
 		// flex: 1 auto;
 		width: auto;
@@ -161,5 +222,8 @@ ul.portfolioNavigation1 {
 	// 	margin-right: 33%;
 	// }
 }
+// // END PORTFOLIO NAVIGATION ------------------------------------------------
+
+
 
 /////////////////////////////////////////////

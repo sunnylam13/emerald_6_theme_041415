@@ -31,7 +31,8 @@ section.portfolio section.portfolioUnit {
 	.imgShaderBox {
 		position: relative;
 		& img {
-			width: 100%;
+			// width: 100%;
+			max-width: 100%;
 		}
 	}
 
@@ -43,9 +44,14 @@ section.portfolio section.portfolioUnit {
 		right:0;
 		left:0;
 		background: $portfolioColourShaderBack;
+		
+		// flexbox
+		// used to centre the span with the icon
 		@include flexboxSettings041715a;
-		display: none;
+		
 		// you would use jQuery to enable display:flex which should make it appear
+		// you must place this AFTER display flex above otherwise the shader starts already visible
+		display: none;
 
 		span.fa {
 			font-size: $portfolioShaderIconSize;

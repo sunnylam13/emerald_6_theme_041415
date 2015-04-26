@@ -11,23 +11,25 @@ section.features {
 	@include sectionPadding041515(5%,0);
 	// set the parent default colour that is passed to all the elements below
 	color: $featuresColour;
-	& h2, h3 {
+	h2, h3 {
 		text-align: center;
 	}
-	& h2 {
+	h2 {
 		margin-bottom: 1%;
 		font-size: $featuresFontSizeHeader;
 		color: $featuresColourHeader;
 	}
-	& h3 {
+	h3 {
 		margin-bottom: 5%;
 		font-size: $featuresFontSize;
 		color: $featuresColourHeader;
 	}
-	& p {
+	p {
 		font-size: $featuresFontSize;
 	}
-	& span.fa {
+
+
+	span.fa {
 		// needed to add margin-bottom here to match h3 to be things in alignment
 		margin-bottom: 5%;
 		padding: 4%;
@@ -41,7 +43,9 @@ section.features {
 			color: $featuresColourIconHover;
 		}
 	}
-	& .imageShader {
+
+
+	.imageShader {
 		position: absolute;
 		top: 0;
 		bottom: 0;
@@ -49,27 +53,37 @@ section.features {
 		left: 0;
 		background: $featuresShader;
 	}
-	& .display {
+
+
+	.display {
 		@include flexboxSettings041715a;
 		// you must assign align-items: flex-end so that the image bottom sits at the bottom of the section
 		// comment out if you want it centred
 		// align-items: flex-end;
 	}
-	& .left, .center, .right {
+
+
+	.left, .center, .right {
 		// this positions everything
 		flex: 1;
 	}
-	& .left, .right {
+	
+
+	.left, .right {
 		// padding-top: 5%;
 		// padding-bottom: 5%;
 	}
-	& .center {
+
+
+	// CENTER
+
+	.center {
 		// @include featuresImageCentre042315a;
 		position: relative;
 		margin:0;
 		padding:0;
 		
-		& div.frame {
+		div.frame {
 			position: absolute;
 			margin:0;
 			padding:0;
@@ -82,14 +96,23 @@ section.features {
 			// when not using the original hero image on a phone
 			text-align: center;
 		}
-		& .copy {
+		
+		.copy {
+		
 			@include flexboxSettings042215a;
 			align-items: center;
 
 			padding-left: 10%;
 			padding-right: 10%;
 
+			// if using the original PSD image
+			// make .copy display none or invisible
+			// display:none;
+
 			@include centreCopyFrameStyle042415a;
+
+			// because .copy isn't aligned with the current version of the extracted central image... add margin-right to adjust
+			margin-left: 2%;
 
 			& h2, h3 {display: block;}
 			& h2 {
@@ -115,11 +138,17 @@ section.features {
 			}
 			
 		}
+
+		// CENTRAL IMAGE
 		& img {
 			width: 100%;
+			// max-width: 100%;
 		}
 	}
-	& .left {
+	
+	// LEFT SIDE
+
+	.left {
 		padding-right: 5%;
 		text-align: right;
 		& div.flex {
@@ -130,7 +159,10 @@ section.features {
 			}
 		}
 	}
-	& .right {
+	
+	// RIGHT SIDE
+
+	.right {
 		padding-left: 5%;
 		text-align: left;
 		& div.flex {

@@ -4,13 +4,14 @@
 
 //- this is for services.jade
 
-section.proofElement1
+section(data-midnight='phaedraGreen3Shade1').proofElement1
 	.imgShader
 		//- this is optional, could be used as a semi-transparent mask
 	.wrapper
 		//- make the img a block or inline block
 		.imageHolder
-			img(src="http://lorempixel.com/500/300", alt="Lorem Image Placeholder")
+			//- img(src="http://lorempixel.com/500/300", alt="Lorem Image Placeholder")
+			img(src="./images/new.big.thing.png", alt="Lorem Image Placeholder")
 		.copy
 			//- for the icons you could use ::before or you can use span.fa, both can work
 			div

@@ -13,6 +13,7 @@ section.titleBlock {
 	// opacity: 0.5;
 	padding-bottom: 5%;
 
+	// IMAGE SHADER  ------------------------------------------------
 	.imageShader {
 		position: absolute;
 		// background-image: url(http://lorempixel.com/1400/700);
@@ -29,6 +30,8 @@ section.titleBlock {
 		@include titleBlockShaderGradient042215a($phaedraRedShade1,$phaedraGreen3Shade1);
 		// height: 97vh;
 	}
+	// // END IMAGE SHADER ------------------------------------------------
+	
 
 	.wrapper {
 		position: relative;
