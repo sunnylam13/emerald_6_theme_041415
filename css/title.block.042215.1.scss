@@ -10,7 +10,9 @@ section.titleBlock {
 	height: 97vh;
 	position: relative;
 	z-index: 5;
-	opacity: 0.5;
+	// opacity: 0.5;
+	padding-bottom: 5%;
+
 	.imageShader {
 		position: absolute;
 		// background-image: url(http://lorempixel.com/1400/700);
@@ -31,6 +33,13 @@ section.titleBlock {
 	.wrapper {
 		position: relative;
 		z-index: 15;
+
+		@include flexboxSettings041715a;
+		flex-flow: column;
+		justify-content: flex-start;
+		align-content: flex-start;
+		align-items: flex-end;
+		padding-top: 12%;
 	}
 
 	.outer {
@@ -40,46 +49,59 @@ section.titleBlock {
 		bottom: 0;
 		right: 0;
 		left: 0;
-		@include flexboxSettings041715a;
-		flex-flow: column;
-		justify-content: flex-start;
-		align-content: flex-start;
-		align-items: flex-end;
-		padding-top: 12%;
-		z-index: 20;
-		height: 97vh;
-		.copy {
-			width: 100%;
-			padding-right: 35%;
-			// height: 97vh;
-		}
-		h1, h2, span.fa {
-			color: $titleblockcolour;
-		}
-		h1, h2 {
-			display: block;
-			margin: 0;
-			padding: 0;
-			width: 100%;
-			margin-bottom: 5%;
-			text-shadow:0 0 10px #203A8B;
-		}
-		h1 {
-			font-size: $titleblockFontSizeHeader1;
-			text-transform: uppercase;
-		}
-		h2 {
-			font-size: $titleblockFontSizeHeader2;
-			font-style: italic;
-		}
-		.copy a {
-			width: auto;
-			height: auto;
-		}
 		
+		// z-index: 20;
+		height: 97vh;
 	}
 
-	.outer span.fa {
+	.copy {
+		width: auto;
+		padding-right: 25%;
+		// height: 97vh;
+		// background: $blackShade1;
+		position: relative;
+		z-index: 25;
+	}
+
+	h1, h2, span.fa {
+		color: $titleblockcolour;
+	}
+	h1, h2 {
+		display: block;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		margin-bottom: 5%;
+		text-shadow:0 0 10px #203A8B;
+	}
+	h1 {
+		font-size: $titleblockFontSizeHeader1;
+		text-transform: uppercase;
+		span {
+			font-size: inherit;
+			text-transform: uppercase;
+			color: red;
+			font-family: inherit;
+		}
+	}
+	
+	h2 {
+		font-size: $titleblockFontSizeHeader2;
+		font-style: italic;
+
+		span {
+			font-size: inherit;
+			font-style: inherit;
+			color: red;
+			font-family: inherit;
+		}
+	}
+	.copy a {
+		width: auto;
+		height: auto;
+	}
+
+	.copy span.fa {
 		font-size: $titleblockFontSizeIcon;
 		border: 2px solid $titleBlockColourIconBorder;
 		padding: 0 1% 0 1%;

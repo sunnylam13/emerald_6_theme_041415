@@ -51,6 +51,8 @@ section.pricing {
 		width: 100%;
 	}
 
+
+
 	header.Standard {
 		@include pricingEntryHeaderV1($pricingColourStandard);
 	}
@@ -61,7 +63,30 @@ section.pricing {
 	header.Ultimate {
 		// background: $pricingColourUltimate;
 		@include pricingEntryHeaderV1($pricingColourUltimate);
-		
+	}
+
+	header.popularClass {
+		position: relative;
+		&::before {
+			content: "Most Popular";
+			position: absolute;
+			top: -10%;
+			left: 0;
+			font-size: $basefontsize*.6375;
+			width: 21.6em;
+			text-align: center;
+			padding: 2% 0 2% 0;
+		}
+	}
+
+	header.popularClass.Premium {
+		&::before {
+			border: 1px solid $pricingColourPremium;
+			border-top-right-radius: 5px;
+			border-top-left-radius: 5px;
+			border-bottom: none;
+			color: $pricingColourPremium;
+		}
 	}
 
 	section.copy {

@@ -1,0 +1,58 @@
+////////////////////////////////////////////
+///// 		SMOOTH SCROLLING
+///////////////////////////////////////////////
+
+// for services.jade
+
+section.smoothScrollProduct1 {
+	background-image: url('http://lorempixel.com/1400/700');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 50vh;
+
+	//flexbox
+	@include flexboxSettings041715a;
+}
+
+section.smoothScrollProduct1 .copy {
+	text-align: center;
+	width: 50%;
+	background: $blackShade1;
+	@include sectionPadding041515(2%,2%);
+	padding-right: 3%;
+	padding-left: 3%;
+
+	@include transitionEffectAllEaseOut(0.4s);
+	&:hover {
+		background: black;
+	}
+
+	h2 {
+		color: $baseFontColor;
+		text-transform: uppercase;
+		font-size: $basefontsize*1.3;
+		font-weight: 400;
+		margin-bottom: 3%;
+	}
+
+	p {
+		margin-bottom: 8%;
+		color: $baseFontColor2;
+		font-style: italic;
+	}
+
+	//button
+	a {
+		font-size: $basefontsize*0.7;
+		text-transform: uppercase;
+		font-family: $basefontfamilyButton;
+		color: $belizeHole;
+		@include transitionEffectAllEaseOut(0.4s);
+
+		&:hover {
+			color: $phaedraRed;
+		}
+	}
+}
+
+///////////////////////////////////////////////

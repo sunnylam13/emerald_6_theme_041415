@@ -1,0 +1,67 @@
+////////////////////////////////////////////
+///// 		DEVICES
+///////////////////////////////////////////////
+
+section.devices1 {
+	// background: $phaedraGreen1;
+	background: lighten($phaedraGreen1,10%);
+}
+
+section.devices1 .wrapper {
+	//flexbox
+	@include flexboxSettings041715a;
+}
+
+section.devices1 .wrapper .copy {
+	//flex child
+	flex: 1 auto;
+	// width: 50%;
+	width: 48%;
+	margin-right: 2%;
+	
+	//flexbox
+	@include flexboxSettings042215a;
+	align-items:flex-start;
+
+	h2 {
+		text-transform: uppercase;
+		font-size: $basefontsize*1.2;
+		margin-bottom: 5%;
+	}
+
+	p,li {
+		font-size: $basefontsize*0.7;
+		color: $baseFontColor3;
+	}
+
+	li {
+		margin-bottom: 4%;
+	}
+
+	li::before {
+		@include beforeAfterIconPlace042215a('\f005');
+		color: $phaedraGreen2;
+	}
+
+	button {
+		border:0;
+		font-size: $basefontsize*0.7;
+		@include projectButtonStyle042115a ($baseFontColor,$phaedraGreen3,$phaedraRed)
+	}
+}
+
+section.devices1 .wrapper .imgHolder {
+	margin:0;
+	padding:0;
+	//flex child
+	flex: 1 auto;
+	width: 50%;
+	//flexbox
+	@include flexboxSettings041715a;
+
+	img {
+		max-width: 100%;
+	}
+}
+
+///////////////////////////////////////////////

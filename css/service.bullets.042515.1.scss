@@ -1,0 +1,51 @@
+////////////////////////////////////////////
+///// 		SERVICES BULLETS DISPLAY
+///////////////////////////////////////////////
+
+// for services.jade
+
+section.servicesShowCase1 {
+	background: white;
+	@include sectionPadding041515(5%,5%);
+}
+
+section.servicesShowCase1 ul.servicesShowCase1 {
+	//flexbox
+	@include flexboxSettings041715a;
+}
+
+section.servicesShowCase1 ul.servicesShowCase1 section.serviceUnit2 {
+	//flex child
+	flex:1 auto;
+	width: 23%;
+	margin-left: 2%;
+	//flexbox
+	@include flexboxSettings042215a;
+	text-align: center;
+
+	div.icon {
+		margin-bottom: 20%;
+	}
+
+	div.icon span.fa {
+		color: $baseFontColor2;
+		font-size: $basefontsize*1.5;
+		@include transitionEffectAllEaseOut(0.4s);
+		&:hover {
+			color: $phaedraGreen3;
+			font-size: $basefontsize*3;
+		}
+	}
+
+	h2 {
+		margin-bottom: 5%;
+		font-size: $basefontsize*0.9;
+	}
+
+	p {
+		padding: 0 5% 0 5%;
+		color: $baseFontColor3;
+	}
+}
+
+///////////////////////////////////////////////

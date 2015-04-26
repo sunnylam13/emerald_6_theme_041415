@@ -24,6 +24,7 @@ $lora: 'Lora', serif;
 
 $titleBlockTransparency: 0.6;
 $featuresTransparency: 0.9;
+$transparencyLevelHigh1: 0.8;
 
 $phaedraRed:rgba(255, 66, 16,1);
 $phaedraRedShade1:rgba(255, 66, 16,$titleBlockTransparency);
@@ -55,6 +56,8 @@ $baselineheight:16px;
 
 $baseFontColor: white;
 $baseFontColor2: lightgrey;
+$baseFontColor3: darken(lightgrey,20%);
+$baseFontColor4: lighten(black,30%);
 $baseFontColorHeader: black;
 
 $baseHoverColor: $phaedraRed;
@@ -334,7 +337,7 @@ $pricingColourPremium: lighten($peterRiver,20%);
 $pricingColourUltimate: lighten($phaedraRed,20%);
 
 //border
-$pricingBorder: 1px solid $baseFontColor2;
+$pricingBorder: 1px solid lighten($baseFontColor2,15%);
 
 // font sizes
 $pricingFontSize:$basefontsize*0.7;
@@ -433,4 +436,14 @@ a {
 	color: red;
 }
 
+h2 {
+	font-size: $basefontsize*1.2;
+}
 
+h3 {
+	font-size: $basefontsize*0.8;
+}
+
+li, a {
+	font-size: $basefontsize*0.7;
+}

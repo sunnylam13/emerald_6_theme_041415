@@ -1,0 +1,515 @@
+////////////////////////////////////////////
+///// 		FOOTER
+///////////////////////////////////////////////
+
+// VARIABLES  ------------------------------------------------
+$addressIconColour: lighten($phaedraRed,10%);
+// // END VARIABLES ------------------------------------------------
+
+
+
+
+// OVERALL SUPER SECTION  ------------------------------------------------
+
+section.footer {
+	@include flexboxSettings042215a;
+
+	h2 {
+		color: $footerColourHeader;
+		font-size: $footerFontSizeHeader2;
+	}
+
+	p {
+		color: $baseFontColor3;
+		font-size: $footerFontSize;
+	}
+
+	a {
+		color: $baseFontColor3;
+		font-size: $footerFontSize;
+	}
+}
+// // END OVERALL SUPER SECTION ------------------------------------------------
+
+
+// ICON LINKS STRIP  ICON LINKS STRIP
+
+section.footer section.iconLinks {
+	background: $footerColourBack1;
+	width: 100%;
+	@include sectionPadding041515(1.5%,0.5%);
+
+	.wrapper {
+		// apply flexbox
+		// want the logo div to be aligned vertically along baseline with the other sections
+		@include flexboxSettings041715a;
+		align-items: baseline;
+		// align-items: center;
+	}
+
+	span.fa {
+		// background: $footerColourIconBack;
+		// color: $footerColourIcon;
+		// border-radius: 50%;
+		// text-align: center;
+
+		padding: 4%;
+		border: 0;
+		color: $footerColourIcon;
+		background: $footerColourIconBack;
+		border-radius: 50%;
+		width: 2.1875em;
+		height: 2.1875em;
+		// line-height: 2.1875em;
+		@include transitionEffectAllEaseOut(0.4s);
+		// use flexbox to centre the Font Awesome icon ::before
+		@include flexboxSettings041715a;
+		&:hover {
+			background:$footerColourIconBackHover;
+			color: $footerColourIconHover;
+		}
+		// make the text below icon change on hover
+		// &:hover ~ p.tag {
+		// 	color: $phaedraRed;
+		// }
+	}
+
+	li {
+		margin: 0;
+		padding: 0;
+		height: auto;
+		margin: 0 0.3em 0 .3em;
+		// text-align: center;
+		@include flexboxSettings042215a;
+		margin-right: 3%;
+	}
+
+	// make the descriptor text below icon change on hover using the advanced selector "+" which selects the element immediately after
+	// the mixin iconLink042315a used a div a
+	// nav.siteNav uses a li a
+	li a:hover + p.tag, div a:hover + p.tag {
+		color: $footerColourIconTagHover;
+		font-weight: bold;
+		// font-style: italic;
+	}
+
+	p.tag {
+		color: $footerColour;
+		font-size: $basefontsize*0.7;
+		margin: 0;
+	}
+}
+
+nav.siteNav {
+	margin: 0;
+	padding: 0;
+	flex: 1 auto;
+	width:33%;
+	ul.flex {
+		@include flexboxSettings041715a;
+		justify-content: flex-end;
+		align-content: space-between;
+	}
+
+
+
+}
+
+div.logoBox {
+	margin: 0;
+	padding: 0;
+	flex: 1 auto;
+	@include flexboxSettings041715a;
+	width:33%;
+}
+
+// an error occurred here because I used the same selectors twice for section.socialIcons... I renamed it to section.socialIconsNav instead
+section.socialIconsNav {
+	margin: 0;
+	padding: 0;
+	flex: 1 auto;
+	width:33%;
+	@include flexboxSettings041715a;
+	justify-content: flex-start;
+	// align-content: flex-start;
+	// align-items: baseline;
+	div {
+		margin:0;
+		padding:0;
+		margin: 0 0.25em 0 .25em;
+		// text-align: center;
+		@include flexboxSettings042215a;
+	}
+}
+
+// // END SUBHEADING ------------------------------------------------
+
+
+// INFORMATION BLOCK SECTION  ------------------------------------------------
+section.footer section.info {
+	background: $footerColourBack2;
+	@include sectionPadding041515(5%,5%);
+	width: 100%;
+	
+	.wrapper {
+		@include flexboxSettings041715a;
+		flex-flow: row nowrap;
+		justify-content: center;
+		align-content: center;
+		align-items:flex-start;
+	}
+
+	// section.footer section.info section was so specific that it seemed to have overridden everything so I commented it out
+	// section {
+	// 	margin:0;
+	// 	padding:0;
+	// 	// flex: 1 auto;
+	// 	// // width: 25%;
+	// 	// // width: auto;
+	// 	// // since margin left and right totals 2%, it must be subtracted from 25%
+	// 	// max-width: 23%;
+	// 	// margin: 0 1% 0 1%;
+	// }
+}
+
+// About Us
+
+section.info section.aboutUs {
+	// flex: 1 auto;
+	// width: 25%;
+	background: transparent;
+	@include flexboxSettings042215a;
+	align-items: flex-start;
+	padding: 0 1% 0 1%;
+	line-height: $baselineheight*0.8;
+
+	flex: 1 auto;
+	// width: 25%;
+	// width: auto;
+	// since margin left and right totals 2%, it must be subtracted from 25%
+	width: 25%;
+	margin: 0 1% 0 1%;
+
+	h2 {
+		margin-bottom: 3%;
+	}
+
+	p, a {
+		margin:0;
+		padding:0;
+	}
+
+	// & p.aboutSummary {
+	// 	margin-bottom: 3%;
+	// }
+
+	
+
+	a[href^="mailto"] {
+		width: 100%;
+		// margin: 2% 0 2% 0;
+		margin-top: 3%;
+		border-top: $footerBorder;
+		padding: 3% 0 3% 0;
+
+		&::before {
+			@include beforeAfterIconPlace042215a('\f003');
+			color: $footerColour2;
+			color: $addressIconColour;
+		}
+
+		@include transitionEffectAllEaseOut(0.4s);
+		&:hover {
+			color: $footerColourHover;
+		}
+	}
+
+	// p:nth-child(1) is the first address p
+
+	// p:nth-child(1) {
+	// 	margin: 2% 0 2% 0;
+	// 	border-top: $footerBorder;
+	// 	// border-bottom: $footerBorder;
+	// 	// padding: 3% 0 3% 0;
+	// }
+
+	.phone {
+		margin:0;
+		padding:0;
+		width: 100%;
+		border-top: $footerBorder;
+	}
+
+	.phone p {
+		&::before {
+			@include beforeAfterIconPlace042215a('\f095');
+			color: $footerColour2;
+			color: $addressIconColour;
+		}
+	}
+
+	.address {
+		display: inline-block;
+		margin: 0;
+		padding:0;
+		width: 100%;
+		border-top: $footerBorder;
+		@include sectionPadding041515(3%,0);
+		
+		p {
+			line-height: $baselineheight*0.8;
+		}
+	}
+
+	.address p:first-child {
+		&::before {
+			@include beforeAfterIconPlace042215a('\f041');
+			color: $footerColour2;
+			color: $addressIconColour;
+			display: inline-block;
+		}
+	}
+
+	.address p:last-child {
+		&::before {
+			@include beforeAfterIconPlace042215a('');
+			display: inline-block;
+			margin:0px 15px 0px 0px;
+		}
+	}
+}
+
+// Useful Links
+
+section.info section.usefulLinks {
+	// flex: 1 auto;
+	// width: 25%;
+	// padding: 0 1% 0 1%;
+
+	flex: 1 auto;
+	// width: 25%;
+	// width: auto;
+	// since margin left and right totals 2%, it must be subtracted from 25%
+	width: 25%;
+	margin: 0 1% 0 1%;
+
+	h2 {
+		margin-bottom: 8%;
+	}
+
+	div {
+		@include flexboxSettings041715a;
+		justify-content: space-between;
+		align-content: space-between;
+		align-items: flex-start;
+	}
+}
+
+section.info section.usefulLinks ul.flex {
+	flex: 1 auto;
+	width: 50%;
+	@include flexboxSettings042215a;
+	justify-content: space-between;
+	align-items: flex-start;
+
+	a {
+		@include transitionEffectAllEaseOut(0.4s);
+		&:hover {
+			color: $footerColourHover;
+		}
+		&::before {
+			@include beforeAfterIconPlace042215a('\f101');
+			margin:0px 5px 0px 0px;
+			color: $footerColourChevron;
+		}
+	}
+}
+
+// Recent Work
+section.info section.recentWork {
+	// flex: 1 auto;
+	// width: 25%;
+	@include flexboxSettings042215a;
+	flex-flow: column wrap;
+	align-items: flex-start;
+	// padding: 0 1% 0 1%;
+
+
+	flex: 1 auto;
+	// width: 25%;
+	// width: auto;
+	// since margin left and right totals 2%, it must be subtracted from 25%
+	width: 25%;
+	margin: 0 1% 0 1%;
+
+
+	h2 {
+		margin-bottom: 8%;
+	}
+
+	a {
+		font-size: $basefontsize*0.6;
+		@include transitionEffectAllEaseOut(0.4s);
+		&:hover {
+			color: $footerColourHover;
+		}
+	}
+}
+
+section.recentWork ul.portfolioThumbs {
+	@include flexboxSettings041715a;
+	justify-content: space-between;
+	align-content: space-between;
+	width: 100%;
+	margin-bottom: 3%;
+	img {
+		flex: 1 auto;
+		display: inline-block;
+	}
+}
+
+section.recentWork a {
+	&::after {
+		@include beforeAfterIconPlace042215a('\f101');
+		margin:0px 0px 0px 5px;
+		color: $footerColourChevron;
+	}
+}
+
+// Mailing List
+section.info section.mailingList {
+	// flex: 1 auto;
+	// width: 25%;
+	padding: 0 1% 0 1%;
+
+	flex: 1 auto;
+	// width: 25%;
+	// width: auto;
+	// since margin left and right totals 2%, it must be subtracted from 25%
+	width: 25%;
+	margin: 0 1% 0 1%;
+
+	h2 {
+		margin-bottom: 8%;
+	}
+
+	p {
+		margin-bottom: 3%;
+	}
+
+	p.privacy {
+		font-size: $basefontsize*0.6;
+		border-bottom: $footerBorder;
+		padding-bottom: 3%;
+	}
+}
+
+section.mailingList form input {
+	// remove the border on the input so that the checkmark button is right up against it
+	border: 0;
+	margin: 0;
+	font-size: $basefontsize*0.7;
+	padding: 2% 5% 2% 5%;
+}
+
+// the checkmark button
+section.mailingList form a {
+	margin: 0;
+	padding: 0;
+	background: $footerColourInput;
+	// padding: 2% 3.5% 2.25% 3.5%;
+	padding: 2% 3.5% 2.75% 3.5%;
+	color: $baseFontColor;
+	@include transitionEffectAllEaseOut(0.4s);
+	&:hover {
+		background: $phaedraRed;
+		color: white;
+	}
+	text-align: center;
+	//flexbox
+	// @include flexboxSettings042215a;
+	// width: 1em;
+}
+
+section.socialIcons {
+	width: 100%;
+}
+
+
+section.mailingList section.socialIcons {
+	@include flexboxSettings041715a;
+	justify-content: flex-start;
+	align-content: flex-start;
+	align-items: center;
+	margin-top: 5%;
+	a {
+		display: inline-block;
+		flex: 1 auto;
+		// width: 16.666666667%;
+		margin:0;
+		padding:0;
+		display: inline-block;
+		width: auto;
+		// margin: 0 5% 0 5%;
+		font-size: $basefontsize*0.8;
+
+		@include transitionEffectAllEaseOut(0.4s);
+		&:hover {
+			color: $footerColourHover;
+		}
+	}
+}
+
+// // END INFORMATION BLOCK SECTION ------------------------------------------------
+
+
+
+// COPYRIGHT STRIP  ------------------------------------------------
+section.footer section.copyright {
+	background: $footerColourBack1;
+	width: 100%;
+	@include sectionPadding041515(1%,0.5%);
+}
+
+section.copyright .wrapper {
+	@include flexboxSettings041715a;
+	align-items: baseline;
+}
+
+section.copyright nav.copyright {
+	flex: 4 auto;
+	width: 75%;
+	@include flexboxSettings041715a;
+	justify-content:flex-start;
+	align-content:flex-start;
+	margin: 0 0 0 2%;
+	a {
+		padding-right: 1%;
+		// padding-left: 1%;
+		text-transform: uppercase;
+		font-size: $basefontsize*0.6;
+		color: black;
+		@include transitionEffectAllEaseOut(0.4s);
+		&:hover {
+			color: $footerColourHover;
+		}
+	}
+}
+
+section.copyright div.trademark {
+	flex: 1 auto;
+	// width: 25%;
+	justify-content:flex-end;
+	align-content:flex-end;
+	p {
+		margin-bottom: 0;
+		text-transform: uppercase;
+		font-size: $basefontsize*0.6;
+		color: black;
+	}
+}
+// // END COPYRIGHT STRIP ------------------------------------------------
+
+
+
+///////////////////////////////////////////////

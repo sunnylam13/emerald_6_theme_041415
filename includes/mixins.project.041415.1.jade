@@ -57,6 +57,14 @@ mixin benefitBullet042115a
 		h3 Bullet
 		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis odio, dicta ex? Ea quod, ipsum.
 
+mixin benefitBullet042115a(faIcon,headline,textIns)
+	span(class=faIcon).fa
+	h3=headline
+	if textIns
+		p=textIns
+	else
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis odio, dicta ex? Ea quod, ipsum.
+
 //- END BENEFITS
 
 //- ===================================
@@ -113,18 +121,20 @@ mixin portfolioNavigation042515a
 //- ===================================
 
 mixin serviceBullet042515a
-	div.icon
-		span.fa.fa-eye
-	div.copy
-		h2 Retina Ready
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae ea harum mollitia, deleniti, dolore voluptate!
+	section.serviceUnit2
+		div.icon
+			span.fa.fa-eye
+		div.copy
+			h2 Retina Ready
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae ea harum mollitia, deleniti, dolore voluptate!
 
 mixin serviceBullet042515b(faClass,headline)
-	div.icon
-		span(class=faClass).fa
-	div.copy
-		h2=headline
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae ea harum mollitia, deleniti, dolore voluptate!
+	section.serviceUnit2
+		div.icon
+			span(class=faClass).fa
+		div.copy
+			h2=headline
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae ea harum mollitia, deleniti, dolore voluptate!
 
 
 //- END SERVICES
@@ -368,31 +378,31 @@ mixin pricingTable042115a(packageName,priceString,popularClass)
 	//- where priceString is $69/Month, $79/Month, $89/Month
 	//- if the optional popularClass (class will match this arg name exactly) is used, it applies that class which should use a ::before in the CSS to add Most Popular with the relevant styling and absolute positioning... if that doesn't work we'll have to write custom update to this mixin and absolute position it that way
 	//- you'll use the packageName class to assign styling colours of course
-	if block
-		block
-	else
-		div.pricingEntry
-			header(class=packageName,class=popularClass)
-				h3=packageName
-				p 
-					span.dollarSign $ 
-					span.priceValue=priceString
-					span.month / Month
-					//- | / Month
-				//- p.month / Month
-				+standardButton041415a('Get Started Now','#','priceCTA','priceCTA')
-			section.copy
-				h3 Benefits
-				ul.bullets
-					li Unlimited products
-					li 20 Pages, Galleries
-					li 500 GB Bandwidth
-					li Mobile Website and Store
-					li Custom Domain Free
-					li 24/7 Round the Clock Support
-					li Unlimited Staff Access
-					li Unlimited Registers
-					li 99% Uptime
+	
+	div.pricingEntry
+		header(class=packageName,class=popularClass)
+			if popularClass
+				//-
+			h3=packageName
+			p 
+				span.dollarSign $ 
+				span.priceValue=priceString
+				span.month / Month
+				//- | / Month
+			//- p.month / Month
+			+standardButton041415a('Get Started Now','#','priceCTA','priceCTA')
+		section.copy
+			h3 Benefits
+			ul.bullets
+				li Unlimited products
+				li 20 Pages, Galleries
+				li 500 GB Bandwidth
+				li Mobile Website and Store
+				li Custom Domain Free
+				li 24/7 Round the Clock Support
+				li Unlimited Staff Access
+				li Unlimited Registers
+				li 99% Uptime
 			
 
 //- END PRICING

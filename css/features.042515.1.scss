@@ -1,0 +1,80 @@
+////////////////////////////////////////////
+///// 		FEATURES 2
+///////////////////////////////////////////////
+
+// for services.jade
+
+// parent
+section.features2 {
+	background: lighten($phaedraGreen1,10%);
+	padding-bottom: 5%;
+}
+
+//banner
+// parent child
+section.features2 .banner {
+	width: 100%;
+	background: $phaedraGreen2;
+	// flexbox
+	@include flexboxSettings041715a;
+	@include sectionPadding041515(2.5%,2.5%);
+	position: relative;
+
+	margin-bottom: 5%;
+
+	h2 {
+		font-size: $featuresFontSizeHeader;
+		text-transform: uppercase;
+		color: $baseFontColor;
+	}
+
+	// downward pointer
+	&::after {
+		content: " ";
+		position: absolute;
+		@include csshexagon041715a(0.9375em,$phaedraGreen2,transparent,transparent,transparent);
+		bottom: -30%;
+		right: 49%;
+	}
+}
+
+// wrapper
+// parent child
+section.features2 .wrapper {
+	// flexbox
+	@include flexboxSettings041715a;
+}
+
+section.features2 .wrapper section.feature2Unit {
+	// flex child settings
+	flex: 1 auto;
+	width: 33.333333333%;
+	// flexbox
+	@include flexboxSettings042215a;
+	text-align: center;
+	// background: blue;
+	@include sectionPadding041515(5%,5%);
+	@include transitionEffectAllEaseOut(0.4s);
+
+	span.fa {
+		font-size: $basefontsize*1.5;
+		color: $phaedraGreen2;
+	}
+
+	h3 {
+		font-size: $featuresFontSizeHeader;
+		@include sectionMargins041515(7%,5%);
+	}
+
+	p {
+		font-size: $featuresFontSize;
+		padding: 0 5% 0 5%;
+		color: $baseFontColor3;
+	}
+
+	&:hover {
+		border: 1px solid $phaedraGreen2;
+	}
+}
+
+///////////////////////////////////////////////

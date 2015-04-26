@@ -43,7 +43,34 @@ section.servicesOffer1 {
 			font-size: $serviceDisplayFontSize;
 			color: $phaedraGreen3;
 			font-family: $montserrat;
+			@include transitionEffectAllEaseOut(0.4s);
 		}
+
+		a:hover {
+			color: $phaedraRed;
+		}
+
+		a::after {
+			@include beforeAfterIconPlace042215a('\f105');
+			border-radius: 50%;
+			color: $phaedraGreen3;
+			border: 1px solid $phaedraGreen3;
+			// width:1em;
+			// height: 1em;
+			padding:1% 5% 1% 7%;
+			margin:0px 0px 0px 5px;
+		}
+
+		a:hover ~ a::after {
+			color: $phaedraRed;
+			border: 1px solid $phaedraRed;
+		}
+
+		a::after:hover {
+			color: $phaedraRed;
+			border: 1px solid $phaedraRed;
+		}
+
 	}
 }
 

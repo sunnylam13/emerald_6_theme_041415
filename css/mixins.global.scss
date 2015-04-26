@@ -72,6 +72,7 @@
 @mixin projectButtonStyle042115a ($colour,$background,$backHover) {
 	// used for <a> anchor elements or <button> elements... 
 	// insert within the SCSS code
+	border:0;
 	display: inline-block;
 	margin: 0;
 	padding: 0;
@@ -143,94 +144,106 @@
 	background-image: linear-gradient(to top left, $colourStart 0%, $colourFinish 100%);
 }
 
-// NAV MENU  ------------------------------------------------
-@mixin navStylingForMidnight ($colour) {
-	$navmenuMidnightBorder: 1px solid lighten($colour,15%);
-	border-bottom: $navmenuMidnightBorder;
-	margin: 0;
-	padding: 0;
-	// for testing
-	// background: lightgrey;
-	position: fixed;
-	width: 100%;
-	z-index: 900;
-	& .flexbox {
-		@include flexboxSettings041715a;
-		color: $colour;
-	}
-	& div.logo, div.menu, div.icons {
-		padding-bottom: $navDivPadding;
-		padding-top: $navDivPadding;
-		text-transform: uppercase;
-	}
-	& div.menu, div.icons {
-		font-family: $navfontfamily;
-		font-size: $navfontsize;
-	}
-	& div.logo {
-		flex: 1;
-		// border-right: $navmenuborder;
-		@include flexboxSettings041715a;
-		justify-content: flex-end;
-		padding-right: 6%;
-		// @include column(2);
-		padding: 2.5% 6% 3% 0;
-		
-		// ADJUST THE COMPANY LOGO COLOUR AS WELL
-		& aside.logo042215a h2 {
-			color: $colour;
-			border: 3px solid $colour;
-		}
-	}
-	& div.menu {
-		flex: 2;
-		// border-right: $navmenuMidnightBorder;
-		// border-left: $navmenuMidnightBorder;
-		@include flexboxSettings041715a;
-		justify-content: flex-end;
-		// @include column(8);
-		& ul {
-			@include flexboxSettings041715a;
-			justify-content: flex-end;
-			width: auto;
-			& a {
-				color: inherit;
-				padding: 1% 20% 1% 20%;
-				font-size: $navfontsize;
-				font-weight: bold;
-				letter-spacing: 1px;
-				@include transitionEffectAllEaseOut(0.3s);
-				&:hover {
-					color: $navcolourlinkhover;
-				}
-			}
-		}
-		font-size: $navfontsize;
-	}
-	& div.icons {
-		flex: 1;
-		border-left: $navmenuMidnightBorder;
-		@include flexboxSettings041715a;
-		justify-content: flex-start;
-		// @include column(2);
-		padding-left: 2.5%;
-		margin-left: 5%;
-		padding-top: 2.25%;
-		& span.fa {
-			border-radius: 50%;
-			color: $navcolouricon;
-			background: $navcolouriconback;
-			padding: 6%;
-			margin-left: $navIconSpacing;
-			margin-right: $navIconSpacing;
-			font-size: $navfontsize;
-			@include transitionEffectAllEaseOut(0.3s);
-			&:hover {
-				background: $navcolouriconbackhover;
-			}
-		}
-	}
+@mixin csshexagon041715a($borderWidth,$top,$bottom,$left,$right) {
+	// you should insert this within a div of some sort to create this
+	// set no height
+	// if you want a triangle pointing in a specific direction set the colour of the border opposite to it
+	// set all other borders to transparent
+	width: 0;
+	border-top: $borderWidth solid $top;
+	border-bottom: $borderWidth solid $bottom;
+	border-left: $borderWidth solid $left;
+	border-right: $borderWidth solid $right;
 }
+
+// NAV MENU  ------------------------------------------------
+// @mixin navStylingForMidnight ($colour) {
+// 	$navmenuMidnightBorder: 1px solid lighten($colour,15%);
+// 	border-bottom: $navmenuMidnightBorder;
+// 	margin: 0;
+// 	padding: 0;
+// 	// for testing
+// 	// background: lightgrey;
+// 	position: fixed;
+// 	width: 100%;
+// 	z-index: 900;
+// 	& .flexbox {
+// 		@include flexboxSettings041715a;
+// 		color: $colour;
+// 	}
+// 	& div.logo, div.menu, div.icons {
+// 		padding-bottom: $navDivPadding;
+// 		padding-top: $navDivPadding;
+// 		text-transform: uppercase;
+// 	}
+// 	& div.menu, div.icons {
+// 		font-family: $navfontfamily;
+// 		font-size: $navfontsize;
+// 	}
+// 	& div.logo {
+// 		flex: 1;
+// 		// border-right: $navmenuborder;
+// 		@include flexboxSettings041715a;
+// 		justify-content: flex-end;
+// 		padding-right: 6%;
+// 		// @include column(2);
+// 		padding: 2.5% 6% 3% 0;
+		
+// 		// ADJUST THE COMPANY LOGO COLOUR AS WELL
+// 		& aside.logo042215a h2 {
+// 			color: $colour;
+// 			border: 3px solid $colour;
+// 		}
+// 	}
+// 	& div.menu {
+// 		flex: 2;
+// 		// border-right: $navmenuMidnightBorder;
+// 		// border-left: $navmenuMidnightBorder;
+// 		@include flexboxSettings041715a;
+// 		justify-content: flex-end;
+// 		// @include column(8);
+// 		& ul {
+// 			@include flexboxSettings041715a;
+// 			justify-content: flex-end;
+// 			width: auto;
+// 			& a {
+// 				color: inherit;
+// 				padding: 1% 20% 1% 20%;
+// 				font-size: $navfontsize;
+// 				font-weight: bold;
+// 				letter-spacing: 1px;
+// 				@include transitionEffectAllEaseOut(0.3s);
+// 				&:hover {
+// 					color: $navcolourlinkhover;
+// 				}
+// 			}
+// 		}
+// 		font-size: $navfontsize;
+// 	}
+// 	& div.icons {
+// 		flex: 1;
+// 		border-left: $navmenuMidnightBorder;
+// 		@include flexboxSettings041715a;
+// 		justify-content: flex-start;
+// 		// @include column(2);
+// 		padding-left: 2.5%;
+// 		margin-left: 5%;
+// 		padding-top: 2.25%;
+// 		& span.fa {
+// 			border-radius: 50%;
+// 			color: $navcolouricon;
+// 			background: $navcolouriconback;
+// 			padding: 6%;
+// 			margin-left: $navIconSpacing;
+// 			margin-right: $navIconSpacing;
+// 			font-size: $navfontsize;
+// 			@include transitionEffectAllEaseOut(0.3s);
+// 			&:hover {
+// 				background: $navcolouriconbackhover;
+// 			}
+// 		}
+// 	}
+// }
 
 @mixin navStylingForMidnightV2 ($backgroundSelectColour) {
 	border-bottom: $navmenuborder;
@@ -303,10 +316,13 @@
 			border-radius: 50%;
 			color: $navcolouricon;
 			background: $navcolouriconback;
-			padding: 6%;
+			// padding: 6%;
 			margin-left: $navIconSpacing;
 			margin-right: $navIconSpacing;
-			font-size: $navfontsize;
+			// font-size: $navfontsize;
+			width: 3.1875em;
+			height: 3.1875em;
+			@include flexboxSettings041715a;
 			@include transitionEffectAllEaseOut(0.3s);
 			&:hover {
 				background: $navcolouriconbackhover;
