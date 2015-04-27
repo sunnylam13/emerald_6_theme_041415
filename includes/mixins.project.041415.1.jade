@@ -57,7 +57,7 @@ mixin benefitBullet042115a
 		h3 Bullet
 		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis odio, dicta ex? Ea quod, ipsum.
 
-mixin benefitBullet042115a(faIcon,headline,textIns)
+mixin benefitBullet042615b(faIcon,headline,textIns)
 	span(class=faIcon).fa
 	h3=headline
 	if textIns
@@ -222,23 +222,35 @@ mixin serviceBullet042515b(faClass,headline)
 //- ===================================
 
 mixin rightBullet042115a
+	//- .right side bullets
 	if block
 		block
 	else
 		section.rightBullet
+			//- div.flex
+			//- 	h3 Fully Responsive
+			//- 	span.fa.fa-dropbox
+			//- p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, commodi!
+
 			div.flex
-				h3 Fully Responsive
 				span.fa.fa-dropbox
+				h3 Fully Responsive
 			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, commodi!
 
 mixin leftBullet042115a
+	//- .left side bullets
 	if block
 		block
 	else
-		section.rightBullet
+		section.leftBullet
+			//- div.flex
+			//- 	span.fa.fa-dropbox
+			//- 	h3 Fully Responsive
+			//- p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, commodi!
+
 			div.flex
-				span.fa.fa-dropbox
 				h3 Fully Responsive
+				span.fa.fa-dropbox
 			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, commodi!
 
 mixin featureImageCopy042315a

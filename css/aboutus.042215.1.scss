@@ -15,7 +15,8 @@ section.aboutus {
 		@include flexboxSettings041715a;
 		justify-content: center;
 		align-items: center;
-		& img {
+		
+		img {
 			$imgMarginLeftRight: 0.75%;
 			display: inline-block;
 			margin: 0;
@@ -25,8 +26,18 @@ section.aboutus {
 			margin-left: $imgMarginLeftRight;
 			width: 100%;
 		}
+
+		// img:first-child {
+		// 	border: 5px solid black;
+		// }
+
+		// img:nth-child(2) {
+		// 	border: 5px solid black;
+		// }
+
 	}
-	& .copy {
+	
+	.copy {
 		// display: inline-block;
 		margin: 0;
 		padding: 0;
@@ -38,17 +49,21 @@ section.aboutus {
 		// align-content: flex-start;
 		// use align-items to line everything on the left side
 		align-items: flex-start;
-		& p, a {
+		
+		p, a {
 			font-size: $aboutFontSize;
 			color: $aboutColour;
 		}
-		& h2 {
+		
+		h2 {
 			margin-bottom: 8%;
 		}
-		& p {
+		
+		p {
 			// margin-bottom: 5%;
 		}
-		& a.aboutCTA {
+		
+		a.aboutCTA {
 			@include projectButtonStyle042115a($aboutColourButton,$aboutColourBackButton,$aboutColourBackButtonHover);
 			padding: 1.5% 6% 1.5% 6%;
 		}

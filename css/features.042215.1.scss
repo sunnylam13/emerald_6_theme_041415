@@ -114,6 +114,9 @@ section.features {
 			// because .copy isn't aligned with the current version of the extracted central image... add margin-right to adjust
 			margin-left: 2%;
 
+			// this is for the animation
+			position: relative;
+
 			& h2, h3 {display: block;}
 			& h2 {
 				margin-bottom: 3%;
@@ -140,9 +143,13 @@ section.features {
 		}
 
 		// CENTRAL IMAGE
-		& img {
+		img {
 			width: 100%;
 			// max-width: 100%;
+			
+			// this is for the animation
+			position: relative;
+			
 		}
 	}
 	
@@ -159,6 +166,10 @@ section.features {
 			}
 		}
 	}
+
+	section.leftBullet {
+		position: relative;
+	}
 	
 	// RIGHT SIDE
 
@@ -173,6 +184,11 @@ section.features {
 			}
 		}
 	}
+
+	section.rightBullet {
+		position: relative;
+	}
+
 }
 
 /////////////////////////////////////////////
