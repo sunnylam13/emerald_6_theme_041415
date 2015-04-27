@@ -246,7 +246,7 @@ function benefitZoneAnimation042615a () {
 
 		$(this).hover(function() {
 			/* Stuff to do when the mouse enters the element */
-			tm.to($(this),0.4, {scaleX:2, scaleY:2,ease:Power1.easeIn});
+			tm.to($(this),0.4, {scaleX:1.4, scaleY:1.4, backgroundColor: 'white', border:'1px solid rgba(255, 66, 16,1)', ease:Power1.easeIn});
 			tm.play();
 		}, function() {
 			/* Stuff to do when the mouse leaves the element */
@@ -300,8 +300,11 @@ function pricingEntryAnimation042615a () {
 
 		$(this).hover(function() {
 			/* Stuff to do when the mouse enters the element */
-			tm.to($(this),0.4, {scaleX:1.4, scaleY:1.4,ease:Power1.easeIn});
-			tm.to($(this),0,{backgroundColor:'lightyellow',ease:Power1.easeIn});
+			var $priceTarget = $(this);
+			tm.to($priceTarget,0.4, {scaleX:1.4, scaleY:1.4,ease:Power1.easeIn});
+			tm.to($priceTarget,0,{backgroundColor:'rgba(251, 255, 152,1)',ease:Power1.easeIn});
+			tm.to($priceTarget.find('li'),0,{color:'black'});
+			tm.to($priceTarget.find('section.copy h3'),0,{color:'black'});
 			tm.play();
 		}, function() {
 			/* Stuff to do when the mouse leaves the element */
