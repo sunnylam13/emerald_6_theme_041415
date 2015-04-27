@@ -2,12 +2,6 @@
 ///// 		MIXINS
 ///////////////////////////////////////////////
 
-@mixin borderSetup042215a ($thick,$state,$colour) {
-	// this is for a very basic border
-	// $state is something like solid, dotted, etc.
-	border: $thick $state $colour;
-}
-
 @mixin transitionEffectAll ($time) {
 	-webkit-transition: all $time;
 	-moz-transition: all $time;
@@ -64,3 +58,62 @@
 	transform: rotate($degrees) scale($scaleMult);
 }
 
+// PERSONAL FAVOURITES  ------------------------------------------------
+
+@mixin borderSetup042215a ($thick,$state,$colour) {
+	// this is for a very basic border
+	// $state is something like solid, dotted, etc.
+	border: $thick $state $colour;
+}
+
+@mixin flexboxSettings041715a {
+	// ROW
+	// this is used within a parent without the class .flexbox... the actual class name used will vary
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-content: center;
+	align-items: center;
+}
+
+@mixin flexboxSettings042215a {
+	// COLUMN
+	// this is used within a parent without the class .flexbox... the actual class name used will vary
+	display: flex;
+	flex-flow: column;
+	justify-content: space-around;
+	align-content: center;
+	// align-items:  flex-start, center, flex-end
+	align-items: center;
+}
+
+@mixin sectionMargins041515($marginTop, $marginBottom) {
+	// TOP AND BOTTOM
+	// where arguments are a value in px, em or %
+	margin-top: $marginTop;
+	margin-bottom: $marginBottom;
+}
+
+@mixin sectionPadding041515($padTop, $padBottom) {
+	// TOP AND BOTTOM
+	// where arguments are a value in px, em or %
+	padding-top: $padTop;
+	padding-bottom: $padBottom;
+}
+
+@mixin beforeAfterIconPlace042215a($content) {
+	// this must be placed with a ::before or ::after selector block
+	// $content must be a string... in the form of '\f01d'
+	// what will change each time you use it is the Unicode for content: ''
+
+	// to make this work you have to use the FontAwesome font and the content must be the icon's Unicode (available at FA's website)
+	// http://stackoverflow.com/questions/18793428/put-an-icon-after-list-item-with-after-and-font-awesome
+	content: $content;
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	margin:0px 10px 0px 0px;
+	text-decoration:none;
+}
+
+// // END PERSONAL FAVOURITES ------------------------------------------------
