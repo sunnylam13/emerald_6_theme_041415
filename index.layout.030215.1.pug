@@ -1,0 +1,25 @@
+html(lang="en")
+	head
+		block title
+		include ./includes/variables.global.041415.1.pug
+		include ./includes/mixins.universal.041415.1.pug
+		include ./includes/mixins.project.041415.1.pug
+		include ./includes/meta.pug
+		include ./includes/links.pug
+		//- include ./includes/scripts.pug 
+	body
+		include ./includes/googleCode.pug
+		
+		block navmenu
+			//- this is constant throughout pages
+			include ./includes/navmenu.042115.1.pug
+
+		block content
+			//- the content will vary with each page... use separate includes instead of blocks here
+		
+		block footer
+			//- this is constant throughout pages
+			include ./includes/footer.042115.1.pug
+
+		//- if I want html and css to load first
+		include ./includes/scripts.pug 

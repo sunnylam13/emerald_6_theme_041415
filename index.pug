@@ -1,0 +1,22 @@
+extends index.layout.030215.1.pug
+
+//- block navmenu
+	//- this is constant throughout pages
+	//- include ./includes/navmenu.042115.1.pug
+
+block content
+	//- the content will vary with each page... use separate includes instead of blocks here
+	include ./includes/title.block.042115.1.pug
+	include ./includes/about.us.042115.1.pug
+	include ./includes/benefits.042115.1.pug
+	include ./includes/portfolio.042115.1.pug
+	include ./includes/features.042115.1.pug
+	include ./includes/core.features.042115.1.pug
+	include ./includes/staff.042115.1.pug
+	include ./includes/premium.wp.theme.042115.1.pug
+	include ./includes/blog.latest.042115.1.pug
+	include ./includes/pricing.042115.1.pug
+
+//- block footer
+	//- this is constant throughout pages
+	//- include ./includes/footer.042115.1.pug
